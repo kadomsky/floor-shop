@@ -1,0 +1,1 @@
+*ERROR* 	v1.7.5.1	2019/02/24 - 12:40:38: Длина свойства Product->description_short составляет 1075 симв. Должно быть между 0 и 800 симв. at line 1032 in file classes/ObjectModel.php

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl" source-language="gl-ES" target-language="gl-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="dd8c84ae3dc95566dc071d0effc40dd2">
+        <source>Our Products</source>
+        <target>Our Products</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:37</note>
+      </trans-unit>
+      <trans-unit id="ca7d973c26c57b69e0857e7a0332d545">
+        <source>Featured products</source>
+        <target>Featured products</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:40</note>
+      </trans-unit>
+      <trans-unit id="15422d54ec0d47000dc86a9820a5237e">
+        <source>Featured</source>
+        <target>Featured</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:41</note>
+      </trans-unit>
+      <trans-unit id="9ff0635f5737513b1a6f559ac2bff745">
+        <source>New products</source>
+        <target>New products</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:46</note>
+      </trans-unit>
+      <trans-unit id="d7b2933ba512ada478c97fa43dd7ebe6">
+        <source>Best Sellers</source>
+        <target>Best Sellers</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:51</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/catalog/_partials/products-top.tpl" source-language="gl-ES" target-language="gl-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="5174d1309f275ba6f275db3af9eb3e18">
+        <source>Grid</source>
+        <target>Grid</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/catalog/_partials/products-top.tpl:35</note>
+      </trans-unit>
+      <trans-unit id="4ee29ca12c7d126654bd0e5275de6135">
+        <source>List</source>
+        <target>Listaxe</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/catalog/_partials/products-top.tpl:36</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/catalog/listing/category.tpl" source-language="gl-ES" target-language="gl-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="f73cc399b5ce12735a57f03414f09ef9">
+        <source>Subcategories</source>
+        <target>Subcategories</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/catalog/listing/category.tpl:41</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

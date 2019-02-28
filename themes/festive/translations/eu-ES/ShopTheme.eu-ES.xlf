@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl" source-language="eu-ES" target-language="eu-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="d2dc5306bd4408dee3d7707a5b48cab5">
+        <source>It is a long established fact that a reader will be distracted by the readable Join the Community to be Updated Firstly ?</source>
+        <target>It is a long established fact that a reader will be distracted by the readable Join the Community to be Updated Firstly ?</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl:38</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_socialfollow/ps_socialfollow.tpl" source-language="eu-ES" target-language="eu-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="c3527078bab902efe0e19ac9875b795d">
+        <source>Follow Us</source>
+        <target>Follow Us</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_socialfollow/ps_socialfollow.tpl:32</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_contactinfo/nav.tpl" source-language="eu-ES" target-language="eu-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="857d4988711244bd271db0b19f165ebf">
+        <source>[1]%phone%[/1] </source>
+        <target>[1]%phone%[/1] </target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_contactinfo/nav.tpl:29</note>
+      </trans-unit>
+      <trans-unit id="02d4482d332e1aef3437cd61c9bcc624">
+        <source>Contact us</source>
+        <target>Contact us</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/modules/ps_contactinfo/nav.tpl:39</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl" source-language="eu-ES" target-language="eu-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="b845299e3d40aa3531fdc900b0be5f1b">
+        <source>Top categories</source>
+        <target>Top categories</target>
+        <note>Context:
+File: /var/www/html/prestashop/PRS01/PRS010051/themes/salon/templates/index.tpl:35</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
