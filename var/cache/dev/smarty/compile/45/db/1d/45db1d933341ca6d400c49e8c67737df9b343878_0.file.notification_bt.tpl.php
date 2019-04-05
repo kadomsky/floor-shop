@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-02-28 12:41:39
+/* Smarty version 3.1.33, created on 2019-04-04 12:25:46
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/gamification/views/templates/hook/notification_bt.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c77acd3e15bc5_33096318',
+  'unifunc' => 'content_5ca5cd9a431529_55925295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c77acd3e15bc5_33096318 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca5cd9a431529_55925295 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
 >
 	var current_id_tab = <?php echo intval($_smarty_tpl->tpl_vars['current_id_tab']->value);?>

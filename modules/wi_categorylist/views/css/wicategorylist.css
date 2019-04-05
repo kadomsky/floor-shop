@@ -146,6 +146,8 @@
 .wicategory-container .categoryblock .categoryimage img{
     width: 100%;
     height:auto;
+	max-width: 185px;
+	max-height: 210px;
 }
 .wicategory-container .categoryblock .block_content .categorylist .cate-heading a {
     color: #4f4f4f;
@@ -186,10 +188,10 @@
 .cate-description p strong{font-weight:normal;}
 .wicategory-container .customNavigation {
     top: 38%;
-    opacity: 0;
-    -khtml-opacity: 0;
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
+    opacity: 0.6;
+    -khtml-opacity: 0.6;
+    -webkit-opacity: 0.6;
+    -moz-opacity: 0.6;
     transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -208,12 +210,16 @@
     -o-transition: all 0.3s ease 0s;
 }
 .wicategory-container .customNavigation a.next {
-    right: -10px;
+    right: 10px;
     left: auto;
+	z-index: 99;
+	color: #999 !important;
 }
 .wicategory-container .customNavigation a.prev {
     right: auto;
-    left: -10px;
+    left: 10px;
+	z-index: 99;
+	color: #999 !important;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1289px)   {
     #categorylist_home {margin: 50px auto 20px;}

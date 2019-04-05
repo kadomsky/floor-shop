@@ -28,14 +28,14 @@
 {block name='head_ie_compatibility'}
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 {/block}
-
+<meta name="robots" content="noindex, nofollow" />
 {block name='head_seo'}
   <title>{block name='head_seo_title'}{$page.meta.title}{/block}</title>
   <meta name="description" content="{block name='head_seo_description'}{$page.meta.description}{/block}">
   <meta name="keywords" content="{block name='head_seo_keywords'}{$page.meta.keywords}{/block}">
-  {if $page.meta.robots !== 'index'}
+  {*if $page.meta.robots !== 'index'}
     <meta name="robots" content="{$page.meta.robots}">
-  {/if}
+  {/if*}
   {if $page.canonical}
     <link rel="canonical" href="{$page.canonical}">
   {/if}
@@ -66,7 +66,11 @@
 {block name='javascript_head'}
   {include file="_partials/javascript.tpl" javascript=$javascript.head vars=$js_custom_vars}
 {/block}
-<div id="wi-pageload"></div>
+<script type="text/javascript">
+document.write('<div id="wi-pageload"></div>');
+</script>
+<noscript><!--div id="wi-pageload"></div--></noscript>
+
 {block name='hook_header'}
   {$HOOK_HEADER nofilter}
 {/block}

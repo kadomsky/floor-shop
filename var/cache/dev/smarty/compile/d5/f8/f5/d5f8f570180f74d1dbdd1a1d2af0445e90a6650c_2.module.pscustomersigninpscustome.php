@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-02-28 12:41:54
+/* Smarty version 3.1.33, created on 2019-04-04 12:25:50
   from 'module:pscustomersigninpscustome' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c77ace2d84482_52871949',
+  'unifunc' => 'content_5ca5cd9ebe3be8_41588207',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c77ace2d84482_52871949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca5cd9ebe3be8_41588207 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_customersignin/ps_customersignin.tpl --><div id="_desktop_user_info">
 <div class="wi_userinfotitle"></div>
   <div class="user-info">

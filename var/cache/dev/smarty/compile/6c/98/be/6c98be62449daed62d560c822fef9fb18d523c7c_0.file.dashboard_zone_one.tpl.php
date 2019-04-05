@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-02-28 12:41:40
+/* Smarty version 3.1.33, created on 2019-04-04 12:25:46
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/psaddonsconnect/views/templates/hook/dashboard_zone_one.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c77acd4a471c1_68879053',
+  'unifunc' => 'content_5ca5cd9ab43898_34701859',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c77acd4a471c1_68879053 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca5cd9ab43898_34701859 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section id="psaddonsconnect" class="panel widget">
 	<div class="panel-heading">

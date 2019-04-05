@@ -36,9 +36,22 @@
         ]
         d='Shop.Theme.Global'
       }
+      </a>
     {else}
       <a href="{$urls.pages.contact}" title="{l s='Contact us' d='Shop.Theme.Global'}"><i class="fa fa-phone" aria-hidden="true"></i>{l s='Contact Us' d='Shop.Theme.Global'}</a>
     {/if}
-    </a>
+    <br>
+      {if $contact_infos.email}
+        {* [1][/1] is for a HTML tag. *}
+        {l
+          s='[1]%email%[/1]'
+          sprintf=[
+            '[1]' => '<a href="mailto:'|cat:$contact_infos.email|cat:'" class="dropdown"><i class="fa fa-envelope" aria-hidden="true"></i><span>',
+            '[/1]' => '</span></a>',
+            '%email%' => $contact_infos.email
+          ]
+          d='Shop.Theme.Global'
+        }
+      {/if}
   </div>
-  </div>
+</div>

@@ -109,6 +109,8 @@
     position: absolute;
     right: 0;
     font-size: 25px;
+	z-index: 99;
+	color: #999 !important;
 }
 .customNavigation a.next::before {
     content: "\f105";
@@ -116,7 +118,10 @@
     position: absolute;
     left: 0;
     font-size: 25px;
+	z-index: 99;
+	color: #999 !important;
 }
+
 .customNavigation a:hover {
     color: #e97b64 !important;
 }
@@ -146,4 +151,21 @@
 }
 @media (max-width: 543px) {
 
+}
+.wi_header_logo img {
+  max-height: 50px;
+}
+.social-sharing li a {
+    text-indent: 0;
+	text-align: center;
+}
+.social-sharing li a:hover {
+    color: gray;
+}
+.fa-ps-ak, .fa-ps-ak:before {
+  font: bold 25px/40px FontAwesome;
+  display: block;
+}
+.fa-moy-mir:before {
+    content: "@";
 }

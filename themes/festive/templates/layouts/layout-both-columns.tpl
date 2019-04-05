@@ -31,7 +31,7 @@
     {/block}
   </head>
 
-  <body id="{$page.page_name}" class="{$page.body_classes|classnames} scrolllock">
+  <body id="{$page.page_name}" class="{$page.body_classes|classnames}">
 
     {block name='hook_after_body_opening_tag'}
     {hook h='displayAfterBodyOpeningTag'}

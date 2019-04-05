@@ -66,7 +66,8 @@ html[xmlns] .wi-flexslider .slides {
 /* Flexslider Cms Block */
 
 .wi-flexslider .caption-description{
-  position: relative;
+    position: relative;
+	margin: 0 5%;
     color: #fff;
     font-size: 18px;
     line-height: 28px;
@@ -170,6 +171,7 @@ html[xmlns] .wi-flexslider .slides {
     font-weight: 400;
     border: 2px solid #e97b64;
     background: #e97b64;
+	border-radius: 16px;
 }
  .main_banner_btn a:hover{
     background: #000;

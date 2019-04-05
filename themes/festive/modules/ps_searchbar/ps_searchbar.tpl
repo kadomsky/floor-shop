@@ -24,9 +24,9 @@
 *}
 <!-- Block search module TOP -->
 <div id="search_widget" class="col-lg-4 col-md-5 col-sm-12 search-widget" data-search-controller-url="{$search_controller_url}">
-	<span class="search_button"></span>
-	<span class="close_button"></span>
-	<div class="search_toggle">
+	<!--span class="search_button"></span>
+	<span class="close_button"></span-->
+	<div class="search_no_toggle">
 	<form method="get" action="{$search_controller_url}">
 		<input type="hidden" name="controller" value="search">
 		<input type="text" name="s" value="{$search_string}" placeholder="{l s='Search our catalog' d='Shop.Theme.Catalog'}">

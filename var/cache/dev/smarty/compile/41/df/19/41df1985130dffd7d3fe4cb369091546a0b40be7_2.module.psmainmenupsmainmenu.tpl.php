@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-02-28 12:41:54
+/* Smarty version 3.1.33, created on 2019-04-04 12:25:50
   from 'module:psmainmenupsmainmenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c77ace2d5b083_72085085',
+  'unifunc' => 'content_5ca5cd9ecb10a0_15062232',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41df1985130dffd7d3fe4cb369091546a0b40be7' => 
     array (
       0 => 'module:psmainmenupsmainmenu.tpl',
-      1 => 1550645573,
+      1 => 1552634637,
       2 => 'module',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c77ace2d5b083_72085085 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ca5cd9ecb10a0_15062232 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'menu' => 
   array (
     'compiled_filepath' => '/home/a0280957/domains/shop.floor-shop.ru/public_html/var/cache/dev/smarty/compile/41/df/19/41df1985130dffd7d3fe4cb369091546a0b40be7_2.module.psmainmenupsmainmenu.tpl.php',
     'uid' => '41df1985130dffd7d3fe4cb369091546a0b40be7',
-    'call_name' => 'smarty_template_function_menu_18249827495c77ace2d460c5_53325629',
+    'call_name' => 'smarty_template_function_menu_15881506605ca5cd9ec9fd86_80683103',
   ),
 ));
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_mainmenu/ps_mainmenu.tpl --><?php $_smarty_tpl->_assignInScope('_counter', 0);?>
@@ -38,9 +38,9 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
     <div class="clearfix"></div>
 </div>
 <!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_mainmenu/ps_mainmenu.tpl --><?php }
-/* smarty_template_function_menu_18249827495c77ace2d460c5_53325629 */
-if (!function_exists('smarty_template_function_menu_18249827495c77ace2d460c5_53325629')) {
-function smarty_template_function_menu_18249827495c77ace2d460c5_53325629(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_menu_15881506605ca5cd9ec9fd86_80683103 */
+if (!function_exists('smarty_template_function_menu_15881506605ca5cd9ec9fd86_80683103')) {
+function smarty_template_function_menu_15881506605ca5cd9ec9fd86_80683103(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('nodes'=>array(),'depth'=>0,'parent'=>null), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -103,6 +103,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
               </div>
               <?php }?>
             </li>
+	<?php if ($_smarty_tpl->tpl_vars['depth']->value === 0 && $_smarty_tpl->tpl_vars['_counter']->value == count($_smarty_tpl->tpl_vars['nodes']->value)) {?>
+	<li class="search_toggle">
+	<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayNavSearch'),$_smarty_tpl ) );?>
+
+	</li>
+	<?php }?>
         <?php
 }
 }
@@ -110,5 +116,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </ul>
     <?php }
 }}
-/*/ smarty_template_function_menu_18249827495c77ace2d460c5_53325629 */
+/*/ smarty_template_function_menu_15881506605ca5cd9ec9fd86_80683103 */
 }

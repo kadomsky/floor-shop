@@ -24,7 +24,10 @@
 *}
 {if $wihomeslider.slides}
 	<div class="wi-flexslider" data-interval="{$wihomeslider.speed}" data-pause="{$wihomeslider.pause}">
-		<div class="wi-loading spinner"></div>
+<script type="text/javascript">
+document.write('<div class="wi-loading spinner"></div>');
+</script>
+<noscript><!--div class="wi-loading spinner"></div--></noscript>
 		<ul class="slides">
 			{foreach from=$wihomeslider.slides item=slide}
 				<li class="slide">

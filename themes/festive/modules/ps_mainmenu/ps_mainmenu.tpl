@@ -35,6 +35,11 @@
               </div>
               {/if}
             </li>
+	{if $depth === 0 && $_counter == $nodes|count}
+	<li class="search_toggle">
+	{hook h='displayNavSearch'}
+	</li>
+	{/if}
         {/foreach}
       </ul>
     {/if}
