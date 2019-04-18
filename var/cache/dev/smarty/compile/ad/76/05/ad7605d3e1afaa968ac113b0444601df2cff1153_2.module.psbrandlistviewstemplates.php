@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 14:07:48
+/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
   from 'module:psbrandlistviewstemplates' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5e58462fd67_09222613',
+  'unifunc' => 'content_5cb83f8e9c2ce9_82289366',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'module:ps_brandlist/views/templates/_partials/".((string)$_smarty_tpl->tpl_vars[\'brand_display_type\']->value).".tpl' => 1,
   ),
 ),false)) {
-function content_5ca5e58462fd67_09222613 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb83f8e9c2ce9_82289366 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_brandlist/views/templates/hook/ps_brandlist.tpl -->
 <div id="search_filters_brands" class="block">
   <h4 class="block_title hidden-md-down">

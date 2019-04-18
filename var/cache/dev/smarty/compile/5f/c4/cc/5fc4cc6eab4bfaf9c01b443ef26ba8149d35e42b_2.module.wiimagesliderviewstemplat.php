@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 14:07:40
+/* Smarty version 3.1.33, created on 2019-04-17 20:27:55
   from 'module:wiimagesliderviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5e57c9b99b1_59376562',
+  'unifunc' => 'content_5cb7621b1b2596_80828983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5e57c9b99b1_59376562 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb7621b1b2596_80828983 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_imageslider/views/templates/hook/slider.tpl --><?php if ($_smarty_tpl->tpl_vars['wihomeslider']->value['slides']) {?>
 	<div class="wi-flexslider" data-interval="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wihomeslider']->value['speed'], ENT_QUOTES, 'UTF-8');?>
 " data-pause="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wihomeslider']->value['pause'], ENT_QUOTES, 'UTF-8');?>

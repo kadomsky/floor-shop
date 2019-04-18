@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 14:07:48
+/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
   from 'module:psbrandlistviewstemplates' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5e5846377d0_08756739',
+  'unifunc' => 'content_5cb83f8e9cb906_75514235',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5e5846377d0_08756739 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb83f8e9cb906_75514235 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_brandlist/views/templates/_partials/brand_text.tpl -->
 <ul>
   <?php

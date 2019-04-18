@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:50
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from 'module:psviewedproductviewstempl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9edb3810_75522066',
+  'unifunc' => 'content_5cb6e93b52c7b7_35391397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product.tpl' => 1,
   ),
 ),false)) {
-function content_5ca5cd9edb3810_75522066 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b52c7b7_35391397 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/ps_viewedproduct/views/templates/hook/ps_viewedproduct.tpl -->
 <section class="featured-products clearfix">
   <h2><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Viewed products','d'=>'Modules.Viewedproduct.Shop'),$_smarty_tpl ) );?>

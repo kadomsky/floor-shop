@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:51
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from 'module:pscontactinfopscontactinf' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9f13e3a6_16213793',
+  'unifunc' => 'content_5cb6e93b88b792_77013749',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5cd9f13e3a6_16213793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b88b792_77013749 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_contactinfo/ps_contactinfo.tpl -->
 <div class="block-contact col-md-4 links wrapper">
   

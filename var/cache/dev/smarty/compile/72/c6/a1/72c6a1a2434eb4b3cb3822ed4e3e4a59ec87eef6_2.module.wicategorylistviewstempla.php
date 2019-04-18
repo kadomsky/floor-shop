@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 14:07:40
+/* Smarty version 3.1.33, created on 2019-04-17 20:27:55
   from 'module:wicategorylistviewstempla' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5e57ca15a57_94366433',
+  'unifunc' => 'content_5cb7621b207400_74525262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5e57ca15a57_94366433 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb7621b207400_74525262 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl -->
 
 

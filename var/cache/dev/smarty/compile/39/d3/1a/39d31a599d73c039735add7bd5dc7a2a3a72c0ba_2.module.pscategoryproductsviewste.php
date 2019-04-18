@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:50
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from 'module:pscategoryproductsviewste' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9ef0d567_07203829',
+  'unifunc' => 'content_5cb6e93b747f36_03743896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product.tpl' => 1,
   ),
 ),false)) {
-function content_5ca5cd9ef0d567_07203829 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b747f36_03743896 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_categoryproducts/views/templates/hook/ps_categoryproducts.tpl --><section class="wi-productscategory-products clearfix mt-3">
 	<div class="products-tab-content">
 	<h2 class="h1 products-section-title text-uppercase">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:50
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/productcomments/productcomments_reviews.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9ede4d23_62198713',
+  'unifunc' => 'content_5cb6e93b56dfb4_95402479',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5cd9ede4d23_62198713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b56dfb4_95402479 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="comments_note">
     <!-- <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['averageTotal']->value > 0 && Configuration::get('PRODUCT_COMMENTS_LIST') == 1, ENT_QUOTES, 'UTF-8');?>
  -->

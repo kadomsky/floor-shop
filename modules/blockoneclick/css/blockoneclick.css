@@ -1,0 +1,18 @@
+div#leftBlockOneClick {
+	float: left;
+}
+div#rightBlockOneClick {
+	float: right;
+}
+div#leftBlockOneClick, div#rightBlockOneClick {
+	padding: 18px;
+	width: 50%;
+	margin: 0;
+}
+.oneClickButton {
+  width: 100%;
+  cursor: pointer;
+}
+form.oneClickSendMessage input {
+	z-index: 9001;
+}

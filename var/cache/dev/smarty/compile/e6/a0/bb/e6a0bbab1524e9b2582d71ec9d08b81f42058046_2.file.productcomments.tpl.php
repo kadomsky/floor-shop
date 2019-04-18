@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:51
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/productcomments/productcomments.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9f09b9e8_20253756',
+  'unifunc' => 'content_5cb6e93b803485_44058338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5cd9f09b9e8_20253756 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b803485_44058338 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/javascript">
     var productcomments_controller_url = '<?php echo $_smarty_tpl->tpl_vars['productcomments_controller_url']->value;?>

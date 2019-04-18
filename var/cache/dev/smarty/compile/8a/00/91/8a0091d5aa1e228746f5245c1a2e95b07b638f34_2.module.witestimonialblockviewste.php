@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 14:07:40
+/* Smarty version 3.1.33, created on 2019-04-17 20:27:54
   from 'module:witestimonialblockviewste' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5e57c0dff50_78574030',
+  'unifunc' => 'content_5cb7621a928486_71566896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5e57c0dff50_78574030 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb7621a928486_71566896 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_testimonialblock/views/templates/hook/wi_testimonialblock.tpl -->
 <div id="wi-testimonialblock">
 <div class="container">

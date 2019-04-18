@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-04 12:25:51
+/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
   from 'module:pssocialfollowpssocialfol' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ca5cd9f0ea7e4_45474884',
+  'unifunc' => 'content_5cb6e93b84ac08_46639116',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,24 +20,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ca5cd9f0ea7e4_45474884 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cb6e93b84ac08_46639116 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
 <!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_socialfollow/ps_socialfollow.tpl -->
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3905827625ca5cd9f0e77b4_00772396', 'block_social');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15325967705cb6e93b847c83_58296801', 'block_social');
 ?>
 
 <!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_socialfollow/ps_socialfollow.tpl --><?php }
 /* {block 'block_social'} */
-class Block_3905827625ca5cd9f0e77b4_00772396 extends Smarty_Internal_Block
+class Block_15325967705cb6e93b847c83_58296801 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'block_social' => 
   array (
-    0 => 'Block_3905827625ca5cd9f0e77b4_00772396',
+    0 => 'Block_15325967705cb6e93b847c83_58296801',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
