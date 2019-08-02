@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:41
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb83f8e8dc065_27198709',
+  'unifunc' => 'content_5d4296c5ed1197_06330506',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0331d9121533210134fb0ec77726df5d037f54aa' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/header.tpl',
-      1 => 1553066872,
+      1 => 1564222119,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb83f8e8dc065_27198709 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c5ed1197_06330506 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10036331935cb83f8e8d7e69_86608808', 'header_nav');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13527922875d4296c5eca390_08951045', 'header_nav');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17816637265cb83f8e8d9702_35975969', 'header_top');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21220368715d4296c5ecd116_59829880', 'header_top');
 }
 /* {block 'header_nav'} */
-class Block_10036331935cb83f8e8d7e69_86608808 extends Smarty_Internal_Block
+class Block_13527922875d4296c5eca390_08951045 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_nav' => 
   array (
-    0 => 'Block_10036331935cb83f8e8d7e69_86608808',
+    0 => 'Block_13527922875d4296c5eca390_08951045',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,12 +93,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_nav'} */
 /* {block 'header_top'} */
-class Block_17816637265cb83f8e8d9702_35975969 extends Smarty_Internal_Block
+class Block_21220368715d4296c5ecd116_59829880 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_top' => 
   array (
-    0 => 'Block_17816637265cb83f8e8d9702_35975969',
+    0 => 'Block_21220368715d4296c5ecd116_59829880',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -107,8 +107,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 	<div class="header-top">
 		<div class="container">
 		<div class="row">
-			<div class="header-logo col-md-4 col-lg-6">
-				<div class="main-logo col-md-12 col-lg-5 col-sm-12">
+			<div class="header-logo col-sm-4 col-md-4 col-lg-3">
+				<div class="main-logo">
 					<div class="wi_header_logo">
 					<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
 ">
@@ -118,22 +118,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 					</a>
 					</div>
 				</div>
-				<div class="main-slogan hidden-sm-down col-md-12 col-lg-7">
-					<div class="wi_header_slogan">
-					<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['urls']->value['base_url'], ENT_QUOTES, 'UTF-8');?>
-" class="hidden-md-down">
-					Старейший интернет-магазин напольных покрытий в России
-					</a><div id="contact-link-slogan"></div>
-					</div>
+			</div>
+			<div class="main-slogan hidden-sm-down hidden-md-down col-lg-2">
+				<div class="wi_header_slogan">
+					<div id="contact-link-slogan"></div>
 				</div>
 			</div>
-			<div class="header-center col-md-8 col-lg-6">
+			<div class="header-center col-sm-8 col-md-8 col-lg-7">
 				<div class="header-menu">
 				<div class="container">
 				<div class="row">
 				<div id="mobile_top_menu_wrapper" class="row hidden-lg-up">
 					<div class="menu-icon">
-					<div class="menu-title"> <i class="fa fa-bars" aria-hidden="true"></i><span>Category</span></div>
+					<div class="menu-title"> <i class="fa fa-bars" aria-hidden="true"></i><span>Меню</span></div>
 					</div>
 					<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
 					<div class="menu-icon">
@@ -147,7 +144,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				</div>
 				</div>
 			</div>
-
 		</div>
 		</div>
 	</div>	

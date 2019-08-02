@@ -161,10 +161,16 @@ class PsblogblogModuleFrontController extends ModuleFrontController
             $blog = PsBlogBlog::findByRewrite(array('link_rewrite'=>$url_rewrite));
         }
 
+		$breadcrumb = parent::getBreadcrumb();
+
         if (!$blog->id_psblog_blog) {
             $full_path = '<a href="'.$helper->getFontBlogLink().'">'.htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8').'</a>';
+			$breadcrumb['links'][] = ['title' => htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8'),
+			'url' => $helper->getFontBlogLink()];
+
             $vars = array(
                 'error' => true,
+				'breadcrumb' => $breadcrumb,
                 'path' => $full_path
             );
             $this->context->smarty->assign($vars);
@@ -234,10 +240,20 @@ class PsblogblogModuleFrontController extends ModuleFrontController
         );
 
         $category_link = $helper->getBlogCatLink($params);
-        $full_path = '<a href="'.$helper->getFontBlogLink().'">'.htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8')
-                .'</a><span class="navigation-pipe">'.Configuration::get('PS_NAVIGATION_PIPE').'</span>';
+        $full_path = '<a href="'.$helper->getFontBlogLink().'">'.htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8').'</a><span class="navigation-pipe">'.Configuration::get('PS_NAVIGATION_PIPE').'</span>';
+
+		$breadcrumb['links'][] = ['title' => htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8'),
+		'url' => $helper->getFontBlogLink()];
+
         $full_path .= '<a href="'.Tools::safeOutput($category_link).'">'.htmlentities($category->title, ENT_NOQUOTES, 'UTF-8').'</a><span class="navigation-pipe">'.Configuration::get('PS_NAVIGATION_PIPE').'</span>'.$blog->meta_title;
-        $limit = 5;
+
+		$breadcrumb['links'][] = ['title' => htmlentities($category->title, ENT_NOQUOTES, 'UTF-8'),
+		'url' => Tools::safeOutput($category_link)];
+
+		$breadcrumb['links'][] = ['title' => $blog->meta_title,
+		'url' => '#'];
+
+		$limit = 5;
 
         $samecats = PsBlogBlog::getListBlogs($category->id_psblogcat, $this->context->language->id, 0, $limit, 'date_add', 'DESC', array('type' => 'samecat', 'id_psblog_blog' => $blog->id_psblog_blog), true);
         foreach ($samecats as $key => $sblog) {
@@ -315,6 +331,7 @@ class PsblogblogModuleFrontController extends ModuleFrontController
             'samecats' => $samecats,
             'tagrelated' => $tagrelated,
             'path' => $full_path,
+			'breadcrumb' => $breadcrumb,
             'config' => $config,
             'id_psblog_blog' => $blog->id_psblog_blog,
             'is_active' => $blog->active,

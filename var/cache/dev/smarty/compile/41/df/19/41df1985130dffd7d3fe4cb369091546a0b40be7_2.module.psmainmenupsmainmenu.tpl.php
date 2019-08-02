@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
   from 'module:psmainmenupsmainmenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb6e93b3d1b72_32329423',
+  'unifunc' => 'content_5d4296c6123348_44046018',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41df1985130dffd7d3fe4cb369091546a0b40be7' => 
     array (
       0 => 'module:psmainmenupsmainmenu.tpl',
-      1 => 1552634637,
+      1 => 1564050768,
       2 => 'module',
     ),
   ),
@@ -20,27 +20,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb6e93b3d1b72_32329423 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c6123348_44046018 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'menu' => 
   array (
     'compiled_filepath' => '/home/a0280957/domains/shop.floor-shop.ru/public_html/var/cache/dev/smarty/compile/41/df/19/41df1985130dffd7d3fe4cb369091546a0b40be7_2.module.psmainmenupsmainmenu.tpl.php',
     'uid' => '41df1985130dffd7d3fe4cb369091546a0b40be7',
-    'call_name' => 'smarty_template_function_menu_5499068955cb6e93b3b5e42_92770533',
+    'call_name' => 'smarty_template_function_menu_15194352295d4296c60fe136_98076487',
   ),
 ));
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_mainmenu/ps_mainmenu.tpl --><?php $_smarty_tpl->_assignInScope('_counter', 0);?>
 
 
-<div class="menu col-lg-8 col-md-7 js-top-menu position-static hidden-sm-down" id="_desktop_top_menu">
+<div class="menu js-top-menu position-static hidden-sm-down" id="_desktop_top_menu">
     <?php $_smarty_tpl->smarty->ext->_tplFunction->callTemplateFunction($_smarty_tpl, 'menu', array('nodes'=>$_smarty_tpl->tpl_vars['menu']->value['children']), true);?>
 
     <div class="clearfix"></div>
 </div>
 <!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_mainmenu/ps_mainmenu.tpl --><?php }
-/* smarty_template_function_menu_5499068955cb6e93b3b5e42_92770533 */
-if (!function_exists('smarty_template_function_menu_5499068955cb6e93b3b5e42_92770533')) {
-function smarty_template_function_menu_5499068955cb6e93b3b5e42_92770533(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_menu_15194352295d4296c60fe136_98076487 */
+if (!function_exists('smarty_template_function_menu_15194352295d4296c60fe136_98076487')) {
+function smarty_template_function_menu_15194352295d4296c60fe136_98076487(Smarty_Internal_Template $_smarty_tpl,$params) {
 $params = array_merge(array('nodes'=>array(),'depth'=>0,'parent'=>null), $params);
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
@@ -116,5 +116,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
       </ul>
     <?php }
 }}
-/*/ smarty_template_function_menu_5499068955cb6e93b3b5e42_92770533 */
+/*/ smarty_template_function_menu_15194352295d4296c60fe136_98076487 */
 }

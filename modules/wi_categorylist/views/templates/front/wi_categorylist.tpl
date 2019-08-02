@@ -56,12 +56,16 @@
 								{if isset($wicategoryinfo.cate_id) && $wicategoryinfo.cate_id}
 									{if $wicategoryinfo.id == $wicategoryinfo.cate_id.id_category}
 										<div class="categoryimage">
-											<img src="{$image_url}/{$wicategoryinfo.cate_id.image}" alt="" class="img-responsive"/>
+										<a href="{$link->getCategoryLink($wicategoryinfo.category->id_category, $wicategoryinfo.category->link_rewrite)}">
+											<img src="{$image_url}/{$wicategoryinfo.cate_id.image}" alt="" class="img-responsive" border="0" />
+										</a>
 										</div>
 									{/if}
 									{else}
 										<div class="categoryimage">
-												<img src="img/cms/Cat-img.jpg" alt="" class="img-responsive"/>
+										<a href="{$link->getCategoryLink($wicategoryinfo.category->id_category, $wicategoryinfo.category->link_rewrite)}">
+											<img src="img/cms/Cat-img.jpg" alt="" class="img-responsive" border="0" />
+										</a>
 										</div>
 								{/if}
 								

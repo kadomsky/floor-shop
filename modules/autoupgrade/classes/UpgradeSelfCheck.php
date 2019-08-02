@@ -24,6 +24,7 @@
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
+
 namespace PrestaShop\Module\AutoUpgrade;
 
 use Configuration;
@@ -32,9 +33,19 @@ use ConfigurationTest;
 class UpgradeSelfCheck
 {
     /**
+     * Recommended PHP Version. If below, display a notice.
+     */
+    const RECOMMENDED_PHP_VERSION = 70103;
+
+    /**
      * @var bool
      */
     private $fOpenOrCurlEnabled;
+
+    /**
+     * @var bool
+     */
+    private $zipEnabled;
 
     /**
      * @var bool
@@ -74,7 +85,7 @@ class UpgradeSelfCheck
     /**
      * @var string
      */
-    private $rootWritableReport = '';
+    private $rootWritableReport;
 
     /**
      * @var false|string
@@ -87,6 +98,13 @@ class UpgradeSelfCheck
     private $maxExecutionTime;
 
     /**
+     * Warning flag for an old running PHP server.
+     *
+     * @var bool
+     */
+    private $phpUpgradeNoticelink;
+
+    /**
      * @var bool
      */
     private $prestashopReady;
@@ -95,6 +113,32 @@ class UpgradeSelfCheck
      * @var string
      */
     private $configDir = '/modules/autoupgrade/config.xml';
+
+    /**
+     * @var Upgrader
+     */
+    private $upgrader;
+
+    /**
+     * Path to the root folder of PS
+     *
+     * @var string
+     */
+    private $prodRootPath;
+
+    /**
+     * Path to the admin folder of PS
+     *
+     * @var string
+     */
+    private $adminPath;
+
+    /**
+     * Path to the root folder of the upgrade module
+     *
+     * @var string
+     */
+    private $autoUpgradePath;
 
     /**
      * UpgradeSelfCheck constructor.
@@ -106,16 +150,10 @@ class UpgradeSelfCheck
      */
     public function __construct(Upgrader $upgrader, $prodRootPath, $adminPath, $autoUpgradePath)
     {
-        $this->moduleVersion = $this->checkModuleVersion();
-        $this->fOpenOrCurlEnabled = ConfigurationTest::test_fopen() || extension_loaded('curl');
-        $this->rootDirectoryWritable = $this->checkRootWritable();
-        $this->adminAutoUpgradeDirectoryWritable = $this->checkAdminDirectoryWritable($prodRootPath, $adminPath, $autoUpgradePath);
-        $this->shopDeactivated = $this->checkShopIsDeactivated();
-        $this->cacheDisabled = !(defined('_PS_CACHE_ENABLED_') && _PS_CACHE_ENABLED_);
-        $this->safeModeDisabled = $this->checkSafeModeIsDisabled();
-        $this->moduleVersionIsLatest = $this->checkModuleVersionIsLastest($upgrader);
-        $this->maxExecutionTime = $this->checkMaxExecutionTime();
-        $this->prestashopReady = $this->runPrestaShopCoreChecks();
+        $this->upgrader = $upgrader;
+        $this->prodRootPath = $prodRootPath;
+        $this->adminPath = $adminPath;
+        $this->autoUpgradePath = $autoUpgradePath;
     }
 
     /**
@@ -123,7 +161,23 @@ class UpgradeSelfCheck
      */
     public function isFOpenOrCurlEnabled()
     {
-        return $this->fOpenOrCurlEnabled;
+        if (null !== $this->fOpenOrCurlEnabled) {
+            return $this->fOpenOrCurlEnabled;
+        }
+
+        return $this->fOpenOrCurlEnabled = ConfigurationTest::test_fopen() || extension_loaded('curl');
+    }
+
+    /**
+     * @return bool
+     */
+    public function isZipEnabled()
+    {
+        if (null !== $this->zipEnabled) {
+            return $this->zipEnabled;
+        }
+
+        return $this->zipEnabled = extension_loaded('zip');
     }
 
     /**
@@ -131,7 +185,11 @@ class UpgradeSelfCheck
      */
     public function isRootDirectoryWritable()
     {
-        return $this->rootDirectoryWritable;
+        if (null !== $this->rootDirectoryWritable) {
+            return $this->rootDirectoryWritable;
+        }
+
+        return $this->rootDirectoryWritable = $this->checkRootWritable();
     }
 
     /**
@@ -139,7 +197,11 @@ class UpgradeSelfCheck
      */
     public function isAdminAutoUpgradeDirectoryWritable()
     {
-        return $this->adminAutoUpgradeDirectoryWritable;
+        if (null !== $this->adminAutoUpgradeDirectoryWritable) {
+            return $this->adminAutoUpgradeDirectoryWritable;
+        }
+
+        return $this->adminAutoUpgradeDirectoryWritable = $this->checkAdminDirectoryWritable($this->prodRootPath, $this->adminPath, $this->autoUpgradePath);
     }
 
     /**
@@ -155,7 +217,11 @@ class UpgradeSelfCheck
      */
     public function isShopDeactivated()
     {
-        return $this->shopDeactivated;
+        if (null !== $this->shopDeactivated) {
+            return $this->shopDeactivated;
+        }
+
+        return $this->shopDeactivated = $this->checkShopIsDeactivated();
     }
 
     /**
@@ -163,7 +229,11 @@ class UpgradeSelfCheck
      */
     public function isCacheDisabled()
     {
-        return $this->cacheDisabled;
+        if (null !== $this->cacheDisabled) {
+            return $this->cacheDisabled;
+        }
+
+        return $this->cacheDisabled = !(defined('_PS_CACHE_ENABLED_') && false != _PS_CACHE_ENABLED_);
     }
 
     /**
@@ -171,7 +241,11 @@ class UpgradeSelfCheck
      */
     public function isSafeModeDisabled()
     {
-        return $this->safeModeDisabled;
+        if (null !== $this->safeModeDisabled) {
+            return $this->safeModeDisabled;
+        }
+
+        return $this->safeModeDisabled = $this->checkSafeModeIsDisabled();
     }
 
     /**
@@ -179,7 +253,11 @@ class UpgradeSelfCheck
      */
     public function isModuleVersionLatest()
     {
-        return $this->moduleVersionIsLatest;
+        if (null !== $this->moduleVersionIsLatest) {
+            return $this->moduleVersionIsLatest;
+        }
+
+        return $this->moduleVersionIsLatest = $this->checkModuleVersionIsLastest($this->upgrader);
     }
 
     /**
@@ -187,6 +265,13 @@ class UpgradeSelfCheck
      */
     public function getRootWritableReport()
     {
+        if (null !== $this->rootWritableReport) {
+            return $this->rootWritableReport;
+        }
+
+        $this->rootWritableReport = '';
+        $this->isRootDirectoryWritable();
+
         return $this->rootWritableReport;
     }
 
@@ -195,7 +280,11 @@ class UpgradeSelfCheck
      */
     public function getModuleVersion()
     {
-        return $this->moduleVersion;
+        if (null !== $this->moduleVersion) {
+            return $this->moduleVersion;
+        }
+
+        return $this->moduleVersion = $this->checkModuleVersion();
     }
 
     /**
@@ -211,12 +300,39 @@ class UpgradeSelfCheck
      */
     public function getMaxExecutionTime()
     {
-        return $this->maxExecutionTime;
+        if (null !== $this->maxExecutionTime) {
+            return $this->maxExecutionTime;
+        }
+
+        return $this->maxExecutionTime = $this->checkMaxExecutionTime();
     }
 
+    /**
+     * @return bool
+     */
+    public function isPhpUpgradeRequired()
+    {
+        if (1 === (int) Configuration::get('PS_AUTOUP_IGNORE_PHP_UPGRADE')) {
+            return false;
+        }
+
+        if (null !== $this->phpUpgradeNoticelink) {
+            return $this->phpUpgradeNoticelink;
+        }
+
+        return $this->phpUpgradeNoticelink = $this->checkPhpVersionNeedsUpgrade();
+    }
+
+    /**
+     * @return bool
+     */
     public function isPrestaShopReady()
     {
-        return $this->prestashopReady || 1 === Configuration::get('PS_AUTOUP_IGNORE_REQS');
+        if (null === $this->prestashopReady) {
+            $this->prestashopReady = $this->runPrestaShopCoreChecks();
+        }
+
+        return $this->prestashopReady || 1 === (int) Configuration::get('PS_AUTOUP_IGNORE_REQS');
     }
 
     /**
@@ -228,6 +344,7 @@ class UpgradeSelfCheck
     {
         return
             $this->isFOpenOrCurlEnabled()
+            && $this->isZipEnabled()
             && $this->isRootDirectoryWritable()
             && $this->isAdminAutoUpgradeDirectoryWritable()
             && $this->isShopDeactivated()
@@ -252,7 +369,7 @@ class UpgradeSelfCheck
      */
     private function checkModuleVersionIsLastest(Upgrader $upgrader)
     {
-        return version_compare($this->moduleVersion, $upgrader->autoupgrade_last_version, '>=');
+        return version_compare($this->getModuleVersion(), $upgrader->autoupgrade_last_version, '>=');
     }
 
     /**
@@ -270,13 +387,23 @@ class UpgradeSelfCheck
     }
 
     /**
+     * Check current PHP version is supported.
+     *
+     * @return bool
+     */
+    private function checkPhpVersionNeedsUpgrade()
+    {
+        return PHP_VERSION_ID < self::RECOMMENDED_PHP_VERSION;
+    }
+
+    /**
      * @return bool
      */
     private function checkShopIsDeactivated()
     {
         return
             !Configuration::get('PS_SHOP_ENABLE')
-            || (isset($_SERVER['HTTP_HOST']) && in_array($_SERVER['HTTP_HOST'], array('127.0.0.1', 'localhost')));
+            || (isset($_SERVER['HTTP_HOST']) && in_array($_SERVER['HTTP_HOST'], array('127.0.0.1', 'localhost', '[::1]')));
     }
 
     /**

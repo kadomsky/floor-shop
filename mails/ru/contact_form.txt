@@ -1,19 +1,17 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Обращение в клиентскую службу
-магазина {shop_name} 
+Your message has been sent successfully, thank you for taking the time to write!
 
-Ваше сообщение отправлено.
+Order ID #:  {order_name}
 
-НОМЕР ЗАКАЗА: {order_name}
+Товар:  {product_name}
 
-ТОВАР: {product_name}
+Прикрепленный файл: {attached_file}
 
-ПРИКРЕПЛЕННЫЙ ФАЙЛ: {attached_file} 		 
+We will reply as soon as possible.
 
-Мы ответим как можно скорее. 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

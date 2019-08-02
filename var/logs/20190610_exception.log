@@ -1,0 +1,8 @@
+*ERROR* 	v1.7.5.1	2019/06/10 - 16:08:35: Duplicate entry '27-1-7' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `psf_customized_data` (`id_customization`, `type`, `index`, `value`)
+            VALUES (27, 1, 7, '2')</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/06/10 - 17:02:29: Duplicate entry '27-1-7' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `psf_customized_data` (`id_customization`, `type`, `index`, `value`)
+            VALUES (27, 1, 7, '2')</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/06/10 - 17:13:00: Duplicate entry '27-1-7' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `psf_customized_data` (`id_customization`, `type`, `index`, `value`)
+            VALUES (27, 1, 7, '2')</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/06/10 - 17:41:58: Duplicate entry '27-1-7' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `psf_customized_data` (`id_customization`, `type`, `index`, `value`)
+            VALUES (27, 1, 7, '2')</pre> at line 769 in file classes/db/Db.php

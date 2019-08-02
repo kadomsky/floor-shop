@@ -1,26 +1,21 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Ваша корзина в магазине {shop_name}
 
-Мы заметили что во время последнего
-посещения {shop_name}, вы не закончили
-начатое оформление заказа.
+Thanks for your visit. However, it looks like you did not complete your purchase.
 
-Ваша корзина была сохранена, можете
-продолжить оформление заказа, посетив
-наш магазин: {shop_url} [{shop_url}]
+Your cart has been saved, you can go back to your order on our shop: {shop_url}
 
-В качестве стимула мы даем вам скидку
-в {amount}% на следующий заказ!
-Предложение действует {days} дней, так
-что не теряйте время! 		 
+We are pleased to offer you a discount of {amount}% off your next order. And this offer is valid for {days} days, so do not wait any longer!
 
-ВАШ КУПОН: {voucher_num}
+Your voucher code on {shop_name}
 
-Для получения скидки введите данный
-код в корзине. 		 
+Here is your VOUCHER CODE: {voucher_num}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+Enter this code in your shopping cart to get the discount.
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

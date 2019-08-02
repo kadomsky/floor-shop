@@ -162,6 +162,8 @@ class PsblogcategoryModuleFrontController extends ModuleFrontController
             );
 
             /* breadcrumb */
+			$breadcrumb = parent::getBreadcrumb();
+
             $r = $helper->getPaginationLink('module-psblog-category', 'category', $params, false, true);
             $path = '';
             $all_cats = array();
@@ -171,15 +173,21 @@ class PsblogcategoryModuleFrontController extends ModuleFrontController
                 if ($cat->id == 1) {
                     # validate module
                     $path .= '<a href="'.$helper->getFontBlogLink().'">'.htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8').'</a><span class="navigation-pipe">'.Configuration::get('PS_NAVIGATION_PIPE').'</span>';
+					$breadcrumb['links'][] = ['title' => htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8'),
+					'url' => $helper->getFontBlogLink()];
                 } elseif ((count($all_cats) - 1) == $key) {
                     # validate module
                     $path .= $cat->title;
+					$breadcrumb['links'][] = ['title' => $cat->title,
+					'url' => '#'];
                 } else {
                     $params = array(
                         'rewrite' => $cat->link_rewrite,
                         'id' => $cat->id
                     );
                     $path .= '<a href="'.$helper->getBlogCatLink($params).'">'.htmlentities($cat->title, ENT_NOQUOTES, 'UTF-8').'</a><span class="navigation-pipe">'.Configuration::get('PS_NAVIGATION_PIPE').'</span>';
+					$breadcrumb['links'][] = ['title' => htmlentities($cat->title, ENT_NOQUOTES, 'UTF-8'),
+					'url' => $helper->getBlogCatLink($params)];
                 }
             }
             /* sub categories */
@@ -214,6 +222,7 @@ class PsblogcategoryModuleFrontController extends ModuleFrontController
                 'childrens' => $childrens,
                 'stop' => $stop,
                 'path' => $path,
+				'breadcrumb' => $breadcrumb,
                 'pages_nb' => $pages_nb,
                 'nb_items' => $count,
                 'p' => (int)$p,

@@ -1,19 +1,13 @@
+{shop_url}
 
-[{shop_url}] 
+Поздравляем!
 
-Поздравляем! 
+Your referred friend {sponsored_firstname} {sponsored_lastname} has placed his/her first order on [{shop_name}]({shop_url})!
 
-Ваш спонсируемый друг {sponsored_firstname}
-{sponsored_lastname} совершил свой первый заказ
-в магазине {shop_name} [{shop_url}]!
+We are pleased to offer you a voucher worth {discount_display} (VOUCHER # {discount_name}) that you can use on your next order.
 
-Мы рады предложить вам купон
-достоинством {discount_display} (КУПОН №
-{discount_name}) который вы можете
-использовать в следующем заказе. 		 
+С наилучшими пожеланиями,
 
-С наилучшими пожеланиями, 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

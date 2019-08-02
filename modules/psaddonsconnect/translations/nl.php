@@ -1,4 +1,5 @@
 <?php
+
 global $_MODULE;
 $_MODULE = array();
 $_MODULE['<{psaddonsconnect}prestashop>psaddonsconnect_59c29985e3ebd042bef35631307d47a2'] = 'Updates & tips';

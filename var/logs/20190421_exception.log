@@ -1,0 +1,64 @@
+*ERROR* 	v1.7.5.1	2019/04/21 - 12:33:33: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                    GROUP BY
+                        pac.id_product_attribute
+' at line 8<br /><br /><pre>
+                    SELECT
+                        pac.`id_product_attribute`
+                    FROM
+                        `psf_product_attribute_combination` pac
+                        INNER JOIN `psf_product_attribute` pa ON pa.id_product_attribute = pac.id_product_attribute
+                    WHERE
+                        pa.id_product = 4065
+                        AND pac.id_attribute IN ()
+                    GROUP BY
+                        pac.id_product_attribute
+                    HAVING
+                        COUNT(pa.id_product) = 0 LIMIT 1</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/04/21 - 13:13:56: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                    GROUP BY
+                        pac.id_product_attribute
+' at line 8<br /><br /><pre>
+                    SELECT
+                        pac.`id_product_attribute`
+                    FROM
+                        `psf_product_attribute_combination` pac
+                        INNER JOIN `psf_product_attribute` pa ON pa.id_product_attribute = pac.id_product_attribute
+                    WHERE
+                        pa.id_product = 4065
+                        AND pac.id_attribute IN ()
+                    GROUP BY
+                        pac.id_product_attribute
+                    HAVING
+                        COUNT(pa.id_product) = 0 LIMIT 1</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/04/21 - 13:24:30: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                    GROUP BY
+                        pac.id_product_attribute
+' at line 8<br /><br /><pre>
+                    SELECT
+                        pac.`id_product_attribute`
+                    FROM
+                        `psf_product_attribute_combination` pac
+                        INNER JOIN `psf_product_attribute` pa ON pa.id_product_attribute = pac.id_product_attribute
+                    WHERE
+                        pa.id_product = 4065
+                        AND pac.id_attribute IN ()
+                    GROUP BY
+                        pac.id_product_attribute
+                    HAVING
+                        COUNT(pa.id_product) = 0 LIMIT 1</pre> at line 769 in file classes/db/Db.php
+*ERROR* 	v1.7.5.1	2019/04/21 - 13:24:39: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')
+                    GROUP BY
+                        pac.id_product_attribute
+' at line 8<br /><br /><pre>
+                    SELECT
+                        pac.`id_product_attribute`
+                    FROM
+                        `psf_product_attribute_combination` pac
+                        INNER JOIN `psf_product_attribute` pa ON pa.id_product_attribute = pac.id_product_attribute
+                    WHERE
+                        pa.id_product = 4065
+                        AND pac.id_attribute IN ()
+                    GROUP BY
+                        pac.id_product_attribute
+                    HAVING
+                        COUNT(pa.id_product) = 0 LIMIT 1</pre> at line 769 in file classes/db/Db.php

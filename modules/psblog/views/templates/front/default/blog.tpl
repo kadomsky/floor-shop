@@ -143,6 +143,7 @@
 
 				{/if}
 				<div class="blog-comment-block">
+				{if $config->get('item_show_comments','1')}
 				{if $config->get('item_comment_engine','local')=='facebook'}
 					{include file="module:psblog/views/templates/front/default/_facebook_comment.tpl"}
 				{elseif $config->get('item_comment_engine','local')=='diquis'}
@@ -150,6 +151,7 @@
 				
 				{else}
 					{include file="module:psblog/views/templates/front/default/_local_comment.tpl"}
+				{/if}
 				{/if}
 				</div>	
 				{else}

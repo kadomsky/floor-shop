@@ -725,7 +725,8 @@ pre code {
     display: table;
     clear: both;
 }
-/*
+
+
 @media (min-width: 544px) {
     .container {
         max-width: 576px;
@@ -751,7 +752,7 @@ pre code {
         max-width: 1400px;
     }
 }
-*/
+
 .container-fluid {
     margin-left: auto;
     margin-right: auto;
@@ -4506,6 +4507,11 @@ tbody.collapse.in {
 .breadcrumb-item.active {
     color: #ebebeb;
 }
+.navigation-pipe {
+  color: white;
+  padding: 0 4px 0 4px;
+  font-size: 18px;
+}
 .pagination {
     display: inline-block;
     padding-left: 0;
@@ -7222,7 +7228,7 @@ textarea:active:-moz-placeholder {
 #header .search-widget {
     padding: 0;
     height: 23px;
-    width: 35px;
+    width: 200px;
     margin: 0;
     z-index: 99;
     float: right;
@@ -7378,7 +7384,7 @@ textarea:active:-moz-placeholder {
 
 #header .header-menu .menu .more_sub_menu .sub-menu { display: none !important; }
 .top-menu a[data-depth="0"] {
-    padding: 20px 17px;
+    padding: 20px 10px;
 }
 #header .header-menu .menu .sub-menu a {
     color: #000;
@@ -7411,9 +7417,18 @@ textarea:active:-moz-placeholder {
     color: #ffbe63;
 }
 #header .top-menu .sub-menu a:hover{color: #ffbe63;}
-.top-menu a[data-depth="1"],
-.top-menu a[data-depth="2"] {
+.top-menu a[data-depth="1"] {
     padding: 0 0 10px 0;
+}
+.top-menu a[data-depth="2"] {
+    font-weight: bold;
+	padding: 0;
+}
+.top-menu a[data-depth="3"] {
+    padding: 0 0 0 10px;
+}
+.top-menu a[data-depth="4"] {
+    padding: 0 0 0 20px;
 }
 #header .header-menu .menu .more_sub_menu a:hover{color: #ffbe63;}
 .top-menu .collapse {
@@ -7559,6 +7574,7 @@ textarea:active:-moz-placeholder {
 #mobile_top_menu_wrapper .top-menu .sub-menu ul[data-depth="1"] > li a {
     text-transform: none;
     padding-left: 20px;
+	font-weight: bold;
 }
 #mobile_top_menu_wrapper .top-menu .sub-menu ul {
     padding: 0;
@@ -8630,7 +8646,7 @@ body#checkout #gift_message {
     margin: 0 0 0 0;
 	padding: 0 6px 0 6px;
     text-align: center;
-	width: 24%;
+/*	width: 24%;*/
 	top: 0;
 	vertical-align: top;
 	font-size: 10pt;
@@ -8784,23 +8800,24 @@ body#checkout #gift_message {
     .products .product_list li.item.col-sm-6,
     .products .product_list li.product_item.col-md-6{
         width: 25%;
-    }   
-    #js-product-list .products .product_list li.product_item.col-md-4 {width: 33.333333%;}
+    }
+	/*#js-product-list .products .product_list li.product_item.col-md-4 {width: 33.333333%;}*/
 }
 @media (min-width: 992px){
+	/*
     .products .product_list li.product_item.col-md-4,
     .products .product_list li.item.col-md-4,
     .products .product_list li.product_item.col-md-6{
         width: 25%;
     }
-    #js-product-list .products .product_list li.product_item.col-md-4 {width: 33.333333%;}
+	#js-product-list .products .product_list li.product_item.col-md-4 {width: 33.333333%;}*/
 }
 @media (min-width: 1290px){
     .products .product_list li.product_item.col-lg-2,
     .products .product_list li.item.col-lg-2{
         width: 25%;
     }
-    #js-product-list .products .product_list li.product_item.col-md-4 {width: 33.33333%;}
+	/*#js-product-list .products .product_list li.product_item.col-md-4 {width: 33.33333%;}*/
 }
 @media (max-width: 1199px){
     .products .product_list li.product_item.col-lg-2,
@@ -13940,7 +13957,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 /*    width: 100%;*/
     float: left;
     position: relative;
-    margin: 0 0 11px;
+    margin: 0 0 0px;
 	padding-left: 40px;
     display: block;
 }
@@ -13995,6 +14012,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 }
 #header .wi_header_slogan {
   max-width: 250px;
+  line-height: 60px;
 }
 
 #header .wi_header_slogan a {
@@ -14005,6 +14023,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 	white-space: nowrap;
 	text-transform: uppercase;
 	margin: 3px 0;
+	color: white;
 }
 .header-left {
    	font: normal 10px sans-serif;
@@ -14413,7 +14432,7 @@ ul.language_inner, ul.currency_inner {
     padding: 7px 50px;
     min-width: 200px;
     font-size: 12px;
-    float: left;
+    /*float: left;*/
     border: 1px solid #e7e7e7;
 }
 #header .search-widget form input[type="text"]::-webkit-input-placeholder {
@@ -14652,7 +14671,7 @@ ul.language_inner, ul.currency_inner {
     padding: 0;
     margin: 0;
     text-align: center;
-    float: left;
+    float: right;
     position: relative;
 }
 #header .header-menu .menu .top-menu li .top-menu {

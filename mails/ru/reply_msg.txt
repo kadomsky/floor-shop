@@ -1,16 +1,11 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+{reply}
 
-{reply} 
+На это сообщение отвечать не нужно, мы его не получим. In order to reply, click on the following link: {link}
 
-На это сообщение отвечать не нужно, мы
-его не получим. 
+[{shop_name}]({shop_url})
 
-Чтобы написать ответ, используйте
-ссылку: {link} [{link}] 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

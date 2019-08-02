@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-17 11:52:11
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
   from 'module:pslinklistviewstemplatesh' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb6e93b875fe7_49810154',
+  'unifunc' => 'content_5d4296c653b716_40008404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb6e93b875fe7_49810154 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c653b716_40008404 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_linklist/views/templates/hook/linkblock.tpl -->
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['linkBlocks']->value, 'linkBlock');

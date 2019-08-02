@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/catalog/_partials/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb83f8e9fcc90_67080740',
+  'unifunc' => 'content_5d4296c62ab4f7_89862927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ea2bc1681fe03c07cc204cb7dccd7d1ba6d38b1' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/catalog/_partials/products.tpl',
-      1 => 1550645573,
+      1 => 1564555143,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/pagination.tpl' => 1,
   ),
 ),false)) {
-function content_5cb83f8e9fcc90_67080740 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c62ab4f7_89862927 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -35,7 +35,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 ?>
 				<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17053665985cb83f8e9fa190_31005144', 'product_miniature');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1623508235d4296c62a1b81_11810935', 'product_miniature');
 ?>
 
 			<?php
@@ -47,7 +47,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
   
 
 	<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6524064115cb83f8e9fb573_20232150', 'pagination');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17269273785d4296c62a4322_94309506', 'pagination');
 ?>
 
 
@@ -59,20 +59,30 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6524064115cb83f8e9
 		</a>
 	</div>-->
 </div>
+<div class="block-category-button ">
+    <?php if ($_smarty_tpl->tpl_vars['category']->value['description']) {?>
+	<div id="category-description" class="text-muted"><?php echo $_smarty_tpl->tpl_vars['category']->value['description'];?>
+</div>
+    <?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['manufacturer']->value['description']) {?>
+    <div id="manufacturer-description"><?php echo $_smarty_tpl->tpl_vars['manufacturer']->value['description'];?>
+</div>
+    <?php }?>
+</div>
 <?php }
 /* {block 'product_miniature'} */
-class Block_17053665985cb83f8e9fa190_31005144 extends Smarty_Internal_Block
+class Block_1623508235d4296c62a1b81_11810935 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'product_miniature' => 
   array (
-    0 => 'Block_17053665985cb83f8e9fa190_31005144',
+    0 => 'Block_1623508235d4296c62a1b81_11810935',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-					<li class="product_item col-xs-12 col-sm-2 col-md-4 col-lg-6">
+					<li class="product_item col-xs-12 col-sm-2 col-md-3 col-lg-3 col-xl-2">
 						<?php $_smarty_tpl->_subTemplateRender('file:catalog/_partials/miniatures/wi-listgrid.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('product'=>$_smarty_tpl->tpl_vars['product']->value), 0, true);
 ?>
 					</li>
@@ -81,12 +91,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'product_miniature'} */
 /* {block 'pagination'} */
-class Block_6524064115cb83f8e9fb573_20232150 extends Smarty_Internal_Block
+class Block_17269273785d4296c62a4322_94309506 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'pagination' => 
   array (
-    0 => 'Block_6524064115cb83f8e9fb573_20232150',
+    0 => 'Block_17269273785d4296c62a4322_94309506',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

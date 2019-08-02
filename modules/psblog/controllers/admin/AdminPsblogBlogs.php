@@ -220,6 +220,22 @@ class AdminPsblogBlogsController extends ModuleAdminController
                     'hint' => $this->module->getTranslator()->trans('Invalid characters:', array(), 'Modules.PsBlog.Admin').' <>;=#{}'
                 ),
                 array(
+                    'type' => 'text',
+                    'label' => $this->module->getTranslator()->trans('Blog Date add', array(), 'Modules.PsBlog.Admin'),
+                    'name' => 'date_add',
+                    'autoload_rte' => true,
+                    'lang' => false,
+                    'hint' => $this->module->getTranslator()->trans('YYYY-MM-DD', array(), 'Modules.PsBlog.Admin')
+                ),
+                array(
+                    'type' => 'text',
+                    'label' => $this->module->getTranslator()->trans('Blog Date upd', array(), 'Modules.PsBlog.Admin'),
+                    'name' => 'date_upd',
+                    'autoload_rte' => true,
+                    'lang' => false,
+                    'hint' => $this->module->getTranslator()->trans('YYYY-MM-DD HH:mm:SS', array(), 'Modules.PsBlog.Admin')
+                ),
+                array(
                     'type' => 'switch',
                     'label' => $this->module->getTranslator()->trans('Indexation (by search engines):', array(), 'Modules.PsBlog.Admin'),
                     'name' => 'indexation',
@@ -471,6 +487,8 @@ class AdminPsblogBlogsController extends ModuleAdminController
         parent::setMedia($isNewTheme);
         $this->addJqueryUi('ui.widget');
         $this->addJqueryPlugin('tagify');
+		$this->addJqueryUI('ui.datepicker');
+		$this->context->controller->addJS(__PS_BASE_URI__.'modules/psblog/views/js/admin/formblog.js');
     }
 
     public function ajaxProcessUpdateblogPositions()

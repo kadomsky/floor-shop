@@ -1,17 +1,15 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+{product} почти не осталось в наличии.
 
-Оставшееся количество меньше
-указанного минимума {last_qty}.
+There are now less than {last_qty} items in stock.
 
-ТОВАРНЫЙ ОСТАТОК: {qty}
+Товарный остаток: {qty}
 
-Рекомендуется пополнить количество
-товара. Для этого нужно открыть
-страницу товара в каталоге. 		 
+Replenish your inventory, go to the "Catalog" > "Stocks" section of your back office to manage your stock.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

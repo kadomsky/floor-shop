@@ -16,3 +16,21 @@ div#leftBlockOneClick, div#rightBlockOneClick {
 form.oneClickSendMessage input {
 	z-index: 9001;
 }
+div.raschetPloshd {
+  font: bold 14px/16px sans-serif;
+}
+
+div.raschetPloshd label {
+    text-align: left;
+    margin: 10px 0;
+    display: block;
+    width: 125px;
+    color: #000;
+    font-weight: 600;
+    float: left;
+}
+
+div.raschetPloshd input {
+    height: 2.5rem;
+    width: auto;
+}

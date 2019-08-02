@@ -1,5 +1,5 @@
 /**
- * 2007-2018 PrestaShop
+ * 2007-2019 PrestaShop and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -15,10 +15,10 @@
  *
  * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
  * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
+ * needs please refer to https://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
+ * @copyright 2007-2019 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
@@ -221,7 +221,7 @@ function importNow(offset, limit, total, validateOnly, crossStepsVariables, more
 	    	   // acceleration will be limited to 4 to avoid newLimit to increase too fast (NEVER reach 30 seconds by call!).
 	    	   var acceleration = Math.min(4, (targetDelay / previousDelay));
 	    	   // keep between 5 to 100 elements to process in one call
-	    	   var newLimit = 1;//Math.min(100, Math.max(5, Math.floor(limit * acceleration)));
+	    	   var newLimit = Math.min(100, Math.max(5, Math.floor(limit * acceleration)));
 	    	   var newOffset = offset + limit;
 	    	   // update progression
 	    	   if (validateOnly) {
@@ -238,9 +238,7 @@ function importNow(offset, limit, total, validateOnly, crossStepsVariables, more
 	    	   }
 
 	    	   // process next group of elements
-//			   setTimeout(function(){
-			   importNow(newOffset, newLimit, total, validateOnly, jsonData.crossStepsVariables, moreStep);
-//			   }, 3000);
+	    	   importNow(newOffset, newLimit, total, validateOnly, jsonData.crossStepsVariables, moreStep);
 
 	    	   // checks if we could go over post_max_size setting. Warns when reach 90% of the actual setting
 	    	   if (jsonData.nextPostSize >= jsonData.postSizeLimit * 0.9) {

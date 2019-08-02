@@ -19,7 +19,21 @@ class BlockoneclickajaxModuleFrontController extends ModuleFrontController {
 		$this->{$metod}();
 		die();
 	}
-
+	public function ajaxProcessCustomfields() {
+		if (!$id_product = Tools::getValue('id_product')) die(Tools::jsonEncode(['error' => true, 'respons' => 'Нет товара']));
+		$this->product = new Product($id_product, true, (int)($this->context->cookie->id_lang));
+		if (!$field_ids = $this->product->getCustomizationFieldIds())
+//			die(Tools::jsonEncode(['error' => true, 'respons' => 'Нет кастомизации у товара '.$id_product]));
+		if (!$shirina = Tools::getValue('sh')) $shirina = 1;
+		if (!$dlina = Tools::getValue('dl')) $dlina = 1;
+		if (!$ploshad = Tools::getValue('pl')) $ploshad = 1;
+		$price = Tools::getValue('price');
+		$this->context->cart->addTextFieldToProduct($this->product->id, 7, Product::CUSTOMIZE_TEXTFIELD, $shirina);
+		$this->context->cart->addTextFieldToProduct($this->product->id, 8, Product::CUSTOMIZE_TEXTFIELD, $dlina);
+		$this->context->cart->addTextFieldToProduct($this->product->id, 9, Product::CUSTOMIZE_TEXTFIELD, $ploshad);
+		$this->context->cart->addTextFieldToProduct($this->product->id, 10, Product::CUSTOMIZE_TEXTFIELD, $price);
+		die(Tools::jsonEncode(['error' => true, 'respons' => 'Есть кастомизация']));
+	}
 	public function ajaxProcessOneClick() {
 		if (!$id_product = (int)Tools::getValue('pID')) die('no poduct');
 		if ($this->product = new Product($id_product, false, $this->module->lang_id)) {
@@ -84,7 +98,7 @@ class BlockoneclickajaxModuleFrontController extends ModuleFrontController {
 				$var_list['{supplier_reference}'] = $product->supplier_reference;
 				$var_list['{product_price}'] = (int)$product->price;
 			}
-			$mailList = [Configuration::get('PS_SHOP_EMAIL'), $from, 'badelins@gmail.com'];
+			$mailList = [Configuration::get('PS_SHOP_EMAIL'), $from];
 //			die(Tools::jsonEncode($_POST));
 			foreach ($mailList as $mail)
 				Mail::Send($this->module->lang_id, 'contact_form_oneclick', Mail::l('НОВЫЙ ЗАКАЗ В ОДИН КЛИК'), $var_list, $mail, null, null, null, NULL);

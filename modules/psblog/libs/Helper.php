@@ -283,6 +283,7 @@ class PsBlogHelper
                 'item_show_created',
                 'item_show_hit',
                 'item_show_counter',
+				'item_show_comments',
                 'social_code',
                 'item_comment_engine',
                 'item_limit_comments',

@@ -1,13 +1,11 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+Your stock cover is now less than the specified minimum of: {warning_coverage}
 
-Складские запасы меньше указанного
-минимума: {warning_coverage}.
+Текущий складской запас: {current_coverage}
 
-ТЕКУЩИЙ СКЛАДСКОЙ ЗАПАС: {current_coverage} 		 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

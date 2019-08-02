@@ -27,7 +27,7 @@
 		<ul class="product_list grid gridcount"> <!-- removed product_grid-->
 			{foreach from=$listing.products item="product"}
 				{block name='product_miniature'}
-					<li class="product_item col-xs-12 col-sm-2 col-md-4 col-lg-6">
+					<li class="product_item col-xs-12 col-sm-2 col-md-3 col-lg-3 col-xl-2">
 						{include file='catalog/_partials/miniatures/wi-listgrid.tpl' product=$product}
 					</li>
 				{/block}
@@ -46,4 +46,12 @@
 			<i class="material-icons">&#xE316;</i>
 		</a>
 	</div>-->
+</div>
+<div class="block-category-button ">
+    {if $category.description}
+	<div id="category-description" class="text-muted">{$category.description nofilter}</div>
+    {/if}
+    {if $manufacturer.description}
+    <div id="manufacturer-description">{$manufacturer.description nofilter}</div>
+    {/if}
 </div>

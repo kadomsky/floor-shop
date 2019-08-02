@@ -36,7 +36,7 @@
             <p class="subcategory-heading">{l s='Subcategories'}</p>
             <ul class="clearfix">
                 {foreach from=$subcategories item=subcategory}
-                    <li>
+                    <li class="col-md-3 col-sm-6 col-xs-12">
                         <div class="subcategory-image">
                             <a href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}" title="{$subcategory.name|escape:'html':'UTF-8'}" class="img">
                                 {if $subcategory.id_image}
@@ -49,7 +49,7 @@
                         </div>
                         <h5><a class="subcategory-name" href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}">{$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}</a></h5>
                         {if $subcategory.meta_description}
-                            <div class="cat_desc">{$subcategory.meta_description}</div>
+                            <div class="cat_desc hidden-md-down">{$subcategory.meta_description}</div>
 			    <!--{*print_r($subcategory)*}-->
                         {/if}
                     </li>
@@ -57,7 +57,7 @@
             </ul>
         </div>
     {/if}
-      {if $category.description}
+      {if $category.description && 0}
 	<div id="category-description" class="text-muted">{$category.description nofilter}</div>
       {/if}
     </div>

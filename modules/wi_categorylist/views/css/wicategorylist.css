@@ -34,7 +34,7 @@
     color: #e97b64;
 }
 .wicategory-container .product_list li.slider{width:100%;}
-.wicategory-container .product_list .owl-item{padding: 15px;}
+.wicategory-container .product_list .owl-item{/*padding: 15px;*/}
 .wicategory-container .categoryblock {
     position: relative;
     width: 100%;

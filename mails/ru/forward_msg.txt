@@ -1,14 +1,15 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Customer Service - Discussion Forwarded
 
-{employee} хочет начать диалог с вами. 
+{employee} wanted to forward this discussion to you.
 
-ИСТОРИЯ ПЕРЕПИСКИ: {messages}
+История переписки: {messages}
 
-{employee} добавил "{comment}" 		 
+{employee} added {comment}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

@@ -1,17 +1,14 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Sponsorship Program
 
-Мы создали купон на ваше имя для
-отправки другу.
+Мы создали купон на ваше имя для отправки другу.
+Вот код Вашего купона: {voucher_num}, достоинством в {voucher_num}
 
-Вот код Вашего купона: {voucher_num},
-достоинством в {voucher_amount}.
+Просто скопируйте / вставьте этот код при оплате вашего следующего заказа.
 
-Просто скопируйте / вставьте этот код
-при оплате вашего следующего заказа. 		
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

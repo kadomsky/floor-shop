@@ -1,37 +1,29 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+Вы получили новый запрос на возврат в {shop_name}.
 
-Вы получили новый запрос на возврат
-в {shop_name}. 
+Return Details
 
-Подробности возврата 
+Заказ: {order_name} Оформлен {date}
 
-ЗАКАЗ: {order_name} Размещен {date}
+Клиент: {firstname} {lastname}, ({email})
 
-КЛИЕНТ: {firstname} {lastname}, ({email}) 
-
-КОД
-
-ТОВАР
-
-КОЛИЧЕСТВО
-
-{items} 
+Код	Товар	Количество   {items}
 
 Адрес доставки
 
-{delivery_block_html} 		 
+{delivery_block_html}
 
 Адрес плательщика
 
-{invoice_block_html} 
+{invoice_block_html}
 
-Сообщение покупателя: 
+Сообщение покупателя:
 
-{message} 
+{message}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

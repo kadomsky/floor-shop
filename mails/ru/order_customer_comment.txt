@@ -1,15 +1,17 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, 
+Message from customer
 
-Вы получили новое сообщение о заказе
-с кодом {order_name}.
+Вы получили новое сообщение о заказе с кодом {order_name}.
 
-КЛИЕНТ: {firstname} {lastname} ({email})
+Клиент: {firstrname} {lastname} ({email})
 
-{message} 		 
+Сообщение покупателя:
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+{message}
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

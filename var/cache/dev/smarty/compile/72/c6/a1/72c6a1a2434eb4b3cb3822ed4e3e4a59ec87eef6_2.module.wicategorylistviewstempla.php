@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-17 20:27:55
+/* Smarty version 3.1.33, created on 2019-08-01 11:35:41
   from 'module:wicategorylistviewstempla' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb7621b207400_74525262',
+  'unifunc' => 'content_5d42a45d8d5d91_77462737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72c6a1a2434eb4b3cb3822ed4e3e4a59ec87eef6' => 
     array (
       0 => 'module:wicategorylistviewstempla',
-      1 => 1550650053,
+      1 => 1564290891,
       2 => 'module',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb7621b207400_74525262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d42a45d8d5d91_77462737 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl -->
 
 
@@ -61,14 +61,20 @@ foreach ($_from as $_smarty_tpl->tpl_vars['wicategoryinfo']->value) {
 								<?php if (isset($_smarty_tpl->tpl_vars['wicategoryinfo']->value['cate_id']) && $_smarty_tpl->tpl_vars['wicategoryinfo']->value['cate_id']) {?>
 									<?php if ($_smarty_tpl->tpl_vars['wicategoryinfo']->value['id'] == $_smarty_tpl->tpl_vars['wicategoryinfo']->value['cate_id']['id_category']) {?>
 										<div class="categoryimage">
+										<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getCategoryLink($_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->id_category,$_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->link_rewrite), ENT_QUOTES, 'UTF-8');?>
+">
 											<img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['image_url']->value, ENT_QUOTES, 'UTF-8');?>
 /<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['wicategoryinfo']->value['cate_id']['image'], ENT_QUOTES, 'UTF-8');?>
-" alt="" class="img-responsive"/>
+" alt="" class="img-responsive" border="0" />
+										</a>
 										</div>
 									<?php }?>
 									<?php } else { ?>
 										<div class="categoryimage">
-												<img src="img/cms/Cat-img.jpg" alt="" class="img-responsive"/>
+										<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getCategoryLink($_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->id_category,$_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->link_rewrite), ENT_QUOTES, 'UTF-8');?>
+">
+											<img src="img/cms/Cat-img.jpg" alt="" class="img-responsive" border="0" />
+										</a>
 										</div>
 								<?php }?>
 								

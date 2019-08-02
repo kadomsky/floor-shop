@@ -1,60 +1,41 @@
+{shop_url}
 
-[{shop_url}] 
+Поздравляем!
 
-Поздравляем! 
+A new order was placed on {shop_name} by the following customer: {firstname} {lastname} ({email})
 
-Клиент: {firstname} {lastname} ({email})
-сформировал новый заказ в магазине
-{shop_name} 
+Подробности заказа
 
-ЗАКАЗ: {order_name} Оформлен {date}
+Заказ: {order_name} Оформлен {date}
 
-СПОСОБ ОПЛАТЫ: {payment} 		 
+Способ оплаты: {payment}
 
-КОД
+Код	Товар	Цена	Количество	Сумма   {items}
+Товары	{total_products}
+Скидки	{total_discounts}
+Подарочная упаковка	{total_wrapping}
+Доставка	{total_shipping}
+Including total tax	{total_tax_paid}
+Итого к оплате	{total_paid}
 
-ТОВАР
+Carrier
 
-ЦЕНА
+Перевозчик: {carrier}
 
-КОЛИЧЕСТВО
+Способ оплаты: {payment}
 
-СУММА
+Адрес доставки
 
-{items} 
+{delivery_block_html}
 
-ТОВАРЫ 
+Адрес плательщика
 
-{total_products} 
+{invoice_block_html}
 
-СКИДКИ 
+Сообщение покупателя:
 
-{total_discounts} 
+{message}
 
-ПОДАРОЧНАЯ УПАКОВКА 
+[{shop_name}]({shop_url})
 
-{total_wrapping} 
-
-ДОСТАВКА 
-
-{total_shipping} 
-
-ВСЕГО НДС 
-
-{total_tax_paid} 
-
-ИТОГО К ОПЛАТЕ 
-
-{total_paid} 
-
-{carrier} 
-
-{delivery_block_html} 
-
-{invoice_block_html} 
-
-{message} 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

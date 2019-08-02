@@ -1,31 +1,17 @@
-
-[{shop_url}] 
+{shop_url}
 
 Здравствуйте, {firstname} {lastname},
 
-Спасибо за ваш заказ с кодом {order_name} в
-магазине {shop_name}. 
+Спасибо за ваш заказ с кодом {order_name} в магазине {shop_name}.
 
-К сожалению, одного или несколько
-товаров в настоящее время нет в
-наличии. Это может привести к
-небольшой задержке в ​​доставке.
-Пожалуйста, примите наши извинения и
-будьте уверены, что мы прилагаем все
-усилия, чтобы исправить это. 
+Order ID {order_name} - Replenishment required
 
-Вы можете просмотреть ваш заказ и
-скачать счет в разделе "История
-заказов" [{history_url}] вашей
-учетной записи, кликнув "Моя учетная
-запись" [{my_account_url}]. 
+Unfortunately, one or more items are currently out of stock and this may cause a slight delay for delivery. Please accept our apologies for this inconvenience and be sure we are doing our best to correct the situation.
 
-Если у вас гостевая учетная запись,
-вы можете следить за заказом через
-"Гостевое отслеживание"
-[{guest_tracking_url}?id_order={order_name}] в
-нашем магазине. 
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
 
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](http://www.prestashop.com/)

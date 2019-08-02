@@ -73,29 +73,27 @@
 	<div class="header-top">
 		<div class="container">
 		<div class="row">
-			<div class="header-logo col-md-4 col-lg-6">
-				<div class="main-logo col-md-12 col-lg-5 col-sm-12">
+			<div class="header-logo col-sm-4 col-md-4 col-lg-3">
+				<div class="main-logo">
 					<div class="wi_header_logo">
 					<a href="{$urls.base_url}">
 					<img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
 					</a>
 					</div>
 				</div>
-				<div class="main-slogan hidden-sm-down col-md-12 col-lg-7">
-					<div class="wi_header_slogan">
-					<a href="{$urls.base_url}" class="hidden-md-down">
-					Старейший интернет-магазин напольных покрытий в России
-					</a><div id="contact-link-slogan"></div>
-					</div>
+			</div>
+			<div class="main-slogan hidden-sm-down hidden-md-down col-lg-2">
+				<div class="wi_header_slogan">
+					<div id="contact-link-slogan"></div>
 				</div>
 			</div>
-			<div class="header-center col-md-8 col-lg-6">
+			<div class="header-center col-sm-8 col-md-8 col-lg-7">
 				<div class="header-menu">
 				<div class="container">
 				<div class="row">
 				<div id="mobile_top_menu_wrapper" class="row hidden-lg-up">
 					<div class="menu-icon">
-					<div class="menu-title"> <i class="fa fa-bars" aria-hidden="true"></i><span>Category</span></div>
+					<div class="menu-title"> <i class="fa fa-bars" aria-hidden="true"></i><span>Меню</span></div>
 					</div>
 					<div class="js-top-menu mobile" id="_mobile_top_menu"></div>
 					<div class="menu-icon">
@@ -108,7 +106,6 @@
 				</div>
 				</div>
 			</div>
-
 		</div>
 		</div>
 	</div>	

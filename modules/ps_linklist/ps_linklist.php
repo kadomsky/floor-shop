@@ -27,7 +27,9 @@ if (!defined('_CAN_LOAD_FILES_')) {
     exit;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
 
 use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
 use PrestaShop\Module\LinkList\LegacyLinkBlockRepository;
@@ -66,7 +68,7 @@ class Ps_Linklist extends Module implements WidgetInterface
     {
         $this->name = 'ps_linklist';
         $this->author = 'PrestaShop';
-        $this->version = '3.0.2';
+        $this->version = '3.0.3';
         $this->need_instance = 0;
         $this->tab = 'front_office_features';
         $this->tabs = [

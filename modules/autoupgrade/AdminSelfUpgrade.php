@@ -242,7 +242,7 @@ class AdminSelfUpgrade extends AdminController
             $this->upgradeContainer->getFileConfigurationStorage()->cleanAll();
         }
 
-        $this->keepImages = $this->upgradeContainer->getUpgradeConfiguration()->get('PS_AUTOUP_KEEP_IMAGES');
+        $this->keepImages = $this->upgradeContainer->getUpgradeConfiguration()->shouldBackupImages();
         $this->updateDefaultTheme = $this->upgradeContainer->getUpgradeConfiguration()->get('PS_AUTOUP_UPDATE_DEFAULT_THEME');
         $this->changeToDefaultTheme = $this->upgradeContainer->getUpgradeConfiguration()->get('PS_AUTOUP_CHANGE_DEFAULT_THEME');
         $this->keepMails = $this->upgradeContainer->getUpgradeConfiguration()->get('PS_AUTOUP_KEEP_MAILS');
@@ -293,6 +293,10 @@ class AdminSelfUpgrade extends AdminController
             Configuration::updateValue('PS_AUTOUP_IGNORE_REQS', 1);
         }
 
+        if (Tools14::isSubmit('ignorePhpOutdated')) {
+            Configuration::updateValue('PS_AUTOUP_IGNORE_PHP_UPGRADE', 1);
+        }
+
         if (Tools14::isSubmit('customSubmitAutoUpgrade')) {
             $config_keys = array_keys(array_merge($this->_fieldsUpgradeOptions, $this->_fieldsBackupOptions));
             $config = array();
@@ -333,27 +337,6 @@ class AdminSelfUpgrade extends AdminController
         parent::postProcess();
     }
 
-    /**
-     * update module configuration (saved in file UpgradeFiles::configFilename) with $new_config.
-     *
-     * @param array $new_config
-     *
-     * @return bool true if success
-     */
-//    public function writeConfig($config)
-//    {
-//        if (!$this->upgradeContainer->getFileConfigurationStorage()->exists(UpgradeFileNames::configFilename) && !empty($config['channel'])) {
-//            $this->upgradeContainer->getUpgrader()->channel = $config['channel'];
-//            $this->upgradeContainer->getUpgrader()->checkPSVersion();
-//
-//            $this->upgradeContainer->getState()->setInstallVersion($this->upgradeContainer->getUpgrader()->version_num);
-//        }
-//
-//        $this->upgradeContainer->getUpgradeConfiguration()->merge($config);
-//        $this->upgradeContainer->getLogger()->info($this->trans('Configuration successfully updated.', array(), 'Modules.Autoupgrade.Admin').' <strong>'.$this->trans('This page will now be reloaded and the module will check if a new version is available.', array(), 'Modules.Autoupgrade.Admin').'</strong>');
-//        return (new UpgradeConfigurationStorage($this->autoupgradePath.DIRECTORY_SEPARATOR))->save($this->upgradeContainer->getUpgradeConfiguration(), UpgradeFileNames::configFilename);
-//    }
-
     public function display()
     {
         // Make sure the user has configured the upgrade options, or set default values
@@ -388,7 +371,7 @@ class AdminSelfUpgrade extends AdminController
             $this->adminDir,
             $this->autoupgradePath
         );
-        $response = new AjaxResponse($this->upgradeContainer->getTranslator(), $this->upgradeContainer->getState(), $this->upgradeContainer->getLogger());
+        $response = new AjaxResponse($this->upgradeContainer->getState(), $this->upgradeContainer->getLogger());
         $this->_html = (new UpgradePage(
             $this->upgradeContainer->getUpgradeConfiguration(),
             $this->upgradeContainer->getTwig(),
@@ -415,6 +398,21 @@ class AdminSelfUpgrade extends AdminController
         $this->content = $this->_html;
 
         return parent::display();
+    }
+
+    /**
+     * @deprecated
+     * Method allowing errors on very old tabs to be displayed.
+     * On the next major of this module, use an admin controller and get rid of this.
+     *
+     * This method is called by functions.php available in the admin root folder.
+     */
+    public function displayErrors()
+    {
+        if (empty($this->_errors)) {
+            return;
+        }
+        echo implode(' - ', $this->_errors);
     }
 
     /**

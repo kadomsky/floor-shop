@@ -11,7 +11,6 @@ return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'PrestaShop\\Module\\AutoUpgrade\\Temp\\' => array($baseDir . '/templates'),
     'PrestaShop\\Module\\AutoUpgrade\\' => array($baseDir . '/classes'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),

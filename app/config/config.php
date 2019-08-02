@@ -131,7 +131,7 @@
           'dbname' => '%database_name%',
           'user' => '%database_user%',
           'password' => '%database_password%',
-          'server_version' => 5.1,
+          'server_version' => 5.0999999999999996,
           'charset' => 'UTF8',
           'mapping_types' => 
           array (

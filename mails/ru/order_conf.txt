@@ -1,73 +1,41 @@
-
-[{shop_url}] 
+{shop_url}
 
 Здравствуйте, {firstname} {lastname},
 
-Благодарим за покупки в магазине
-{shop_name}! 
+Thank you for shopping on {shop_name}!
 
-ЗАКАЗ: {order_name} Оформлен {date}
+Подробности заказа
 
-СПОСОБ ОПЛАТЫ: {payment} 		 
+Заказ: {order_name} Оформлен {date}
 
-КОД
+Способ оплаты: {payment}
 
-ТОВАР
+Код	Товар	Цена	Количество	Сумма  {products_txt} {discounts_txt}
+Товары	{total_products}
+Скидки	{total_discounts}
+Подарочная упаковка	{total_wrapping}
+Доставка	{total_shipping}
+Including total tax	{total_tax_paid}
+Итого к оплате	{total_paid}
 
-ЦЕНА
+Доставка
 
-КОЛИЧЕСТВО
+Перевозчик: {carrier}
 
-СУММА
+Способ оплаты: {payment}
 
-{products_txt} 
+Адрес доставки
 
-{discounts} 
+{delivery_block_txt}
 
-ТОВАРЫ 
+Адрес плательщика
 
-{total_products} 
+{invoice_block_txt}
 
-СКИДКИ 
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
 
-{total_discounts} 
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
 
-ПОДАРОЧНАЯ УПАКОВКА 
+[{shop_name}]({shop_url})
 
-{total_wrapping} 
-
-ДОСТАВКА 
-
-{total_shipping} 
-
-ВСЕГО НДС 
-
-{total_tax_paid} 
-
-ИТОГО К ОПЛАТЕ 
-
-{total_paid} 
-
-ПЕРЕВОЗЧИК: {carrier}
-
-СПОСОБ ОПЛАТЫ: {payment} 		 
-
-{delivery_block_txt} 
-
-{invoice_block_txt} 
-
-Вы можете просмотреть ваш заказ и
-скачать счет в разделе "История
-заказов" [{history_url}] вашей
-учетной записи, кликнув "Моя учетная
-запись" [{my_account_url}]. 
-
-Если у вас гостевая учетная запись,
-вы можете следить за заказом через
-"Гостевое отслеживание"
-[{guest_tracking_url}?id_order={order_name}] в
-нашем магазине. 
-
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

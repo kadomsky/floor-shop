@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:41
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/catalog/listing/category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb83f8e86b4b9_16933508',
+  'unifunc' => 'content_5d4296c5e2e222_54304008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7d0fe1b05536451a27704f8bfd96851ddbc3f5be' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/catalog/listing/category.tpl',
-      1 => 1554389326,
+      1 => 1564206369,
       2 => 'file',
     ),
   ),
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb83f8e86b4b9_16933508 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c5e2e222_54304008 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6060545695cb83f8e858755_33322570', 'product_list_header');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9520713885d4296c5e109a2_63143716', 'product_list_header');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, 'catalog/listing/product-list.tpl');
 }
 /* {block 'product_list_header'} */
-class Block_6060545695cb83f8e858755_33322570 extends Smarty_Internal_Block
+class Block_9520713885d4296c5e109a2_63143716 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'product_list_header' => 
   array (
-    0 => 'Block_6060545695cb83f8e858755_33322570',
+    0 => 'Block_9520713885d4296c5e109a2_63143716',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -63,7 +63,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['subcategory']->value) {
 ?>
-                    <li>
+                    <li class="col-md-3 col-sm-6 col-xs-12">
                         <div class="subcategory-image">
                             <a href="<?php echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['link']->value->getCategoryLink($_smarty_tpl->tpl_vars['subcategory']->value['id_category'],$_smarty_tpl->tpl_vars['subcategory']->value['link_rewrite']),'html','UTF-8' )), ENT_QUOTES, 'UTF-8');?>
 " title="<?php echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( $_smarty_tpl->tpl_vars['subcategory']->value['name'],'html','UTF-8' )), ENT_QUOTES, 'UTF-8');?>
@@ -85,7 +85,7 @@ echo htmlspecialchars($_smarty_tpl->tpl_vars['lang_iso']->value, ENT_QUOTES, 'UT
 "><?php echo htmlspecialchars(call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'escape' ][ 0 ], array( call_user_func_array($_smarty_tpl->registered_plugins[ 'modifier' ][ 'truncate' ][ 0 ], array( $_smarty_tpl->tpl_vars['subcategory']->value['name'],25,'...' )),'html','UTF-8' )), ENT_QUOTES, 'UTF-8');?>
 </a></h5>
                         <?php if ($_smarty_tpl->tpl_vars['subcategory']->value['meta_description']) {?>
-                            <div class="cat_desc"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcategory']->value['meta_description'], ENT_QUOTES, 'UTF-8');?>
+                            <div class="cat_desc hidden-md-down"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcategory']->value['meta_description'], ENT_QUOTES, 'UTF-8');?>
 </div>
 			    <!---->
                         <?php }?>
@@ -97,7 +97,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         </div>
     <?php }?>
-      <?php if ($_smarty_tpl->tpl_vars['category']->value['description']) {?>
+      <?php if ($_smarty_tpl->tpl_vars['category']->value['description'] && 0) {?>
 	<div id="category-description" class="text-muted"><?php echo $_smarty_tpl->tpl_vars['category']->value['description'];?>
 </div>
       <?php }?>

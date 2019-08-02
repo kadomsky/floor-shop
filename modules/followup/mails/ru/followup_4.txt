@@ -1,27 +1,19 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Your cart on {shop_name}
 
-Вы являетесь одним из наших лучших
-клиентов, однако вы не оформляли заказ
-{days_threshold} дней.
+Congratulations, you are one of our best customers! However, it looks like you have not placed an order since {days_threshold} days.
 
-Ваша корзина была сохранена, можете
-продолжить оформление заказа, посетив
-наш магазин: {shop_url} [{shop_url}]
+Ваша корзина была сохранена, можете продолжить оформление заказа, посетив наш магазин: {shop_url}
 
-В благодарность за оказанное нам
-доверие, мы хотим дать вам скидку в
-{amount}% действующую на следующий заказ!
-Предложение действует {days} дней, не
-упускайте момент! 		 
+We are pleased to offer you a discount of {amount}% off your next order. And this offer is valid for {days} days, so do not wait any longer!
 
-ВАШ КУПОН: {voucher_num}
+Here is your VOUCHER CODE: {voucher_num}
 
-Для получения скидки введите данный
-код в корзине. 		 
+Enter this code in your shopping cart to get the discount.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

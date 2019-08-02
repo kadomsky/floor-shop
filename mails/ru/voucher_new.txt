@@ -1,13 +1,13 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Voucher code has been generated
 
-Вот код Вашего купона: {voucher_num}
+Here is your new voucher code: {voucher_num}
 
-Просто скопируйте / вставьте этот код
-при оплате вашего следующего заказа. 		
+In order to use it, just copy/paste this code during check out.
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

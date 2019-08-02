@@ -162,7 +162,13 @@ class PsbloglistModuleFrontController extends ModuleFrontController
 		//$module_tpl_listing = 'module:psblog/views/templates/front/'.$template.'/_listing_blog.tpl';
 
         /* breadcrumb */
+		$breadcrumb = parent::getBreadcrumb();
+
         $path = '<a href="'.$helper->getFontBlogLink().'">'.htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8').'</a>';
+
+		$breadcrumb['links'][] = ['title' => htmlentities($config->get('blog_link_title_'.$this->context->language->id, 'Blog'), ENT_NOQUOTES, 'UTF-8'),
+		'url' => $helper->getFontBlogLink()];
+
         $this->context->smarty->assign(array(
             'leading_blogs' => $leading_blogs,
             'secondary_blogs' => $secondary_blogs,
@@ -174,6 +180,7 @@ class PsbloglistModuleFrontController extends ModuleFrontController
             'nb_items' => $count,
             'range' => $range,
             'path' => $path,
+			'breadcrumb' => $breadcrumb,
             'start' => $start,
             'stop' => $stop,
             'pages_nb' => $pages_nb,

@@ -1,21 +1,15 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте, {firstname} {lastname}, 
+Your guest account has been turned into a customer account
 
-Ваша гостевая учётная запись в
-магазине {shop_name} превращена в
-клиентскую. 
+Congratulations, your guest account for {shop_name} has been turned into a customer account!
 
-АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ: {email} 		 
+Email address: {email}
 
-Пожалуйста, будьте осторожны при
-совместном использовании этих данных
-для входа с другими лицами. 
+Вы можете войти в учётную запись в нашем магазине: [{shop_name}]({shop_url})
 
-Вы можете войти в учётную запись в
-нашем магазине: {shop_url} 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

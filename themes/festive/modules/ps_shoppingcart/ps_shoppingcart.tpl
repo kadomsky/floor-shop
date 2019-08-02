@@ -28,9 +28,10 @@
 		 
 			<a rel="nofollow" href="{$cart_url}"  {if $cart.products_count > 0} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{/if}> 
 				<!-- <span class="hidden-sm-down title">{l s='' d='Shop.Theme.Checkout'}</span> -->
-				<span class="cart-products-count">{$cart.products_count}</span>
+				<span class="cart-products-count">{count($cart.products)}</span>
 				<!-- <span class="hidden-sm-down item">{l s='Item' d='Shop.Theme.Checkout'}</span> -->
 				<span class="value"> {$cart.totals.total.value}</span>
+				<!--span class="value">{$cart.products_count}</span-->
 			</a>
 		 
 		

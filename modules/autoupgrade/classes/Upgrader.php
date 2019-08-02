@@ -24,6 +24,7 @@
  *  @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *  International Registered Trademark & Property of PrestaShop SA
  */
+
 namespace PrestaShop\Module\AutoUpgrade;
 
 use Symfony\Component\Filesystem\Filesystem;
@@ -339,7 +340,7 @@ class Upgrader
      *
      * @param string $version
      *
-     * @return SimpleXMLElement or false if error
+     * @return \SimpleXMLElement|false if error
      */
     public function getXmlMd5File($version, $refresh = false)
     {
@@ -350,7 +351,7 @@ class Upgrader
      * returns an array of files which are present in PrestaShop version $version and has been modified
      * in the current filesystem.
      *
-     * @return array of string> array of filepath
+     * @return array|false
      */
     public function getChangedFilesList($version = null, $refresh = false)
     {
@@ -426,7 +427,7 @@ class Upgrader
      * @param string $version2
      * @param bool $show_modif
      *
-     * @return array array('modified'=>array(...), 'deleted'=>array(...))
+     * @return array|false array('modified'=>array(...), 'deleted'=>array(...))
      */
     public function getDiffFilesList($version1, $version2, $show_modif = true, $refresh = false)
     {

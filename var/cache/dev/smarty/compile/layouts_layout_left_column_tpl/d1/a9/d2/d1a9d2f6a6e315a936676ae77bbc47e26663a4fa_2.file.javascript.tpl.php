@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:41
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb83f8e8c6ee0_68967274',
+  'unifunc' => 'content_5d4296c5eb10e2_08492081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb83f8e8c6ee0_68967274 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c5eb10e2_08492081 (Smarty_Internal_Template $_smarty_tpl) {
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['javascript']->value['external'], 'js');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['js']->value) {

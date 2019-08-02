@@ -1,12 +1,11 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+Subscribing to newsletter
 
-В благодарность за вашу подписку на
-рассылку, мы рады предложить Вам этот
-купон: {discount} 
+Thank you for subscribing to our newsletter. We are pleased to offer you the following voucher: {discount}
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
+[{shop_name}]({shop_url})
 
+Powered by [PrestaShop](http://www.prestashop.com/)

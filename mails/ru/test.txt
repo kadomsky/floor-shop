@@ -1,13 +1,11 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте, {firstname} {lastname},
 
-Здравствуйте 
+Here is a test email from your shop.
 
-Это ТЕСТОВЫЙ E-MAIL из вашего магазина.
+If you can read this, it means the test is successful!
 
-Если вы можете прочитать его, то
-тестирование прошло успешно!. 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

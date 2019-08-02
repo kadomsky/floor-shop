@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-18 12:12:46
+/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/psblog/views/templates/hook/categories_menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb83f8e9d9749_03287442',
+  'unifunc' => 'content_5d4296c626bf26_64761451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb83f8e9d9749_03287442 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d4296c626bf26_64761451 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Block categories module -->
     <?php if ($_smarty_tpl->tpl_vars['tree']->value) {?>

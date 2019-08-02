@@ -1,17 +1,13 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+{product} есть в наличии.
 
-Этот товар снова появился на складе.
+Good news, this item is back in stock!
 
-Вы можете получить доступ к странице
-товара, нажав на ссылку: {product}
-[{product_link}]
+Click on the following link to visit the product page and order it: [{product}]({product_link})
 
-Вы можете заказать это прямо сейчас в
-нашем интернет-магазине. 		 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)

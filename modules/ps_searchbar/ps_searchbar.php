@@ -57,7 +57,7 @@ class Ps_Searchbar extends Module implements WidgetInterface
             && $this->registerHook('top')
             && $this->registerHook('displaySearch')
             && $this->registerHook('header')
-            && $this->registerHook('displayNavSearch');
+        ;
     }
 
     public function hookHeader()

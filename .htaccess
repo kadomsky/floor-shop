@@ -18,9 +18,7 @@ RewriteEngine on
 
 #Domain: shop.floor-shop.ru
 RewriteRule . - [E=REWRITEBASE:/]
-RewriteRule ^api$ api/ [L]
-
-RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
+RewriteRule ^api(?:/(.*))?$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
 
 # Images
 RewriteCond %{HTTP_HOST} ^shop.floor-shop.ru$

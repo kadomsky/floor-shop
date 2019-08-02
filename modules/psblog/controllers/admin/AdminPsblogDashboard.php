@@ -584,6 +584,15 @@ class AdminPsblogDashboardController extends ModuleAdminController
                     'values' => $onoff,
                 ),
                 array(
+                    'type' => 'switch',
+                    'label' => $this->module->getTranslator()->trans('Show Comments:', array(), 'Modules.PsBlog.Admin'),
+                    'name' => 'item_show_comments',
+                    'required' => false,
+                    'class' => 't',
+                    'default' => '1',
+                    'values' => $onoff,
+                ),
+                array(
                     'type' => 'textarea',
                     'label' => $this->module->getTranslator()->trans('Social Sharing CODE', array(), 'Modules.PsBlog.Admin'),
                     'name' => 'social_code',

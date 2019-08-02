@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-04-17 20:27:55
+/* Smarty version 3.1.33, created on 2019-08-01 11:35:41
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/psblog/views/templates/hook/psbloghome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cb7621b0def09_86003965',
+  'unifunc' => 'content_5d42a45d833277_67559703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5cb7621b0def09_86003965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d42a45d833277_67559703 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/home/a0280957/domains/shop.floor-shop.ru/public_html/vendor/smarty/smarty/libs/plugins/modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 

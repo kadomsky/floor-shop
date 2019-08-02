@@ -1,11 +1,9 @@
+{shop_url}
 
-[{shop_url}] 
+Здравствуйте,
 
-Здравствуйте, 
+Спасибо за подписку на нашу рассылку.
 
-СПАСИБО ЗА ПОДПИСКУ НА НАШУ
-РАССЫЛКУ. 
+[{shop_name}]({shop_url})
 
-{shop_name} [{shop_url}] powered by
-PrestaShop(tm) [http://www.prestashop.com/] 
-
+Powered by [PrestaShop](http://www.prestashop.com/)
