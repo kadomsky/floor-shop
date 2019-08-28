@@ -164,20 +164,19 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         );
 
         $filterBlock = $filterBlockSearch->getFromCache($filterHash);
-        if (empty($filterBlock)) {
+//        if (empty($filterBlock)) {
             $filterBlock = $filterBlockSearch->getFilterBlock($productsAndCount['count'], $facetedSearchFilters);
             $filterBlockSearch->insertIntoCache($filterHash, $filterBlock);
-        }
+//        }
+// print_r($filterBlock['filters']);
 
         $facets = $this->filtersConverter->getFacetsFromFilterBlocks(
             $filterBlock['filters']
         );
-
-        $this->labelRangeFilters($facets);
-        $this->addEncodedFacetsToFilters($facets);
-        $this->hideZeroValues($facets);
-        $this->hideUselessFacets($facets);
-
+		$this->labelRangeFilters($facets);
+		$this->addEncodedFacetsToFilters($facets);
+// echo '44444444444444';print_r($facets);
+		$this->hideUselessFacets($facets, (int) $result->getTotalProductsCount());
         $facetCollection = new FacetCollection();
         $nextMenu = $facetCollection->setFacets($facets);
         $result->setFacetCollection($nextMenu);
@@ -198,8 +197,6 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
     {
         list($activeFilters, $displayedFacets, $facetsVar) = $this->prepareActiveFiltersForRender($context, $result);
 
-
-//		echo nl2br(print_r($displayedFacets, true));
         // No need to render without facets
         if (empty($facetsVar)) {
             return '';
@@ -266,7 +263,6 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         if (empty($facetCollection)) {
             return null;
         }
-
         $facetsVar = array_map(
             [$this, 'prepareFacetForTemplate'],
             $facetCollection->getFacets()
@@ -276,8 +272,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         $activeFilters = [];
         foreach ($facetsVar as $idx => $facet) {
             // Remove undisplayed facets
-//			print_r($facet);
-            if (!empty($facet['displayed']) || 1) {
+            if (!empty($facet['displayed'])) {
                 $displayedFacets[] = $facet;
             }
 
@@ -333,12 +328,16 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
     private function labelRangeFilters(array $facets)
     {
         foreach ($facets as $facet) {
-            if ($facet->getType() === 'weight') {
-                $unit = Configuration::get('PS_WEIGHT_UNIT');
-                foreach ($facet->getFilters() as $filter) {
-                    $filterValue = $filter->getValue();
-                    $min = empty($filterValue[0]) ? $facet->getProperty('min') : $filterValue[0];
-                    $max = empty($filterValue[1]) ? $facet->getProperty('max') : $filterValue[1];
+            if (!in_array($facet->getType(), Filters\Converter::RANGE_FILTERS)) {
+                continue;
+            }
+
+            foreach ($facet->getFilters() as $filter) {
+                $filterValue = $filter->getValue();
+                $min = empty($filterValue[0]) ? $facet->getProperty('min') : $filterValue[0];
+                $max = empty($filterValue[1]) ? $facet->getProperty('max') : $filterValue[1];
+                if ($facet->getType() === 'weight') {
+                    $unit = Configuration::get('PS_WEIGHT_UNIT');
                     $filter->setLabel(
                         sprintf(
                             '%1$s%2$s - %3$s%4$s',
@@ -348,12 +347,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                             $unit
                         )
                     );
-                }
-            } elseif ($facet->getType() === 'price') {
-                foreach ($facet->getFilters() as $filter) {
-                    $filterValue = $filter->getValue();
-                    $min = empty($filterValue[0]) ? $facet->getProperty('min') : $filterValue[0];
-                    $max = empty($filterValue[1]) ? $facet->getProperty('max') : $filterValue[1];
+                } elseif ($facet->getType() === 'price') {
                     $filter->setLabel(
                         sprintf(
                             '%1$s - %2$s',
@@ -396,7 +390,6 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                     }
                 }
             }
-
             foreach ($facet->getFilters() as $filter) {
                 // toggle the current filter
                 if ($filter->isActive() || $facet->getProperty('range')) {
@@ -406,7 +399,8 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                         $facet
                     );
                 } else {
-                    $facetFilters = $this->facetsSerializer->addFilterToFacetFilters(
+//					echo print_r($filter, true)."<br>\n";
+					$facetFilters = $this->facetsSerializer->addFilterToFacetFilters(
                         $activeFacetFilters,
                         $filter,
                         $facet
@@ -424,28 +418,13 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
     }
 
     /**
-     * Hide entries with 0 results
-     *
-     * @param array $facets
-     */
-    private function hideZeroValues(array $facets)
-    {
-        foreach ($facets as $facet) {
-            foreach ($facet->getFilters() as $filter) {
-                if ($filter->getMagnitude() === 0) {
-                    $filter->setDisplayed(false);
-                }
-            }
-        }
-    }
-
-    /**
      * Remove the facet when there's only 1 result.
      * Keep facet status when it's a slider
      *
      * @param array $facets
+     * @param int $totalProducts
      */
-    private function hideUselessFacets(array $facets)
+    private function hideUselessFacets(array $facets, $totalProducts)
     {
         foreach ($facets as $facet) {
             if ($facet->getWidgetType() === 'slider') {
@@ -455,15 +434,29 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                 continue;
             }
 
+            $totalFacetProducts = 0;
             $usefulFiltersCount = 0;
             foreach ($facet->getFilters() as $filter) {
-                if ($filter->getMagnitude() > 0) {
+                if ($filter->getMagnitude() > 0 && $filter->isDisplayed()) {
+                    $totalFacetProducts += $filter->getMagnitude();
                     ++$usefulFiltersCount;
                 }
             }
 
             $facet->setDisplayed(
+                // There are two filters displayed
                 $usefulFiltersCount > 1
+                ||
+                /*
+                 * There is only one fitler and the
+                 * magnitude is different than the
+                 * total products
+                 */
+                (
+                    count($facet->getFilters()) === 1
+                    && $totalFacetProducts < $totalProducts
+                    && $usefulFiltersCount > 1
+                )
             );
         }
     }

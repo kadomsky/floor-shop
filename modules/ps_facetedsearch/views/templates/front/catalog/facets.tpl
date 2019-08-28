@@ -25,12 +25,12 @@
 {if $displayedFacets|count}
   <div id="search_filters">
     {block name='facets_title'}
-      <p class="text-uppercase h6 block_title hidden-sm-down">{l s='Filter By' d='Shop.Theme.Actions'}</p>
+      <p class="text-uppercase h6 hidden-sm-down">{l s='Filter By' d='Shop.Theme.Actions'}</p>
     {/block}
-    <div class="block_content collapse" id="block_search_filters">
+
     {block name='facets_clearall_button'}
       {if $activeFilters|count}
-        <div id="_desktop_search_filters_clear_all" class="hidden-xl-down clear-all-wrapper">
+        <div id="_desktop_search_filters_clear_all" class="hidden-sm-down clear-all-wrapper">
           <button data-search-url="{$clear_all_link}" class="btn btn-tertiary js-search-filters-clear-all">
             <i class="material-icons">&#xE14C;</i>
             {l s='Clear all' d='Shop.Theme.Actions'}
@@ -41,20 +41,18 @@
 
     {foreach from=$displayedFacets item="facet"}
       <section class="facet clearfix">
-        <p class="h6 facet-title hidden-xl-down">{$facet.label}</p>
+        <p class="h6 facet-title hidden-sm-down">{$facet.label}</p>
         {assign var=_expand_id value=10|mt_rand:100000}
         {assign var=_collapse value=true}
         {foreach from=$facet.filters item="filter"}
           {if $filter.active}{assign var=_collapse value=false}{/if}
         {/foreach}
 
-        <div class="title " data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
+        <div class="title hidden-md-up" data-target="#facet_{$_expand_id}" data-toggle="collapse"{if !$_collapse} aria-expanded="true"{/if}>
           <p class="h6 facet-title">{$facet.label}</p>
-          <span class="float-xs-right">
-            <span class="navbar-toggler collapse-icons">
-              <i class="material-icons add">&#xE313;</i>
-              <i class="material-icons remove">&#xE316;</i>
-            </span>
+          <span class="navbar-toggler collapse-icons">
+            <i class="material-icons add">&#xE313;</i>
+            <i class="material-icons remove">&#xE316;</i>
           </span>
         </div>
 
@@ -161,7 +159,7 @@
           {block name='facet_item_slider'}
             {foreach from=$facet.filters item="filter"}
               <ul id="facet_{$_expand_id}"
-                class="faceted-slider"
+                class="faceted-slider collapse{if !$_collapse} in{/if}"
                 data-slider-min="{$facet.properties.min}"
                 data-slider-max="{$facet.properties.max}"
                 data-slider-id="{$_expand_id}"
@@ -184,6 +182,5 @@
         {/if}
       </section>
     {/foreach}
-    </div>
   </div>
 {/if}

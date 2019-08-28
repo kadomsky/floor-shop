@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 16:37:50
+/* Smarty version 3.1.33, created on 2019-08-26 10:18:45
   from 'module:blockreassuranceviewstemp' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d42eb2e2b37d4_47252284',
+  'unifunc' => 'content_5d6387d5693411_11343272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d42eb2e2b37d4_47252284 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d6387d5693411_11343272 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/blockreassurance/views/templates/hook/blockreassurance.tpl --><?php if ($_smarty_tpl->tpl_vars['elements']->value) {?>
   <div id="block-reassurance">
     <ul>

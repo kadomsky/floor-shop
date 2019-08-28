@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 10:36:31
+/* Smarty version 3.1.33, created on 2019-08-24 11:01:37
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/new-theme/template/components/layout/nav_bar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d42967fc20281_73246337',
+  'unifunc' => 'content_5d60eee14cfc92_54147465',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d42967fc20281_73246337 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d60eee14cfc92_54147465 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block">
   <span class="menu-collapse" data-toggle-url="<?php echo $_smarty_tpl->tpl_vars['toggle_navigation_url']->value;?>
 ">

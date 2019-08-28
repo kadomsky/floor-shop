@@ -224,8 +224,9 @@ class Wi_Categorylist extends Module implements WidgetInterface
 
     protected function getConfigFormValues()
     {
+//		echo Tools::getValue('WI_CATE_LIST', Configuration::get('WI_CATE_LIST'));
         $result =  array(
-            'WI_CATE_LIST' =>  Tools::getValue('WI_CATE_LIST', Configuration::get('WI_CATE_LIST')),
+            'WI_CATE_LIST' => Tools::getValue('WI_CATE_LIST', Configuration::get('WI_CATE_LIST')),
             'category_id' => Tools::getValue('category_id', Configuration::get('category_id')),
         );
 

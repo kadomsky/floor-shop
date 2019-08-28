@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 11:35:41
+/* Smarty version 3.1.33, created on 2019-08-24 14:06:36
   from 'module:wicategorylistviewstempla' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d42a45d8d5d91_77462737',
+  'unifunc' => 'content_5d611a3cb56879_68002845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72c6a1a2434eb4b3cb3822ed4e3e4a59ec87eef6' => 
     array (
       0 => 'module:wicategorylistviewstempla',
-      1 => 1564290891,
+      1 => 1565963426,
       2 => 'module',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d42a45d8d5d91_77462737 (Smarty_Internal_Template $_smarty_tpl) {
-?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl -->
+function content_5d611a3cb56879_68002845 (Smarty_Internal_Template $_smarty_tpl) {
+?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl -->
 
 
 <div  class="wicategorylist block" id="categorylist_home">
@@ -29,7 +29,7 @@ function content_5d42a45d8d5d91_77462737 (Smarty_Internal_Template $_smarty_tpl)
 <div class="row">
 		<div class="products-tab-content">
 		<h2 class="h1 products-section-title">
-		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'shop by category','d'=>'Modules.Categoryslist'),$_smarty_tpl ) );?>
+		<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'shop by category','d'=>'Modules.Categorylist.Shop'),$_smarty_tpl ) );?>
 
 		</h2>
 		</div>
@@ -86,7 +86,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['wicategoryinfo']->value) {
 									</div>
 									<div class="cate-button">
 										<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getCategoryLink($_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->id_category,$_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->link_rewrite), ENT_QUOTES, 'UTF-8');?>
-">View Collection</a>
+"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'View Collection','d'=>'Modules.Categorylist.Shop'),$_smarty_tpl ) );?>
+</a>
 									</div>
 									<ul class="subcategory">
 									<?php $_smarty_tpl->_assignInScope('categorychildcount', 1);?>
@@ -116,7 +117,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 									<li>
 										<a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getCategoryLink($_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->id_category,$_smarty_tpl->tpl_vars['wicategoryinfo']->value['category']->link_rewrite), ENT_QUOTES, 'UTF-8');?>
 ">
-											<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'View all','mod'=>'wicategorylist'),$_smarty_tpl ) );?>
+											<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'View all','d'=>'Modules.Categorylist.Shop'),$_smarty_tpl ) );?>
 </a>
 									</li>
 								</ul>
@@ -140,7 +141,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 				<?php }?>
 					
 				<?php } else { ?>
-					<div class="alert alert-info"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'No Category is Selected.','mod'=>'wicategorylist'),$_smarty_tpl ) );?>
+					<div class="alert alert-info"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'No Category is Selected.','d'=>'Modules.Categorylist.Shop'),$_smarty_tpl ) );?>
 </div>
 				<?php }?>
 				
@@ -148,5 +149,5 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 			</div>
 </div>
 </div>
-</div><!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl --><?php }
+</div><!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/wi_categorylist/views/templates/front/wi_categorylist.tpl --><?php }
 }

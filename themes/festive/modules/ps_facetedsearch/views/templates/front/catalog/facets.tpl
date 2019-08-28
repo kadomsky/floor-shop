@@ -64,6 +64,8 @@
               {foreach from=$facet.filters key=filter_key item="filter"}
                 {if !$filter.displayed}
                   {continue}
+		 {else}
+		 {*print_r($filter)*}
                 {/if}
 
                 <li>
@@ -172,6 +174,7 @@
                 data-slider-encoded-url="{$filter.nextEncodedFacetsURL}"
               >
                 <li>
+		<!--div>{$filter.label}</div-->
                   <p id="facet_label_{$_expand_id}">
                     {$filter.label}
                   </p>

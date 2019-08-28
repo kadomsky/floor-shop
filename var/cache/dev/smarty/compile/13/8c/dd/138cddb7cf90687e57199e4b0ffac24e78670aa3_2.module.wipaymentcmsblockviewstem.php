@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
+/* Smarty version 3.1.33, created on 2019-08-24 11:01:43
   from 'module:wipaymentcmsblockviewstem' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4296c6545e30_33076391',
+  'unifunc' => 'content_5d60eee7f10f34_47423552',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4296c6545e30_33076391 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d60eee7f10f34_47423552 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_paymentcmsblock/views/templates/hook/wi_paymentcmsblock.tpl -->
 <div id="wipaymentcmsblock" class="col-md-4 links block links">
    <div class="title clearfix hidden-lg-up" data-target="#payment_block" data-toggle="collapse">

@@ -67,6 +67,10 @@ class Facet
     private $widgetType = 'radio';
 
     /**
+     * @var array the filter next encoded facets
+     */
+    private $nextEncodedFacets;
+    /**
      * @return array an array representation of the facet
      */
     public function toArray()
@@ -81,6 +85,7 @@ class Facet
             }, $this->filters),
             'multipleSelectionAllowed' => $this->multipleSelectionAllowed,
             'widgetType' => $this->widgetType,
+            'nextEncodedFacets' => $this->nextEncodedFacets,
         ];
     }
 
@@ -229,5 +234,25 @@ class Facet
     public function getWidgetType()
     {
         return $this->widgetType;
+    }
+
+    /**
+     * @param $nextEncodedFacets
+     *
+     * @return $this
+     */
+    public function setNextEncodedFacets($nextEncodedFacets)
+    {
+        $this->nextEncodedFacets = $nextEncodedFacets;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getNextEncodedFacets()
+    {
+        return $this->nextEncodedFacets;
     }
 }

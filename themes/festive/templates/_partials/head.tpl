@@ -56,8 +56,6 @@
 {/block}
 <!-- Webinth Customized -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet"> 
 
 {block name='stylesheets'}
   {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}

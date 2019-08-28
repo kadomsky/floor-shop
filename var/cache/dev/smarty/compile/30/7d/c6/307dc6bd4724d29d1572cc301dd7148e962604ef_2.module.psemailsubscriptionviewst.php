@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
+/* Smarty version 3.1.33, created on 2019-08-24 11:01:43
   from 'module:psemailsubscriptionviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4296c6509d20_67598793',
+  'unifunc' => 'content_5d60eee7ed1b79_99422098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4296c6509d20_67598793 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d60eee7ed1b79_99422098 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl --><div class="block_newsletter col-lg-12 col-md-12 col-sm-12 links block links">
     <h3 class="h3 hidden-md-down"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Newsletter','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </h3>

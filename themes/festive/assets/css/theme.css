@@ -6549,7 +6549,7 @@ html {
     height: 100%;
 }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -7387,6 +7387,7 @@ textarea:active:-moz-placeholder {
     padding: 20px 10px;
 }
 #header .header-menu .menu .sub-menu a {
+    margin: 0 14px 0 0;
     color: #000;
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -9682,7 +9683,7 @@ body#checkout #gift_message {
 .brands .product-title{ margin-top:15px; }
 #brand_list li.brand .brand-inner{ 
 	border-bottom: 1px solid #e4e4e4;
-    padding: 31px 0 30px 0;
+    padding: 18px 0 16px 0;
 }
 #brand_list li.brand .brand-inner .brand-img{ text-align: center; margin-bottom: 10px;}
 #brand_list li.brand .brand-inner .brand-img img{ max-width: 100%; }
@@ -9697,9 +9698,15 @@ body#checkout #gift_message {
      #products .thumbnail-container .product-description,
     .products .thumbnail-container .product-description,
     .wi-product-accessories .thumbnail-container .product-description {}
-	#brand_list li.brand .brand-inner{ text-align: center; }
+	#brand_list li.brand .brand-inner{ 
+	text-align: center; 
+	 padding: 10px 0 8px 0;
+}
 	#brand_list li.brand .brand-inner .col-xs-12{ padding:0px; }
-	#brand_list li.brand .brand-inner .brand-products{ border-left:0px; padding:0px; }
+	#brand_list li.brand .brand-inner .brand-products{ 
+	border-left:0px; 
+	padding:10px 0 8px 0; 
+	}
 }
 @media (max-width: 480px) {
 	#products .products .list li.product_item .center-block{ width:100%; text-align: left; }
@@ -9817,7 +9824,7 @@ body#checkout #gift_message {
      position:relative;
      width:100%;
      text-align:center;
-     margin:102px auto 50px;
+     margin: 20px auto 20px;
      overflow: hidden;
      display: block;
 }
@@ -10032,7 +10039,7 @@ body#checkout #gift_message {
     z-index: 1;
     overflow: hidden;
     clear: both;
-    margin: 47px auto;
+    margin: 20px auto;
     text-align: center;
 }
 .test_block {
@@ -10954,7 +10961,7 @@ body#checkout #gift_message {
 #left-column .links , #right-column .links,
 #wileftbanner{
 	border: medium none;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     clear: both;
     overflow: hidden;
     position: relative;
@@ -11936,7 +11943,7 @@ body#checkout #gift_message {
     position: relative;
     overflow: hidden;
     clear: both;
-    margin: 77px auto 26px;
+    margin:10px auto 20px;
 }
 #home-page-tabs{
     margin-bottom: 15px;
@@ -11946,7 +11953,7 @@ body#checkout #gift_message {
     padding: 0;
     text-align: center;
     width: 100%;
-    margin: 0 auto 39px;
+    margin: 0 auto 0px;
     position: relative;
     z-index: 1;
 }
@@ -13504,6 +13511,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 /*    color: #fff;
     display: inline-block;
     float: left;*/
+	min-width: 140px;
     position: relative;
     z-index: 99;
     cursor: pointer;
@@ -13664,7 +13672,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
     position: relative;
     display: block;
     width: 100%;
-    margin: 0 3% 0 3%;
+    margin: 0 auto;
     float: left;
 }
 .footer-before{
@@ -13950,6 +13958,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 }
 #header .header-center {
     position: relative;
+	min-width: 140px;
     margin: 0;
     float: left;
 }
@@ -13991,6 +14000,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
 #header .row-header>div {
   display: block;
   position: relative;
+  padding: 0 0;
 }
 #header .faLeftIcon {
   display: block;
@@ -14056,7 +14066,7 @@ li.cart-item:last-child{ border-bottom: 0px; }
     content: none;
 }
 #_desktop_user_info .user-info,#_mobile_user_info .user-info  {
-    background: #fff none repeat scroll 0 0;
+    background-color: #404e5b;
     border: 1px solid #e4e4e4;
     display: none;
     margin: 0;
@@ -14937,7 +14947,6 @@ ul.language_inner, ul.currency_inner {
 
     .top-menu a[data-depth="0"] {padding: 20px 15px;}
     #wi-serviceblock .service_block {padding: 3px 35px;}
-    #wi-serviceblock {margin: 80px auto 50px;}
     .banner_content .title1 {line-height: 55px;font-size: 55px;}    
     .banner_content .banner_desc {font-size: 18px;}
     .wi-special-products {margin: 50px auto 20px;}
@@ -14948,7 +14957,6 @@ ul.language_inner, ul.currency_inner {
     .footer-container .links.link2 {margin-right: 25px;}
     .footer-container .links {width: 17.5%;}
     #wipaymentcmsblock,.footer-container .block-contact.links {width: 26%;}
-    .wi-hometabcontent {margin: 40px auto 26px;}
     .main_banner_title {font-size: 26px;line-height: 26px;}
     .test_block {width: 85%;}  
     .block_newsletter form .col-xs-12 {width: 100%;}
@@ -14998,7 +15006,6 @@ ul.language_inner, ul.currency_inner {
 */
     .top-menu a[data-depth="0"] {padding: 20px 15px;}
     #wi-serviceblock .service_block {padding: 3px 35px;}
-    #wi-serviceblock {margin: 80px auto 50px;}
     .banner_content .title1 {line-height: 55px;font-size: 55px;}    
     .banner_content .banner_desc {font-size: 18px;}
     .wi-special-products {margin: 50px auto 20px;}
@@ -15009,8 +15016,7 @@ ul.language_inner, ul.currency_inner {
     .footer-container .links.link2 {margin-right: 25px;}
     .footer-container .links {width: 17.5%;}
     #wipaymentcmsblock,.footer-container .block-contact.links {width: 26%;}
-    .wi-hometabcontent {margin: 40px auto 26px;}
-    .main_banner_title {font-size: 26px;line-height: 26px;}
+	    .main_banner_title {font-size: 26px;line-height: 26px;}
     .test_block {width: 95%;} 
     .block_newsletter form .col-xs-12 {width: 100%;}
     .wi-block-instagram-social{margin: 24px auto 0px}
@@ -15626,13 +15632,12 @@ ul.language_inner, ul.currency_inner {
     #header .blockcart .header > a .value {display: none;}
     .offer_heading2 {display: none;}
     #wi-serviceblock .service_block {width: 33.333%;}
-    #home-page-tabs {margin: 0 auto 25px;}
     .banner_content .title1 {line-height: 30px;font-size: 30px;}
     #wi-bannerblock .banner_content {top: 12%;width: 58%;}
     .banner_content .banner_desc {font-size: 12px;line-height: 18px;}
     .banner_content .banner_btn {padding: 6px 14px;margin: 15px auto 0;font-size: 12px;}
     #wi-bannerblock {margin: 25px auto;}
-    .wi-special-products,#wi-testimonialblock {margin: 20px auto;}
+    .wi-special-products,#wi-testimonialblock {margin: 20px auto 2px;}
     .footer-container {padding: 0 15px; margin: 10px auto 30px;}
     .copyright {width: 90%;}
     .block_newsletter form {width: 85%;}
@@ -15705,7 +15710,6 @@ ul.language_inner, ul.currency_inner {
 
     #product #wrapper .container > .row{margin: 0 -15px;}
     #home-page-tabs li{display: block;}
-    #home-page-tabs {margin: 0 auto 15px;}
     #home-page-tabs .nav-link{text-align: center;}
     .products .product_list li.product_item.col-sm-6, 
     .products .product_list li.item.col-sm-6, 

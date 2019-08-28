@@ -132,9 +132,9 @@ class Feature extends AbstractHook
 
         foreach (Language::getLanguages(false) as $language) {
             $seoUrl = Tools::getValue('url_name_' . (int) $language['id_lang']);
-
-            if (empty($seoUrl)) {
-                $seoUrl = Tools::getValue('name_' . (int) $language['id_lang']);
+            $metaTitle = Tools::getValue('meta_title_' . (int) $language['id_lang']);
+            if (empty($seoUrl) && empty($metaTitle)) {
+                continue;
             }
 
             $this->database->execute(
@@ -143,7 +143,7 @@ class Feature extends AbstractHook
                 VALUES (
                 ' . (int) $params['id_feature'] . ', ' . (int) $language['id_lang'] . ',
                 \'' . pSQL(Tools::link_rewrite($seoUrl)) . '\',
-                \'' . pSQL(Tools::getValue('meta_title_' . (int) $language['id_lang']), true) . '\')'
+                \'' . pSQL($metaTitle, true) . '\')'
             );
         }
 

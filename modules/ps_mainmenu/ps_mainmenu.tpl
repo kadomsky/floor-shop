@@ -1,6 +1,6 @@
 {function name="menu" nodes=[] depth=0}
   {strip}
-    {if $nodes|count}
+    {if $nodes|count && $depth <= 1}
       <ul data-depth="{$depth}">
         {foreach from=$nodes item=node}
           <li class="{$node.type}{if $node.current} current{/if}">

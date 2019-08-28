@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 10:37:41
+/* Smarty version 3.1.33, created on 2019-08-24 11:01:43
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4296c5ed1197_06330506',
+  'unifunc' => 'content_5d60eee797d263_82954092',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0331d9121533210134fb0ec77726df5d037f54aa' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/header.tpl',
-      1 => 1564222119,
+      1 => 1565242153,
       2 => 'file',
     ),
   ),
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4296c5ed1197_06330506 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d60eee797d263_82954092 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13527922875d4296c5eca390_08951045', 'header_nav');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11230726075d60eee79797c4_42439596', 'header_nav');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21220368715d4296c5ecd116_59829880', 'header_top');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1706474535d60eee797ae24_70644195', 'header_top');
 }
 /* {block 'header_nav'} */
-class Block_13527922875d4296c5eca390_08951045 extends Smarty_Internal_Block
+class Block_11230726075d60eee79797c4_42439596 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_nav' => 
   array (
-    0 => 'Block_13527922875d4296c5eca390_08951045',
+    0 => 'Block_11230726075d60eee79797c4_42439596',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -53,7 +53,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				<i class="fa fa-star" aria-hidden="true"></i> 
 				Лучших брендов Европы</div>
 				<div class="col-md-5 col-lg-4"><h3>Свыше 3 тысяч видов</h3>
-				<i class="fa fa-sticky-note faLeftIcon" aria-hidden="true"></i>
+				<i class="fa fa-sticky-note faLeftIcon hidden-md-down" aria-hidden="true"></i>
 				Напольных покрытий</div>
 				<div class="hidden-md-down col-lg-3"><h3>Прямые поставки</h3>
 				<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
@@ -75,11 +75,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				<i class="fa fa-truck fa-flip-horizontal" aria-hidden="true"></i>
 				от производителей</div>
 			</div>
-			<div class="header-center col-sm-6 col-md-2 col-lg-1">
+			<div class="header-center col-sm-6 col-md-2 col-lg-2">
 				<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayNav1'),$_smarty_tpl ) );?>
 
 			</div>
-			<div class="header-right col-sm-6 col-md-3 col-lg-3">
+			<div class="header-right col-sm-6 col-md-3 col-lg-2">
 				<div  id="_mobile_cart"></div>
 				<div  id="_mobile_user_info"></div>
 				<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayNav2'),$_smarty_tpl ) );?>
@@ -93,12 +93,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_nav'} */
 /* {block 'header_top'} */
-class Block_21220368715d4296c5ecd116_59829880 extends Smarty_Internal_Block
+class Block_1706474535d60eee797ae24_70644195 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_top' => 
   array (
-    0 => 'Block_21220368715d4296c5ecd116_59829880',
+    0 => 'Block_1706474535d60eee797ae24_70644195',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

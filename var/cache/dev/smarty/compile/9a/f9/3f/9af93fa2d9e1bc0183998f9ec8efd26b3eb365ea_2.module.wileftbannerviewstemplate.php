@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 10:37:42
+/* Smarty version 3.1.33, created on 2019-08-24 11:01:43
   from 'module:wileftbannerviewstemplate' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d4296c6224d53_96572766',
+  'unifunc' => 'content_5d60eee7bdd406_42262316',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d4296c6224d53_96572766 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d60eee7bdd406_42262316 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_leftbanner/views/templates/hook/wileftbanner.tpl -->
 <?php if ($_smarty_tpl->tpl_vars['wileftbanner']->value['slides']) {?>
 	<div id="wi-leftbanner"  class="block">

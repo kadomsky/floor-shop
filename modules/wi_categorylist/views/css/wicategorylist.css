@@ -13,7 +13,7 @@
     clear: both;
     overflow: hidden;
     display: inline-block;
-    margin: 93px auto 20px;
+    margin: 20px auto 20px;
 }
 #spe_res {
     float: left;
@@ -147,7 +147,7 @@
     width: 100%;
     height:auto;
 	max-width: 185px;
-	max-height: 210px;
+	max-height: 185px;
 }
 .wicategory-container .categoryblock .block_content .categorylist .cate-heading a {
     color: #4f4f4f;
@@ -210,23 +210,20 @@
     -o-transition: all 0.3s ease 0s;
 }
 .wicategory-container .customNavigation a.next {
-    right: 10px;
+    right: -4px;
     left: auto;
 	z-index: 99;
 	color: #999 !important;
 }
 .wicategory-container .customNavigation a.prev {
     right: auto;
-    left: 10px;
+    left: -4px;
 	z-index: 99;
 	color: #999 !important;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1289px)   {
-    #categorylist_home {margin: 50px auto 20px;}
-    
 }
 @media (max-width: 991px) {
-    #categorylist_home {margin: 50px auto 20px;}
 }
 @media (max-width: 767px) {
     #categorylist_home {padding: 0 15px;}
@@ -234,8 +231,8 @@
     .wicategory-container .customNavigation a.prev {left: 0px;}
 }
 @media (max-width: 543px) {
-    .wicategory-container .customNavigation a.next {right: -10px;}
-    .wicategory-container .customNavigation a.prev {left: -10px;}
+    .wicategory-container .customNavigation a.next {right: -4px;}
+    .wicategory-container .customNavigation a.prev {left: -4px;}
 }
 @media (max-width: 479px) {
 }

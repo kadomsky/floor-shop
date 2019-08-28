@@ -35,7 +35,7 @@
 				<i class="fa fa-star" aria-hidden="true"></i> 
 				Лучших брендов Европы</div>
 				<div class="col-md-5 col-lg-4"><h3>Свыше 3 тысяч видов</h3>
-				<i class="fa fa-sticky-note faLeftIcon" aria-hidden="true"></i>
+				<i class="fa fa-sticky-note faLeftIcon hidden-md-down" aria-hidden="true"></i>
 				Напольных покрытий</div>
 				<div class="hidden-md-down col-lg-3"><h3>Прямые поставки</h3>
 				<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
@@ -57,10 +57,10 @@
 				<i class="fa fa-truck fa-flip-horizontal" aria-hidden="true"></i>
 				от производителей</div>
 			</div>
-			<div class="header-center col-sm-6 col-md-2 col-lg-1">
+			<div class="header-center col-sm-6 col-md-2 col-lg-2">
 				{hook h='displayNav1'}
 			</div>
-			<div class="header-right col-sm-6 col-md-3 col-lg-3">
+			<div class="header-right col-sm-6 col-md-3 col-lg-2">
 				<div  id="_mobile_cart"></div>
 				<div  id="_mobile_user_info"></div>
 				{hook h='displayNav2'}

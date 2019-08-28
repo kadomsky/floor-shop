@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-01 11:35:41
+/* Smarty version 3.1.33, created on 2019-08-24 14:06:36
   from 'module:wiofferblockviewstemplate' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d42a45d8806b0_12965319',
+  'unifunc' => 'content_5d611a3cae6984_67740894',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d42a45d8806b0_12965319 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d611a3cae6984_67740894 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/modules/wi_offerblock/views/templates/hook/wi_offerblock.tpl -->
 <div id="wi-offerblock">
 <div class="container">

@@ -66,7 +66,7 @@ class Filter
     /**
      * @var array the filter next encoded facets
      */
-    private $nextEncodedFacets = [];
+    private $nextEncodedFacets;
 
     /**
      * @return array an array representation of the filter

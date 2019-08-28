@@ -35,7 +35,10 @@ use Feature;
 use FeatureValue;
 use Group;
 use Manufacturer;
+use PrestaShopDatabaseException;
 use PrestaShop\Module\FacetedSearch\Adapter\InterfaceAdapter;
+use PrestaShop\PrestaShop\Core\Localization\Locale;
+use PrestaShop\PrestaShop\Core\Localization\Specification\NumberSymbolList;
 use Shop;
 use Tools;
 
@@ -134,7 +137,6 @@ class Block
                     $filterBlocks[] = $this->getCategoriesBlock($filter, $selectedFilters, $idLang, $parent);
             }
         }
-
         return [
             'filters' => $filterBlocks,
         ];
@@ -173,10 +175,14 @@ class Block
      */
     public function insertIntoCache($filterHash, $data)
     {
-        $this->database->execute(
-            'INSERT INTO ' . _DB_PREFIX_ . 'layered_filter_block (hash, data)
-            VALUES ("' . $filterHash . '", "' . pSQL(serialize($data)) . '")'
-        );
+        try {
+            $this->database->execute(
+                'REPLACE INTO ' . _DB_PREFIX_ . 'layered_filter_block (hash, data) ' .
+                'VALUES ("' . $filterHash . '", "' . pSQL(serialize($data)) . '")'
+            );
+        } catch (PrestaShopDatabaseException $e) {
+            // Don't worry if the cache have invalid or duplicate hash
+        }
     }
 
     /**
@@ -233,7 +239,7 @@ class Block
             'min' => null,
             'unit' => $this->context->currency->sign,
             'specifications' => $priceSpecifications,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => Converter::WIDGET_TYPE_SLIDER,
             'nbr' => $nbProducts,
         ];
@@ -323,7 +329,7 @@ class Block
             'min' => null,
             'unit' => Configuration::get('PS_WEIGHT_UNIT'),
             'specifications' => null,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => Converter::WIDGET_TYPE_SLIDER,
             'value' => null,
             'nbr' => $nbProducts,
@@ -407,7 +413,7 @@ class Block
             'id_key' => 0,
             'name' => $this->context->getTranslator()->trans('Condition', [], 'Modules.Facetedsearch.Shop'),
             'values' => $conditionArray,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => $filter['filter_type'],
         ];
 
@@ -504,7 +510,7 @@ class Block
             'id_key' => 0,
             'name' => $this->context->getTranslator()->trans('Availability', [], 'Modules.Facetedsearch.Shop'),
             'values' => $quantityArray,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => $filter['filter_type'],
         ];
 
@@ -566,7 +572,7 @@ class Block
             'id_key' => 0,
             'name' => $this->context->getTranslator()->trans('Brand', [], 'Modules.Facetedsearch.Shop'),
             'values' => $manufacturersArray,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => $filter['filter_type'],
         ];
 
@@ -682,11 +688,13 @@ class Block
         if (!empty($selectedFilters['id_attribute_group'])) {
             foreach ($selectedFilters['id_attribute_group'] as $key => $selectedFilter) {
                 if ($key == $idAttributeGroup) {
-                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter('with_attributes');
+                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter();
+                    $filteredSearchAdapter->getInitialPopulation()->resetOperationsFilter('with_attributes', (int) $idAttributeGroup);
                     break;
                 }
             }
         }
+
         if (!$filteredSearchAdapter) {
             $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter();
         }
@@ -736,7 +744,7 @@ class Block
                     'values' => [],
                     'url_name' => $urlName,
                     'meta_title' => $metaTitle,
-                    'filter_show_limit' => $filter['filter_show_limit'],
+                    'filter_show_limit' => (int) $filter['filter_show_limit'],
                     'filter_type' => $filter['filter_type'],
                 ];
             }
@@ -749,12 +757,15 @@ class Block
             }
 
             $attributesBlock[$idAttributeGroup]['values'][$idAttribute] = [
-                'color' => $attribute['color'],
                 'name' => $attribute['name'],
                 'nbr' => $count,
                 'url_name' => $urlName,
                 'meta_title' => $metaTitle,
             ];
+
+            if ($attributesBlock[$idAttributeGroup]['is_color_group'] !== false) {
+                $attributesBlock[$idAttributeGroup]['values'][$idAttribute]['color'] = $attribute['color'];
+            }
 
             if (array_key_exists('id_attribute_group', $selectedFilters)) {
                 foreach ($selectedFilters['id_attribute_group'] as $selectedAttribute) {
@@ -814,7 +825,9 @@ class Block
         if (!empty($selectedFilters['id_feature'])) {
             foreach ($selectedFilters['id_feature'] as $key => $selectedFilter) {
                 if ($key == $idFeature) {
-                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter('with_features');
+                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter();
+                    $filteredSearchAdapter->getInitialPopulation()->resetOperationsFilter('with_features', (int) $idFeature);
+
                     break;
                 }
             }
@@ -849,7 +862,7 @@ class Block
                     $features[$idFeature]['featureValues'][$featureValue['id_feature_value']] = $featureValue;
                 }
 
-                $featureLayeredInfos = $this->getFeatureLayeredInfos($idFeature, $idLang);
+                $featureLayeredInfos = $this->getFeatureValueLayeredInfos($idFeature, $idLang);
                 if (!empty($featureLayeredInfos)) {
                     list($urlName, $metaTitle) = array_values($featureLayeredInfos);
                 } else {
@@ -864,7 +877,7 @@ class Block
                     'name' => $feature['name'],
                     'url_name' => $urlName,
                     'meta_title' => $metaTitle,
-                    'filter_show_limit' => $filter['filter_show_limit'],
+                    'filter_show_limit' => (int) $filter['filter_show_limit'],
                     'filter_type' => $filter['filter_type'],
                 ];
             }
@@ -874,7 +887,7 @@ class Block
                 continue;
             }
 
-            $featureValueLayeredInfos = $this->getFeatureValueLayeredInfos($idFeatureValue, $idLang);
+            $featureValueLayeredInfos = $this->getFeatureLayeredInfos($idFeatureValue, $idLang);
             if (!empty($featureValueLayeredInfos)) {
                 list($urlName, $metaTitle) = array_values($featureValueLayeredInfos);
             } else {
@@ -1018,7 +1031,7 @@ class Block
             'id_key' => 0,
             'name' => $this->context->getTranslator()->trans('Categories', [], 'Modules.Facetedsearch.Shop'),
             'values' => $categoryArray,
-            'filter_show_limit' => $filter['filter_show_limit'],
+            'filter_show_limit' => (int) $filter['filter_show_limit'],
             'filter_type' => $filter['filter_type'],
         ];
 
@@ -1032,6 +1045,36 @@ class Block
      */
     private function preparePriceSpecifications()
     {
+        /* @var Currency */
+        $currency = $this->context->currency;
+        // New method since PS 1.7.6
+        if (isset($this->context->currentLocale) && method_exists($this->context->currentLocale, 'getPriceSpecification')) {
+            /* @var PriceSpecification */
+            $priceSpecification = $this->context->currentLocale->getPriceSpecification($currency->iso_code);
+            /* @var NumberSymbolList */
+            $symbolList = $priceSpecification->getSymbolsByNumberingSystem(Locale::NUMBERING_SYSTEM_LATIN);
+
+            $symbol = [
+                $symbolList->getDecimal(),
+                $symbolList->getGroup(),
+                $symbolList->getList(),
+                $symbolList->getPercentSign(),
+                $symbolList->getMinusSign(),
+                $symbolList->getPlusSign(),
+                $symbolList->getExponential(),
+                $symbolList->getSuperscriptingExponent(),
+                $symbolList->getPerMille(),
+                $symbolList->getInfinity(),
+                $symbolList->getNaN(),
+            ];
+
+            return array_merge(
+                ['symbol' => $symbol],
+                $priceSpecification->toArray()
+            );
+        }
+
+        // Default symbol configuration
         $symbol = [
             '.',
             ',',
@@ -1045,21 +1088,9 @@ class Block
             '∞',
             'NaN',
         ];
-        /* @var Currency */
-        $currency = $this->context->currency;
-        // New method since PS 1.7.6
-        if (isset($this->context->currentLocale) && method_exists($this->context->currentLocale, 'getPriceSpecification')) {
-            /* @var PriceSpecification */
-            $priceSpecification = $this->context->currentLocale->getPriceSpecification($currency->iso_code);
-
-            return array_merge(
-                ['symbol' => $symbol],
-                $priceSpecification->toArray()
-            );
-        }
-
         // The property `$precision` exists only from PS 1.7.6. On previous versions, all prices have 2 decimals
-        $precision = isset($currency->precision) ? $currency->precision : 2;
+		print_r($currency);
+        $precision = 0;//isset($currency->precision) ? $currency->precision : 2;
         $formats = explode(';', $currency->format);
         if (count($formats) > 1) {
             $positivePattern = $formats[0];

@@ -30,7 +30,7 @@
 <div class="row">
 		<div class="products-tab-content">
 		<h2 class="h1 products-section-title">
-		{l s='shop by category' d='Modules.Categoryslist'}
+		{l s='shop by category' d='Modules.Categoryslist.Shop'}
 		</h2>
 		</div>
 		<div id="spe_res">

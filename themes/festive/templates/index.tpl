@@ -34,23 +34,23 @@
 				<div class="container">
 				<div class="row">
 				<div class="hometabcontent">
-				<h1 class="h1 products-section-title text-uppercase">{l s='our products' d='Shop.Theme'}</h1>
+				<h1 class="h1 products-section-title text-uppercase">{l s='our products' d='Shop.Theme.Global'}</h1>
 				<div class="tabs">
-<!-- 				<span class="tabs_title">{l s='Our Products' mod='Shop.Theme'}</span> -->
+<!-- 				<span class="tabs_title">{l s='Our Products' d='Shop.Theme.Global'}</span> -->
 					<ul id="home-page-tabs" class="nav nav-tabs clearfix">
 						<li class="nav-item">
-							<a data-toggle="tab" href="#featureProduct" class="nav-link active" data-text="{l s='Featured products' mod='Shop.Theme'}">
-								<span>{l s='Featured' mod='Shop.Theme'}</span>
+							<a data-toggle="tab" href="#featureProduct" class="nav-link active" data-text="{l s='Featured products' d='Shop.Theme.Global'}">
+								<span>{l s='Featured' d='Shop.Theme.Global'}</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a data-toggle="tab" href="#newProduct" class="nav-link" data-text="{l s='New products' mod='Shop.Theme'}">
-								<span>{l s='New products' mod='Shop.Theme'}</span>
+							<a data-toggle="tab" href="#newProduct" class="nav-link" data-text="{l s='New products' d='Shop.Theme.Global'}">
+								<span>{l s='New products' d='Shop.Theme.Global'}</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a data-toggle="tab" href="#bestseller" class="nav-link" data-text="{l s='Best Sellers' mod='Shop.Theme'}">
-								<span>{l s='Best Sellers' mod='Shop.Theme'}</span>
+							<a data-toggle="tab" href="#bestseller" class="nav-link" data-text="{l s='Best Sellers' d='Shop.Theme.Global'}">
+								<span>{l s='Best Sellers' d='Shop.Theme.Global'}</span>
 							</a>
 						</li>
 					</ul>

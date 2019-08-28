@@ -73,12 +73,14 @@ $(document).ready(function(){
 	$('#_desktop_cart').on('click', function() {
 			$(".user-info").slideUp("slow");
 			$('.wi_userinfotitle').removeClass('active');
+
 			$("#header .search_toggle").slideUp("slow");
 			$('#search_widget').removeClass('active');
 		});
 
 		"use strict";   
-    	$("#top-menu .sub-menu li:has(ul)").parent().parent().parent().addClass("mega");
+    	$("#top-menu .sub-menu li").parent().parent().parent().addClass("mega");
+//    	$("#top-menu .sub-menu li:has(ul)").parent().parent().parent().addClass("mega");
 
     	//add more links in when menu is above max_elem
 
