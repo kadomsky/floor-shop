@@ -1217,6 +1217,7 @@ class AdminContainer extends Container
                 84 => 'productcomments',
                 85 => 'psblog',
                 86 => 'blockoneclick',
+                87 => 'watermark',
             ],
             'ps_cache_dir' => '/home/a0280957/domains/shop.floor-shop.ru/public_html/var/cache/dev/',
             'mail_themes_uri' => '/mails/themes',

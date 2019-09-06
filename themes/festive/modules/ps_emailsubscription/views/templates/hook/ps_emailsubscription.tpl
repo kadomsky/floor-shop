@@ -45,7 +45,7 @@
                 name="email"
                 type="text"
                 value="{$value}"
-                placeholder="{l s='Enter Your Email' d='Shop.Forms.Labels'}"
+                placeholder="{l s='Enter Your Email' d='Shop.Theme.Global'}"
               aria-labelledby="block-newsletter-label"
               >
             </div>

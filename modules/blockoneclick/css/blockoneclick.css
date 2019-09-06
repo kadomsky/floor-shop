@@ -33,4 +33,17 @@ div.raschetPloshd label {
 div.raschetPloshd input {
     height: 2.5rem;
     width: auto;
+    font: bold 20px/26px sans-serif;
+}
+div.raschetPloshd input[name=dlina], div.raschetPloshd input[name=shirina] {
+    text-align: right;
+	width: 50pt;
+}
+div.raschetPloshd input[name=dlinaDec], div.raschetPloshd input[name=shirinaDec] {
+    text-align: left;
+	width: 25pt;
+}
+div.raschetPloshd .decemalDiv {
+    font: bold 30px/36px sans-serif;
+	margin: 0 1px 0 5px;
 }

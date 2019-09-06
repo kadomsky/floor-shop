@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 10:17:47
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/welcome/views/contents/welcome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d63879b02a4d6_49019451',
+  'unifunc' => 'content_5d72185e44ccb1_84752479',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0537cb7a82ae445f69ffc831873d55db2b27bf82' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/welcome/views/contents/welcome.tpl',
-      1 => 1562920117,
+      1 => 1566972104,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d63879b02a4d6_49019451 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e44ccb1_84752479 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="onboarding-welcome">
   <i class="material-icons onboarding-button-shut-down">close</i>

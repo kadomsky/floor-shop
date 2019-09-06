@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 10:17:52
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/layout.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6387a0ca6555_01216948',
+  'unifunc' => 'content_5d72185e7230d3_35913238',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f40565403dbf23a6e857aed3f758bdd61d1ef8da' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/layout.tpl',
-      1 => 1562920092,
+      1 => 1566972078,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6387a0ca6555_01216948 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e7230d3_35913238 (Smarty_Internal_Template $_smarty_tpl) {
 echo $_smarty_tpl->tpl_vars['header']->value;?>
 
 <?php if (isset($_smarty_tpl->tpl_vars['conf']->value)) {?>

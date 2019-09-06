@@ -164,19 +164,19 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         );
 
         $filterBlock = $filterBlockSearch->getFromCache($filterHash);
-//        if (empty($filterBlock)) {
+        if (empty($filterBlock)) {
             $filterBlock = $filterBlockSearch->getFilterBlock($productsAndCount['count'], $facetedSearchFilters);
             $filterBlockSearch->insertIntoCache($filterHash, $filterBlock);
-//        }
-// print_r($filterBlock['filters']);
+        }
 
         $facets = $this->filtersConverter->getFacetsFromFilterBlocks(
             $filterBlock['filters']
         );
-		$this->labelRangeFilters($facets);
-		$this->addEncodedFacetsToFilters($facets);
-// echo '44444444444444';print_r($facets);
-		$this->hideUselessFacets($facets, (int) $result->getTotalProductsCount());
+
+        $this->labelRangeFilters($facets);
+        $this->addEncodedFacetsToFilters($facets);
+        $this->hideUselessFacets($facets, (int) $result->getTotalProductsCount());
+
         $facetCollection = new FacetCollection();
         $nextMenu = $facetCollection->setFacets($facets);
         $result->setFacetCollection($nextMenu);
@@ -263,6 +263,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
         if (empty($facetCollection)) {
             return null;
         }
+
         $facetsVar = array_map(
             [$this, 'prepareFacetForTemplate'],
             $facetCollection->getFacets()
@@ -390,6 +391,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                     }
                 }
             }
+
             foreach ($facet->getFilters() as $filter) {
                 // toggle the current filter
                 if ($filter->isActive() || $facet->getProperty('range')) {
@@ -399,8 +401,7 @@ class SearchProvider implements FacetsRendererInterface, ProductSearchProviderIn
                         $facet
                     );
                 } else {
-//					echo print_r($filter, true)."<br>\n";
-					$facetFilters = $this->facetsSerializer->addFilterToFacetFilters(
+                    $facetFilters = $this->facetsSerializer->addFilterToFacetFilters(
                         $activeFacetFilters,
                         $filter,
                         $facet

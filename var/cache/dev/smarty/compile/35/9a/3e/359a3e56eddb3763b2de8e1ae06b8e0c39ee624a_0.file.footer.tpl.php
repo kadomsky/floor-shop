@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-25 02:51:41
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d61cd8d622020_62100236',
+  'unifunc' => 'content_5d72185e70dbb0_58957872',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '359a3e56eddb3763b2de8e1ae06b8e0c39ee624a' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/footer.tpl',
-      1 => 1562920092,
+      1 => 1566972078,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:error.tpl' => 1,
   ),
 ),false)) {
-function content_5d61cd8d622020_62100236 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e70dbb0_58957872 (Smarty_Internal_Template $_smarty_tpl) {
 ?>         <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['hook'][0], array( array('h'=>'displayAdminEndContent'),$_smarty_tpl ) );?>
 
 	</div>

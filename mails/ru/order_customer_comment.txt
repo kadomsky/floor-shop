@@ -2,7 +2,7 @@
 
 Здравствуйте, {firstname} {lastname},
 
-Message from customer
+Сообщение от клиента
 
 Вы получили новое сообщение о заказе с кодом {order_name}.
 
@@ -14,4 +14,4 @@ Message from customer
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](http://www.prestashop.com/)
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

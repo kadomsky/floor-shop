@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 10:17:52
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d6387a0c8c397_25905805',
+  'unifunc' => 'content_5d72185e6f5bb4_80700875',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1cd6d3896a268da1b194eb56cb2e9c805ccb2d74' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/admin444r1iiva/themes/default/template/nav.tpl',
-      1 => 1562920092,
+      1 => 1566972078,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d6387a0c8c397_25905805 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e6f5bb4_80700875 (Smarty_Internal_Template $_smarty_tpl) {
 ?><nav class="nav-bar d-none d-md-block" role="navigation" id="nav-sidebar">
 	<span class="menu-collapse" data-toggle-url="<?php echo $_smarty_tpl->tpl_vars['toggle_navigation_url']->value;?>
 ">

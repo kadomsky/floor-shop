@@ -67,3 +67,11 @@ AddType font/woff2 .woff2
 ErrorDocument 404 /index.php?controller=404
 
 # ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
+# start ~ module watermark section
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond expr "! %{HTTP_REFERER} -strmatch '*://%{HTTP_HOST}*/admin444r1iiva/*'"
+RewriteRule [0-9/]+/[0-9]+\.jpg$ - [F]
+</IfModule>
+# end ~ module watermark section

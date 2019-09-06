@@ -1,0 +1,33 @@
+{
+  "name": "prestashop/watermark",
+  "description": "PrestaShop module watermark",
+  "homepage": "https://github.com/PrestaShop/watermark",
+  "license": "AFL - Academic Free License (AFL 3.0)",
+  "authors": [
+    {
+      "name": "PrestaShop SA",
+      "email": "contact@prestashop.com"
+    }
+  ],
+  "require": {
+      "php": ">=5.6.0",
+      "prestashop/circuit-breaker": "^3.0.0",
+      "doctrine/cache": "^1.6",
+      "guzzlehttp/cache-subscriber": "dev-master"
+   },
+  "autoload": {
+    "psr-4": {
+      "PrestaShop\\Module\\Watermark\\": "src/"
+    },
+    "classmap": ["watermark.php"],
+    "exclude-from-classmap": []
+  },
+  "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false,
+    "platform": {
+      "php": "5.6"
+    }
+  },
+  "type": "prestashop-module"
+}

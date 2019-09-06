@@ -137,6 +137,7 @@ class Block
                     $filterBlocks[] = $this->getCategoriesBlock($filter, $selectedFilters, $idLang, $parent);
             }
         }
+
         return [
             'filters' => $filterBlocks,
         ];
@@ -688,8 +689,7 @@ class Block
         if (!empty($selectedFilters['id_attribute_group'])) {
             foreach ($selectedFilters['id_attribute_group'] as $key => $selectedFilter) {
                 if ($key == $idAttributeGroup) {
-                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter();
-                    $filteredSearchAdapter->getInitialPopulation()->resetOperationsFilter('with_attributes', (int) $idAttributeGroup);
+                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter('with_attributes_' . $idAttributeGroup);
                     break;
                 }
             }
@@ -825,8 +825,7 @@ class Block
         if (!empty($selectedFilters['id_feature'])) {
             foreach ($selectedFilters['id_feature'] as $key => $selectedFilter) {
                 if ($key == $idFeature) {
-                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter();
-                    $filteredSearchAdapter->getInitialPopulation()->resetOperationsFilter('with_features', (int) $idFeature);
+                    $filteredSearchAdapter = $this->searchAdapter->getFilteredSearchAdapter('with_features_' . $idFeature);
 
                     break;
                 }
@@ -862,7 +861,7 @@ class Block
                     $features[$idFeature]['featureValues'][$featureValue['id_feature_value']] = $featureValue;
                 }
 
-                $featureLayeredInfos = $this->getFeatureValueLayeredInfos($idFeature, $idLang);
+                $featureLayeredInfos = $this->getFeatureLayeredInfos($idFeature, $idLang);
                 if (!empty($featureLayeredInfos)) {
                     list($urlName, $metaTitle) = array_values($featureLayeredInfos);
                 } else {
@@ -887,7 +886,7 @@ class Block
                 continue;
             }
 
-            $featureValueLayeredInfos = $this->getFeatureLayeredInfos($idFeatureValue, $idLang);
+            $featureValueLayeredInfos = $this->getFeatureValueLayeredInfos($idFeatureValue, $idLang);
             if (!empty($featureValueLayeredInfos)) {
                 list($urlName, $metaTitle) = array_values($featureValueLayeredInfos);
             } else {
@@ -1089,8 +1088,7 @@ class Block
             'NaN',
         ];
         // The property `$precision` exists only from PS 1.7.6. On previous versions, all prices have 2 decimals
-		print_r($currency);
-        $precision = 0;//isset($currency->precision) ? $currency->precision : 2;
+        $precision = isset($currency->precision) ? $currency->precision : 2;
         $formats = explode(';', $currency->format);
         if (count($formats) > 1) {
             $positivePattern = $formats[0];

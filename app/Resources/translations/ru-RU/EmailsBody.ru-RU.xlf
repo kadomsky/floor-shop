@@ -615,8 +615,16 @@
   </file>
   <file original="mails/themes/classic/modules/referralprogram/referralprogram-congratulations.html.twig" source-language="en" target-language="ru" datatype="plaintext">
     <body>
-      
-      
+      <trans-unit id="43614475dd83d9e6b291a2805ee620fc" approved="yes">
+        <source><![CDATA[Your referred friend [1]{sponsored_firstname} {sponsored_lastname}[/1] has placed his or her first order on <a href="{shop_url}">{shop_name}</a>!]]></source>
+        <target state="translated"><![CDATA[Приглашенный вами друг [1]{sponsored_firstname} [/1]{sponsored_lastname} разместил свой первый заказ в <a href="{shop_url}">{shop_name}</a>!]]></target>
+        <note>Line: 22</note>
+      </trans-unit>
+      <trans-unit id="1b9efd76beb745e43205f60167621060" approved="yes">
+        <source>We are pleased to offer you a voucher worth [1]{discount_display} (voucher # {discount_name})[/1] that you can use on your next order.</source>
+        <target state="translated">Мы рады предложить вам купон на [1]{discount_display} (№ купона:{discount_name})[/1], который можно использовать в следующем заказе.</target>
+        <note>Line: 23</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/classic/modules/referralprogram/referralprogram-invitation.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -625,6 +633,21 @@
         <source>join us!</source>
         <target state="translated">присоединяйтесь!</target>
         <note>Line: 7</note>
+      </trans-unit>
+      <trans-unit id="c4ae632d712131d48fcb9c6197933fe6" approved="yes">
+        <source><![CDATA[Your friend [1]{firstname} {lastname}[/1] wants to refer you on <a href="{shop_url}">{shop_name}</a>!]]></source>
+        <target state="translated"><![CDATA[Ваш друг [1]{firstname} {lastname}[/1] хочет пригласить вас в <a href="{shop_url}">{shop_name}</a>!]]></target>
+        <note>Line: 22</note>
+      </trans-unit>
+      <trans-unit id="dbec0bbd293d01bb529aceafda9d0af0" approved="yes">
+        <source>Get referred and earn a discount voucher of [1]{discount}![/1]</source>
+        <target state="translated">Приняв приглашение вы получитае купон на скидку в [1]{discount}![/1]</target>
+        <note>Line: 24</note>
+      </trans-unit>
+      <trans-unit id="34ef083263a212936be7907709faab44" approved="yes">
+        <source>It's very easy to sign up. Just click here!</source>
+        <target state="translated">Зарегистрироваться несложно. Просто кликните здесь!</target>
+        <note>Line: 25</note>
       </trans-unit>
       <trans-unit id="ba14b0fd8b7764d2fdf225b11b6e3fc3" approved="yes">
         <source>When signing up, don't forget to provide the e-mail address of your referring friend:</source>
@@ -689,6 +712,11 @@
         <target state="translated">Учетная запись</target>
         <note>Line: 3</note>
       </trans-unit>
+      <trans-unit id="edccc47e82abb1a733820982878c5fb0" approved="yes">
+        <source>Your login details on {shop_name}</source>
+        <target state="translated">Ваши данные для входа в {shop_name}</target>
+        <note>Line: 189</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/backoffice_order.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -697,6 +725,11 @@
         <source>A new order has been generated on your behalf.</source>
         <target state="translated">Был оформлен новый заказ на ваше имя.</target>
         <note>Line: 170</note>
+      </trans-unit>
+      <trans-unit id="fb08925252dd912f564413fb5109eb06" approved="yes">
+        <source>Back Office Order</source>
+        <target state="translated">Заказ Бэк-офиса</target>
+        <note>Line: 3</note>
       </trans-unit>
       <trans-unit id="bfa8b60dbfd44914f8cf61b57c641784" approved="yes">
         <source><![CDATA[Please go on <a href="{order_link}">{order_link}</a> to complete the payment.]]></source>
@@ -747,6 +780,11 @@
         <target state="translated">Вы решили оплатить банковским переводом.</target>
         <note>Line: 390</note>
       </trans-unit>
+      <trans-unit id="920fcf4696dd1caa2d08eae6ebc8d29a" approved="yes">
+        <source>Here is the information you need for your transfer:</source>
+        <target state="translated">Вот информация, необходимая для вашего перевода:</target>
+        <note>Line: 391</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/cheque.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -771,10 +809,35 @@
         <target state="translated">Благодарим за покупки в магазине {shop_name}!</target>
         <note>Line: 53</note>
       </trans-unit>
+      <trans-unit id="97b07b4e5caa086464d9f38956718d2b" approved="yes">
+        <source>Your order with the reference [1]{order_name}[/1] has been placed successfully. You can expect [1]delivery as soon as your payment is received[/1].</source>
+        <target state="translated">Ваш заказ с кодом [1]{order_name}[/1] успешно размещен. Мы [1]отправим его, как только получим ваш платёж[/1].</target>
+        <note>Line: 256</note>
+      </trans-unit>
       <trans-unit id="060bf2d587991d8f090a1309b285291c" approved="yes">
         <source>Check</source>
         <target state="translated">Чек</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="0664188509e5edc8daac0d8c80bc05b3" approved="yes">
+        <source>Awaiting payment by check</source>
+        <target state="translated">Ожидание оплаты чеком</target>
+        <note>Line: 189</note>
+      </trans-unit>
+      <trans-unit id="6a9e91ee7fe91c99fc2b5915a2555a57" approved="yes">
+        <source>Payment method: check</source>
+        <target state="translated">Способ оплаты: чеком</target>
+        <note>Line: 323</note>
+      </trans-unit>
+      <trans-unit id="0cce70a6fc36b8ed06d4a0241b36eecb" approved="yes">
+        <source>You have decided to pay by bank check.</source>
+        <target state="translated">Вы решили оплатить банковским чеком.</target>
+        <note>Line: 390</note>
+      </trans-unit>
+      <trans-unit id="10766e013f1b6a5cbc249604bb7fc286" approved="yes">
+        <source>Here is the information you need for your check:</source>
+        <target state="translated">Информация, необходимая вам для оплаты чеком:</target>
+        <note>Line: 391</note>
       </trans-unit>
     </body>
   </file>
@@ -800,6 +863,11 @@
         <target state="translated">Контакты</target>
         <note>Line: 3</note>
       </trans-unit>
+      <trans-unit id="482757e4afa747b69445ed1bfa8ea542" approved="yes">
+        <source>Customer Email Address:</source>
+        <target state="translated">Email-адрес клиента:</target>
+        <note>Line: 180</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/contact_form.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -813,6 +881,16 @@
         <source>Contact Form</source>
         <target state="translated">Форма обратной связи</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="608a2464e2d26ee3b336400c920f87d0" approved="yes">
+        <source>Your message has been sent successfully, thank you for taking the time to write!</source>
+        <target state="translated">Ваше сообщение отправлено, спасибо, что потратили время на его написание!</target>
+        <note>Line: 180</note>
+      </trans-unit>
+      <trans-unit id="7897b8cbc40618fdd3c1ad502ba47faa" approved="yes">
+        <source>We will reply as soon as possible.</source>
+        <target state="translated">Вы ответим максимально быстро.</target>
+        <note>Line: 266</note>
       </trans-unit>
     </body>
   </file>
@@ -828,6 +906,16 @@
         <target state="translated">Кредитная квитанция</target>
         <note>Line: 180</note>
       </trans-unit>
+      <trans-unit id="c44669ebfaeb42d8895e332f6199688e" approved="yes">
+        <source>A credit slip has been generated in your name for order with the reference [1]{order_name}[/1].</source>
+        <target state="translated">К заказу с кодом [1]{order_name}[/1] создана платёжная квитанция на ваше имя.</target>
+        <note>Line: 247</note>
+      </trans-unit>
+      <trans-unit id="933bd01e99683693ad9ddf8405040681" approved="yes">
+        <source><![CDATA[Review this credit slip and download your invoice on our shop, go to the <a href="{history_url}" target="_blank">Credit slips</a> section of your customer account.]]></source>
+        <target state="translated"><![CDATA[Просмотрите эту квитанцию и скачайте ваш счёт, затем перейдите в раздел <a href="{history_url}" target="_blank">Платёжные квитанции</a> вашего аккаунта.]]></target>
+        <note>Line: 310</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/download_product.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -837,10 +925,20 @@
         <target state="translated">Скачать товары</target>
         <note>Line: 3</note>
       </trans-unit>
+      <trans-unit id="a6c40a67df49207ba0519d1bee14a484" approved="yes">
+        <source>Thank you for your order with the reference {order_name} from [1]{shop_name}[/1]</source>
+        <target state="translated">Спасибо вам за заказ в магазине [1]{shop_name}[/1]. Код заказа {order_name}.</target>
+        <note>Line: 53</note>
+      </trans-unit>
       <trans-unit id="9e81969b0d999f5daa0d37ce13fb7001" approved="yes">
         <source>Product(s) to download</source>
         <target state="translated">Товары для скачивания</target>
         <note>Line: 189</note>
+      </trans-unit>
+      <trans-unit id="8bbeb216836330d437043e36617d5325" approved="yes">
+        <source>You have [1]{nbProducts}[/1] product(s) now available for download using the following link(s):</source>
+        <target state="translated">Вам доступны для скачивания товары в количестве [1]{nbProducts}[/1] шт. по этим ссылкам:</target>
+        <note>Line: 256</note>
       </trans-unit>
     </body>
   </file>
@@ -856,10 +954,20 @@
         <target state="translated">Фамилия:</target>
         <note>Line: 262</note>
       </trans-unit>
+      <trans-unit id="a3b24a2a75c846bdf0bc8449746a8637" approved="yes">
+        <source>Employee password</source>
+        <target state="translated">Пароль работника</target>
+        <note>Line: 3</note>
+      </trans-unit>
       <trans-unit id="02fef144b687c453c4a1ae7c4e3e150b" approved="yes">
         <source>Here is your personal login information for {shop_name}</source>
         <target state="translated">Ваши персональные данные для входа в {shop_name}</target>
         <note>Line: 180</note>
+      </trans-unit>
+      <trans-unit id="0b937cfeb30c586cd659a58173bd37c7" approved="yes">
+        <source>Here is your identification information on [1]{shop_name}[/1]</source>
+        <target state="translated">Информация для вашей идентификации в [1]{shop_name}[/1]</target>
+        <note>Line: 247</note>
       </trans-unit>
     </body>
   </file>
@@ -870,10 +978,20 @@
         <target state="translated">История переписки:</target>
         <note>Line: 254</note>
       </trans-unit>
+      <trans-unit id="5a02acdd25040de97181665e4e84caa4" approved="yes">
+        <source>[1]{employee}[/1] wanted to forward this discussion to you.</source>
+        <target state="translated">[1]{employee}[/1] хочет передать это обсуждение вам.</target>
+        <note>Line: 247</note>
+      </trans-unit>
       <trans-unit id="459ea98b5f18960e8c26da4754208f75" approved="yes">
         <source>Forward message</source>
         <target state="translated">Переслать сообщение</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="c413b39ac8eea02ebfbee487d1d9ea16" approved="yes">
+        <source>Customer Service - Discussion Forwarded</source>
+        <target state="translated">Клиентская служба - Обсуждение передано</target>
+        <note>Line: 180</note>
       </trans-unit>
       <trans-unit id="638dae1199098a2faffc18b14086ecc5" approved="yes">
         <source>[1]{employee}[/1] added [1]{comment}[/1]</source>
@@ -893,6 +1011,21 @@
         <source>Email address:</source>
         <target state="translated">E-mail:</target>
         <note>Line: 254</note>
+      </trans-unit>
+      <trans-unit id="016878df57341f82e0702d9259bfb7d8" approved="yes">
+        <source>Guest to customer</source>
+        <target state="translated">Гостя в клиента</target>
+        <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="387c721c8acb98382f1d18feccf3dd55" approved="yes">
+        <source>Your guest account has been turned into a customer account</source>
+        <target state="translated">Ваш гостевой аккаунт превращен в клиентский</target>
+        <note>Line: 180</note>
+      </trans-unit>
+      <trans-unit id="3008c9316cf28c5f439bbcc2e43b2e3e" approved="yes">
+        <source>Congratulations, your guest account for [1]{shop_name}[/1] has been turned into a customer account!</source>
+        <target state="translated">Подзравляем, ваш гостевой аккаунт в [1]{shop_name}[/1] превращен в клиентский!</target>
+        <note>Line: 247</note>
       </trans-unit>
     </body>
   </file>
@@ -927,14 +1060,34 @@
         <target state="translated">Вы можете отслеживать заказ по следующей ссылке:</target>
         <note>Line: 259</note>
       </trans-unit>
+      <trans-unit id="b395812bfd92c9b2c5cce4335dbdf404" approved="yes">
+        <source>Your order with the reference [1]{order_name}[/1] is on its way.</source>
+        <target state="translated">Ваш заказ с кодом [1]{order_name}[/1] в пути.</target>
+        <note>Line: 252</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/log_alert.html.twig" source-language="en" target-language="ru" datatype="plaintext">
     <body>
+      <trans-unit id="ad69fd3d0352d7e45ccca96a1048a747" approved="yes">
+        <source><![CDATA[You can check for it in the [1]Advanced Parameters > Logs[/1] section of your back office.]]></source>
+        <target state="translated"><![CDATA[Это можно проверить в секции Бэк-офиса [1]Расширенные параметры -> Журналы[/1].]]></target>
+        <note>Line: 254</note>
+      </trans-unit>
       <trans-unit id="0f170325fe7cbbbd2be4d705b277650e" approved="yes">
         <source>Log Alert</source>
         <target state="translated">Занести уведомление в журнал</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="223e2a86894ef6ae6d9a96b2d4f53acf" approved="yes">
+        <source>New alert message saved</source>
+        <target state="translated">Новое уведомление сохранено</target>
+        <note>Line: 180</note>
+      </trans-unit>
+      <trans-unit id="3cfb2805cc4075e0a98e932afb94d132" approved="yes">
+        <source>[1]WARNING:[/1] you have received a new log alert in your back office.</source>
+        <target state="translated">[1]ВНИМАНИЕ:[/1] поступило новое уведомление в бэк-офисе.</target>
+        <note>Line: 247</note>
       </trans-unit>
     </body>
   </file>
@@ -954,6 +1107,11 @@
         <target state="translated">Заказ отменён</target>
         <note>Line: 179</note>
       </trans-unit>
+      <trans-unit id="059b64746023360b7ab478fd850ffeb3" approved="yes">
+        <source>Your order with the reference [1]{order_name}[/1] from [1]{shop_name}[/1] has been canceled by the merchant.</source>
+        <target state="translated">Ваш заказ с кодом [1]{order_name}[/1] в [1]{shop_name}[/1] отменён продавцом.</target>
+        <note>Line: 246</note>
+      </trans-unit>
     </body>
   </file>
   <file original="mails/themes/modern/core/order_conf.html.twig" source-language="en" target-language="ru" datatype="plaintext">
@@ -962,6 +1120,11 @@
         <source>Order confirmation</source>
         <target state="translated">Подтверждение заказа</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="ca102bf009d3e0d62a4fc6918b20110e" approved="yes">
+        <source>Thank you for shopping on [1]{shop_name}[/1]!</source>
+        <target state="translated">Благодарим за покупку в [1]{shop_name}[/1]!</target>
+        <note>Line: 53</note>
       </trans-unit>
     </body>
   </file>
@@ -1041,6 +1204,11 @@
         <source>Please note that this will change your current password.</source>
         <target state="translated">Пожалуйста, обратите внимание, что будет изменен текущий пароль.</target>
         <note>Line: 254</note>
+      </trans-unit>
+      <trans-unit id="de148dcf9a5a0f2de3a65c36f9991f42" approved="yes">
+        <source>Password Query</source>
+        <target state="translated">Запрос пароля</target>
+        <note>Line: 3</note>
       </trans-unit>
     </body>
   </file>
@@ -1280,10 +1448,20 @@
         <target state="translated">Адрес плательщика</target>
         <note>Line: 596</note>
       </trans-unit>
+      <trans-unit id="5c9412907a7aabeea3491fafec5c082e" approved="yes">
+        <source>Including total tax</source>
+        <target state="translated">Включая итог по налогам</target>
+        <note>Line: 364</note>
+      </trans-unit>
       <trans-unit id="6810a1cc40329a394b9d73b5f8dac744" approved="yes">
         <source>New Order</source>
         <target state="translated">Новый заказ</target>
         <note>Line: 3</note>
+      </trans-unit>
+      <trans-unit id="ea1fc6431869b331e6db01a2f6ca921f" approved="yes">
+        <source>A new order was placed on [1]{shop_name}[/1] by the following customer:</source>
+        <target state="translated">В магазине [1]{shop_name}[/1] размещен заказ клиентом:</target>
+        <note>Line: 53</note>
       </trans-unit>
       <trans-unit id="914419aa32f04011357d3b604a86d7eb" approved="yes">
         <source>Carrier</source>
@@ -1299,10 +1477,20 @@
         <target state="translated">Заказ изменен</target>
         <note>Line: 180</note>
       </trans-unit>
+      <trans-unit id="681a0aa2d158085f63f86c84900fa989" approved="yes">
+        <source>Your order with the reference [1]{order_name}[/1] from [1]{shop_name}[/1] has been changed by the merchant.</source>
+        <target state="translated">Ваш заказ с кодом [1]{order_name}[/1] в [1]{shop_name}[/1] изменён продавцом.</target>
+        <note>Line: 247</note>
+      </trans-unit>
       <trans-unit id="869a6d7d8b6af1ca14f874356141ac45" approved="yes">
         <source><![CDATA[If you have a guest account, you can follow your order via the <a href="{guest_tracking_url}" target="_blank">Guest Tracking</a> section on our shop.]]></source>
         <target state="translated"><![CDATA[Если у вас гостевая учётная запись, то вы можете отслеживать заказ в разделе <a href="{guest_tracking_url}" target="_blank">"Гостевое Отслеживание"</a>.]]></target>
         <note>Line: 317</note>
+      </trans-unit>
+      <trans-unit id="af6c5b694abbb964eec098febaa5d31d" approved="yes">
+        <source>Order ID {order_name}</source>
+        <target state="translated">Код заказа {order_name}</target>
+        <note>Line: 180</note>
       </trans-unit>
     </body>
   </file>

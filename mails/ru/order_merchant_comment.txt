@@ -12,4 +12,4 @@ You have received a new message from {shop_name} regarding order with the refere
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](http://www.prestashop.com/)
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

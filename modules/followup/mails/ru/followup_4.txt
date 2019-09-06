@@ -2,7 +2,7 @@
 
 Здравствуйте, {firstname} {lastname},
 
-Your cart on {shop_name}
+Ваша корзина в {shop_name}
 
 Congratulations, you are one of our best customers! However, it looks like you have not placed an order since {days_threshold} days.
 
@@ -12,8 +12,8 @@ We are pleased to offer you a discount of {amount}% off your next order. And thi
 
 Here is your VOUCHER CODE: {voucher_num}
 
-Enter this code in your shopping cart to get the discount.
+Для получения скидки введите данный код в корзине.
 
 [{shop_name}]({shop_url})
 
-Powered by [PrestaShop](http://www.prestashop.com/)
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

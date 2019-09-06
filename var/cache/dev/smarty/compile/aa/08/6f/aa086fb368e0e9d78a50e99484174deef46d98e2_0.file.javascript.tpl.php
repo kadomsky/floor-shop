@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-25 02:51:41
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/javascript.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d61cd8d60e9d7_94077346',
+  'unifunc' => 'content_5d72185e6bec75_46949447',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa086fb368e0e9d78a50e99484174deef46d98e2' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/javascript.tpl',
-      1 => 1562920125,
+      1 => 1566972113,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d61cd8d60e9d7_94077346 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e6bec75_46949447 (Smarty_Internal_Template $_smarty_tpl) {
 if (isset($_smarty_tpl->tpl_vars['js_def']->value) && is_array($_smarty_tpl->tpl_vars['js_def']->value) && count($_smarty_tpl->tpl_vars['js_def']->value)) {
 echo '<script'; ?>
  type="text/javascript">

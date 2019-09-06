@@ -91,8 +91,6 @@ class Converter
             $facet = new Facet();
             $facet
                 ->setLabel($filterBlock['name'])
-                ->setProperty('url_name', $filterBlock['url_name'])
-				->setNextEncodedFacets($filterBlock['url_name'])
                 ->setProperty('filter_show_limit', $filterBlock['filter_show_limit'])
                 ->setMultipleSelectionAllowed(true);
 
@@ -122,8 +120,6 @@ class Converter
                             ->setType($type)
                             ->setLabel($filterArray['name'])
                             ->setMagnitude($filterArray['nbr'])
-							->setProperty('url_name', $filterArray['url_name'])
-							->setNextEncodedFacets($filterArray['url_name'])
                             ->setValue($id);
                         if (array_key_exists('checked', $filterArray)) {
                             $filter->setActive($filterArray['checked']);
@@ -140,9 +136,15 @@ class Converter
                         $filters[] = $filter;
                     }
 
-                    usort($filters, array($this, 'sortFiltersByMagnitude'));
+                    if ((int) $filterBlock['filter_show_limit'] !== 0) {
+                        usort($filters, array($this, 'sortFiltersByMagnitude'));
+                    }
+
                     $this->hideZeroValuesAndShowLimit($filters, (int) $filterBlock['filter_show_limit']);
-                    usort($filters, array($this, 'sortFiltersByLabel'));
+
+                    if ((int) $filterBlock['filter_show_limit'] !== 0 || $filterBlock['type'] !== self::TYPE_ATTRIBUTE_GROUP) {
+                        usort($filters, array($this, 'sortFiltersByLabel'));
+                    }
 
                     // No method available to add all filters
                     foreach ($filters as $filter) {
@@ -449,7 +451,8 @@ class Converter
         $aMagnitude = $a->getMagnitude();
         $bMagnitude = $b->getMagnitude();
         if ($aMagnitude == $bMagnitude) {
-            return 0;
+            // Same magnitude, sort by label
+            return $this->sortFiltersByLabel($a, $b);
         }
 
         return $aMagnitude > $bMagnitude ? -1 : +1;
@@ -465,6 +468,6 @@ class Converter
      */
     private function sortFiltersByLabel(Filter $a, Filter $b)
     {
-        return strcmp($a->getLabel(), $b->getLabel());
+        return strnatcmp($a->getLabel(), $b->getLabel());
     }
 }

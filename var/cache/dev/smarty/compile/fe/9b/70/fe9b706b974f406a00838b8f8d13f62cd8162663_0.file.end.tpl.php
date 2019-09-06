@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-26 10:17:47
+/* Smarty version 3.1.33, created on 2019-09-06 11:27:10
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/welcome/views/contents/end.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d63879b035915_86027938',
+  'unifunc' => 'content_5d72185e454db0_55276434',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fe9b706b974f406a00838b8f8d13f62cd8162663' => 
     array (
       0 => '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/welcome/views/contents/end.tpl',
-      1 => 1562920117,
+      1 => 1566972104,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d63879b035915_86027938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d72185e454db0_55276434 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="onboarding-welcome" class="modal-body">
     <div class="col-12">

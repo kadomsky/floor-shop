@@ -27,6 +27,11 @@
         <target state="translated">ID магазина</target>
         <note>Line: 326</note>
       </trans-unit>
+      <trans-unit id="338ff4d33d460df0bf7643c3e0a706bc" approved="yes">
+        <source>blockreassurance</source>
+        <target state="translated">blockreassurance</target>
+        <note>Line: 76</note>
+      </trans-unit>
       <trans-unit id="bb8956c67b82c7444a80c6b2433dd8b4" approved="yes">
         <source>Are you sure you want to uninstall this module?</source>
         <target state="translated">Точно хотите удалить этот модуль?</target>
@@ -43,10 +48,30 @@ Comment: Confirm uninstall</note>
         <target state="translated">При удалении произошла ошибка. Свяжитесь с нами через сайт Addons.</target>
         <note>Line: 154</note>
       </trans-unit>
+      <trans-unit id="a596edf2f0e5ae9c2372c93e1c8fcc24" approved="yes">
+        <source>Block updated</source>
+        <target state="translated">Блок обновлён</target>
+        <note>Line: 268</note>
+      </trans-unit>
+      <trans-unit id="f2f5589389027c1c6d63d2cec51afde5" approved="yes">
+        <source>Oops... looks like an error occurred</source>
+        <target state="translated">Опаньки... Кажется, произошла ошибка</target>
+        <note>Line: 269</note>
+      </trans-unit>
       <trans-unit id="da755c5b9609e21d2f7c0e542fa02cf0" approved="yes">
         <source>Configuration updated successfully!</source>
         <target state="translated">Конфигурация обновлена.</target>
         <note>Line: 270</note>
+      </trans-unit>
+      <trans-unit id="81f6a0f1aaedeb8d2c35617f53c90aaa" approved="yes">
+        <source>Position changed successfully!</source>
+        <target state="translated">Позиция изменена!</target>
+        <note>Line: 271</note>
+      </trans-unit>
+      <trans-unit id="939d7906a02e747900bc9a6e06109e06" approved="yes">
+        <source>An error occurred when switching position</source>
+        <target state="translated">При переключении позиции произошла ошибка</target>
+        <note>Line: 272</note>
       </trans-unit>
     </body>
   </file>
