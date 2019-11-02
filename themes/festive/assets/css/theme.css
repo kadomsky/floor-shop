@@ -8633,54 +8633,49 @@ body#checkout #gift_message {
     font-weight: 500;
     text-transform: uppercase;
 }
-#subcategories ul {
-    float: none;
-	display: block;
-    margin: 0 0 0 0;
-	padding: 0 0 0 0;
+#subcategories .subcategories_list {
     text-align: center;
-	width: 100%;
-}
-#subcategories ul li {
-    float: none;
-	display: inline-block;
-    margin: 0 0 0 0;
-	padding: 0 6px 0 6px;
-    text-align: center;
-/*	width: 24%;*/
 	top: 0;
 	vertical-align: top;
 	font-size: 10pt;
-	text-align: justify;
+	border: 0;
+	padding: 0 6px 0 6px;
 }
-#subcategories ul li h5 {
+#subcategories .subcategories_list h5 {
     text-align: center;
+	width: 100%;
 }
 
-#subcategories ul li .subcategory-image {
+#subcategories .subcategories_list .subcategory-image {
     margin: 0;
+	width: 100%;
 }
-#subcategories ul li .subcategory-image a {
+#subcategories .subcategories_list .subcategory-image a {
     border: 0;
     display: block;
     padding: 0;
 }
-#subcategories ul li .subcategory-image a img {
+#subcategories .subcategories_list .subcategory-image a img {
     height: auto;
     width: 100%;
     vertical-align: top;
 }
-#subcategories ul li .subcategory-name {
+#subcategories .subcategories_list .subcategory-name {
     font-weight: 400;
     font-size: 14px;
 }
-#subcategories ul li:hover .subcategory-image a {
+#subcategories .subcategories_list .cat_desc {
+    font-size: 14px;
+	text-align: justify;
+}
+#subcategories .subcategories_list:hover .subcategory-image a {
     border-color: #ffbe63;
 }
-#subcategories ul li:hover .subcategory-name {
+#subcategories .subcategories_list:hover .subcategory-name {
     color: #ffbe63;
 }
 /***** Products Design ****/
+
 
 #index .products{
 	margin-bottom: 100px;
@@ -8924,8 +8919,7 @@ body#checkout #gift_message {
 }
 
 .productpage_title,
-.quickview h1.h1{     
-    text-transform: capitalize;
+.quickview h1.h1{
     color: #000;
     font-size: 20px;
     vertical-align: middle;
@@ -9170,8 +9164,10 @@ body#checkout #gift_message {
     white-space: normal;
 }
 .product_list .product-title a{
-    white-space: nowrap;
-    overflow: hidden;
+/*	display: block; */
+	height: 35px;
+	white-space: pre-line;
+	overflow: hidden;
     clear: both;
     display: inline-block;
     width: 100%;
@@ -9931,11 +9927,12 @@ body#checkout #gift_message {
 }
 #wi-bannerblock .banner_content {
     position: absolute;
-    top: 26.2%;
-    text-align: right;
-    left: 1%;
+    top: 10%;
+    text-align: left;
+    left: 6%;
     right: auto;
-    width: 53.5%;
+	height: 70%;
+    width: 88%;
     transition: all 0.9s ease 0s;
     -webkit-transition: all 0.9s ease 0s;
     -moz-transition: all 0.9s ease 0s;
@@ -9960,16 +9957,18 @@ body#checkout #gift_message {
     -o-transition: all 0.9s ease 0s;
 }
 .banner_content .title1 {
-    display: inline-block;
-    color: #000;
-    line-height: 70px;
-    font-size: 70px;
-    letter-spacing: -1.7px;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    line-height: 2.5vw;
+    font-size: 30px;
+    font-size: 2vw;
+	position: relative;
+    width: 45%;
+	top:10%;
+	height: 70%;
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: uppercase;
     transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -9984,37 +9983,42 @@ body#checkout #gift_message {
     -o-transition: all 0.5s ease 0s;
     color: #ffbe63;
 }
-.banner_content .banner_desc {
-    display: inline-block;
+#wi-bannerblock .banner_desc {
+    display: block;
     color: #000;
-    line-height: 24px;
-    font-size: 20px;
-    letter-spacing: 1.15px;
-    position: relative;
-    width: 100%;
-    margin: 22px auto 0;
+    font-size: 16px;
+    font-size: 1vw;
+    position: absolute;
     font-weight: 300;
-    text-transform: capitalize;
+    text-transform: uppercase;
+	bottom: 10%;
+	right: 6%;
 }
-.banner_content .banner_btn {
+#wi-bannerblock .right_banner .banner_btn,
+#wi-bannerblock .left_banner .banner_btn {
     font-size: 14px;
     text-transform: uppercase;
-    line-height: 20px;
+    line-height: 40px;
+    font-size: 1vw;
+    line-height: 2.5vw;
+	width: 50%;
+	text-align: center;
     letter-spacing: 0.5px;
-    display: inline-block;
-    padding: 9px 20px;
+    display: block;
+    bottom: 0;
     color: #000;
     font-weight: 400;
     background: #fff;
     border: 1px solid #fff;
-    float: right;
-    clear: both;
-    transition: all 0.5s ease 0s;
+    position: absolute;
+	transition: all 0.5s ease 0s;
     -webkit-transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
     -ms-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
-    margin: 64px auto 0;
+}
+#wi-bannerblock .left_banner .banner_btn {
+   right: 0;
 }
 .banner_content .banner_btn:hover {
     background: #000;
@@ -14920,7 +14924,6 @@ ul.language_inner, ul.currency_inner {
 }
 /*** Responsive part ***/
 @media only screen and (min-width: 1290px) and (max-width: 1459px)   {
-   #wi-bannerblock .banner_content {top: 18%;}
    .footer-container .links.link2,.footer-container .block_newsletter.links{margin-right: 78px;}
    #products .products .list li.product_item .center-block {width: 63%;}
 
@@ -14947,11 +14950,7 @@ ul.language_inner, ul.currency_inner {
 
     .top-menu a[data-depth="0"] {padding: 20px 15px;}
     #wi-serviceblock .service_block {padding: 3px 35px;}
-    .banner_content .title1 {line-height: 55px;font-size: 55px;}    
-    .banner_content .banner_desc {font-size: 18px;}
-    .wi-special-products {margin: 50px auto 20px;}
-    .banner_content .banner_btn {margin: 20px auto 0;}
-    #wi-bannerblock .banner_content {top: 20%;}
+	.wi-special-products {margin: 50px auto 20px;}
     .footer-container .block_newsletter.links {margin-right: 25px;padding-right: 25px;width: 33%;}
     #wisocialblock {width: 33%;}
     .footer-container .links.link2 {margin-right: 25px;}
@@ -15006,11 +15005,7 @@ ul.language_inner, ul.currency_inner {
 */
     .top-menu a[data-depth="0"] {padding: 20px 15px;}
     #wi-serviceblock .service_block {padding: 3px 35px;}
-    .banner_content .title1 {line-height: 55px;font-size: 55px;}    
-    .banner_content .banner_desc {font-size: 18px;}
     .wi-special-products {margin: 50px auto 20px;}
-    .banner_content .banner_btn {margin: 20px auto 0;}
-    #wi-bannerblock .banner_content {top: 20%;}
     .footer-container .block_newsletter.links {margin-right: 25px;padding-right: 25px;width: 33%;}
     #wisocialblock {width: 33%;}
     .footer-container .links.link2 {margin-right: 25px;}
@@ -15321,9 +15316,6 @@ ul.language_inner, ul.currency_inner {
     .offer_heading1 {padding: 0;}
     #wi-serviceblock .service_block {padding: 3px 10px;}
     #wi-serviceblock {margin: 50px auto 25px;}
-    .banner_content .title1 {line-height: 40px;font-size: 40px;}
-    .banner_content .banner_desc {font-size: 13px;margin: 10px auto 0;}
-    .banner_content .banner_btn {padding: 7px 15px;}
 
 }
 @media (max-width: 767px) {
@@ -15632,11 +15624,6 @@ ul.language_inner, ul.currency_inner {
     #header .blockcart .header > a .value {display: none;}
     .offer_heading2 {display: none;}
     #wi-serviceblock .service_block {width: 33.333%;}
-    .banner_content .title1 {line-height: 30px;font-size: 30px;}
-    #wi-bannerblock .banner_content {top: 12%;width: 58%;}
-    .banner_content .banner_desc {font-size: 12px;line-height: 18px;}
-    .banner_content .banner_btn {padding: 6px 14px;margin: 15px auto 0;font-size: 12px;}
-    #wi-bannerblock {margin: 25px auto;}
     .wi-special-products,#wi-testimonialblock {margin: 20px auto 2px;}
     .footer-container {padding: 0 15px; margin: 10px auto 30px;}
     .copyright {width: 90%;}
@@ -15697,11 +15684,11 @@ ul.language_inner, ul.currency_inner {
     }
     #wi-serviceblock .service_block.block2 {border-right:none;}
     .products-section-title, .tabs_title {margin-bottom: 15px;}
-    #wi-bannerblock .left_subbanner, #wi-bannerblock .right_subbanner {width: 100%;}
-    #wi-bannerblock .banner_content {top: 15%;width: 53.5%;}
-    .banner_content .title1 {line-height: 70px;font-size: 70px;}
-    .banner_content .banner_desc {line-height: 24px;font-size: 20px;margin: 22px auto 0;}
-    .banner_content .banner_btn {font-size: 14px;padding: 9px 20px;margin: 30px auto 0;}
+	#wi-bannerblock .left_subbanner, #wi-bannerblock .right_subbanner {width: 100%;}
+    .banner_content .title1 {line-height: 40px;font-size: 30px;line-height: 5vw;font-size: 4vw;}
+    #wi-bannerblock .banner_desc {font-size: 16px;font-size: 2.4vw;}
+    #wi-bannerblock .right_banner .banner_btn,
+    #wi-bannerblock .left_banner .banner_btn {font-size: 14px;font-size: 2vw;line-height:4vw;width:70%;}
     .layout-left-column #content-wrapper, .layout-right-column #content-wrapper {margin-bottom: 20px;}
 
 }   
@@ -15764,9 +15751,7 @@ ul.language_inner, ul.currency_inner {
     #header .language-selector .expand-more span,#header .currency-selector .expand-more span {display: none;}
     #header .language-selector img,#header .currency-selector span.cur_sing {display: block;}
     #wi-serviceblock .service_block {width: 100%;float: left;border: none;}
-    .banner_content .title1 {line-height: 40px;font-size: 40px;}
-    .banner_content .banner_desc {font-size: 12px;line-height: 18px;margin: 15px auto 0;}
-    .banner_content .banner_btn {padding: 6px 14px;margin: 15px auto 0;font-size: 12px;}
+
     #wi-testimonialblock .test-author {padding: 21px 10px;}
     #testimonial-carousel .post-description {padding: 15px;}
     .block_newsletter form {width: 100%;}
