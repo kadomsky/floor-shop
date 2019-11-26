@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:43
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:42
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/modules/ps_mbo/views/templates/admin/toolbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8f715daf7_10581769',
+  'unifunc' => 'content_5ddd1d4a643ab4_49243516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ddcf8f715daf7_10581769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddd1d4a643ab4_49243516 (Smarty_Internal_Template $_smarty_tpl) {
 ?> 
 <?php if (!$_smarty_tpl->tpl_vars['isSymfonyContext']->value) {?>
     <li style="display:none;">

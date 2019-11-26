@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:47
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:48
   from 'module:psbrandlistviewstemplates' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8fb865cf8_33484970',
+  'unifunc' => 'content_5ddd1d502dfdf7_92254346',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,8 +21,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'module:ps_brandlist/views/templates/_partials/".((string)$_smarty_tpl->tpl_vars[\'brand_display_type\']->value).".tpl' => 1,
   ),
 ),false)) {
-function content_5ddcf8fb865cf8_33484970 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '15566344255ddcf8fb85eb21_99479570';
+function content_5ddd1d502dfdf7_92254346 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '13014166145ddd1d4fbf54d7_64542850';
 ?>
 <!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_brandlist/views/templates/hook/ps_brandlist.tpl -->
 <div id="search_filters_brands" class="block">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:46
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:45
   from 'module:pslinklistviewstemplatesh' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8fa5253c1_90395602',
+  'unifunc' => 'content_5ddd1d4d2c00d9_89177622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_5ddcf8fa5253c1_90395602 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddd1d4d2c00d9_89177622 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
 ));
 ?><!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_linklist/views/templates/hook/linkblock.tpl -->
   <div class="col-md-4 links block links">
       <h3 class="h3 hidden-md-down">Товары</h3>
-            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_39905" data-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_29913" data-toggle="collapse">
         <span class="h3">Товары</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
@@ -33,7 +33,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
           </span>
         </span>
       </div>
-      <ul id="footer_sub_menu_39905" class="collapse block_content">
+      <ul id="footer_sub_menu_29913" class="collapse block_content">
                   <li>
             <a
                 id="link-product-page-prices-drop-1"
@@ -68,7 +68,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
     </div>
   <div class="col-md-4 links block links">
       <h3 class="h3 hidden-md-down">Наша компания</h3>
-            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_41387" data-toggle="collapse">
+            <div class="title h3 block_title hidden-lg-up" data-target="#footer_sub_menu_67112" data-toggle="collapse">
         <span class="h3">Наша компания</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
@@ -77,7 +77,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
           </span>
         </span>
       </div>
-      <ul id="footer_sub_menu_41387" class="collapse block_content">
+      <ul id="footer_sub_menu_67112" class="collapse block_content">
                   <li>
             <a
                 id="link-cms-page-1-2"

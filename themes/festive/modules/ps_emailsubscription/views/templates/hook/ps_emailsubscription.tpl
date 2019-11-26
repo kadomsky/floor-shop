@@ -25,7 +25,7 @@
 <div class="block_newsletter col-lg-12 col-md-12 col-sm-12 links block links">
     <h3 class="h3 hidden-md-down">{l s='Newsletter' d='Shop.Theme.Global'}</h3>
       <div class="title h3 block_title hidden-lg-up" data-target="#block_newsletter" data-toggle="collapse">
-        <span class="h3">{l s='News Letter' d='Shop.Theme.Global'}</span>
+        <span class="h3">{l s='Newsletter' d='Shop.Theme.Global'}</span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
             <i class="material-icons add">&#xE313;</i>

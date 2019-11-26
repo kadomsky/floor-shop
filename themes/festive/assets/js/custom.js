@@ -395,13 +395,29 @@ function additionalCarousel(sliderId){
 		itemsTablet: [767,2],
 		itemsMobile : [479,1]
 	});
-
 	// Custom Navigation Events
-	$(".cat_next").click(function(){
+	$(".wicategorylist .cat_next").click(function(){
 		wicategory.trigger('owl.next');
 	})
-	$(".cat_prev").click(function(){
+	$(".wicategorylist .cat_prev").click(function(){
 		wicategory.trigger('owl.prev');
+	});
+
+/* Category list Slider */
+	var wiserviceblock = $("#wi-serviceblock-carousel");
+	wiserviceblock.owlCarousel({
+		items : 3, //10 items above 1000px browser width
+		/*itemsDesktop : [1289,4], 
+		itemsDesktopSmall : [991,3], 
+		itemsTablet: [767,2],
+		itemsMobile : [479,1]*/
+	});
+	// Custom Navigation Events
+	$(".serviceblock_inner .cat_next").click(function(){
+		wiserviceblock.trigger('owl.next');
+	})
+	$("serviceblock_inner .cat_prev").click(function(){
+		wiserviceblock.trigger('owl.prev');
 	});
 
 // ---------------- Fixed header responsive ----------------------

@@ -53,12 +53,14 @@ class Wi_Serviceblock extends Module implements WidgetInterface
         $this->ps_versions_compliancy = array('min' => '1.7.0.0', 'max' => _PS_VERSION_);
 
         $this->templateFile = 'module:wi_serviceblock/views/templates/hook/wi_serviceblock.tpl';
+
     }
 
     public function install()
     {
         return  parent::install() &&
             $this->installDB() &&
+			$this->registerHook('displayHeader') &&
             $this->registerHook('displayservices')&&
             $this->registerHook('displayFooterAfter');
     }
@@ -257,6 +259,10 @@ class Wi_Serviceblock extends Module implements WidgetInterface
         return array(
             'wiserviceblockinfos' => Db::getInstance()->getRow($sql),
         );
+    }
+	public function hookdisplayHeader($params)
+    {
+        $this->context->controller->registerStylesheet('modules-wiserviceblock', 'modules/'.$this->name.'/views/css/wiserviceblock.css', ['media' => 'all', 'priority' => 150]);
     }
 	
 }

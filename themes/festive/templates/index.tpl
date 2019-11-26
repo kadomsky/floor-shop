@@ -30,7 +30,7 @@
        		 {hook h='displayTopColumn'}
 		<!-- Webinth Customize -->
 			
-			<section class="wi-hometabcontent">
+			<section class="wi-hometabcontent hidden-xs-down">
 				<div class="container">
 				<div class="row">
 				<div class="hometabcontent">

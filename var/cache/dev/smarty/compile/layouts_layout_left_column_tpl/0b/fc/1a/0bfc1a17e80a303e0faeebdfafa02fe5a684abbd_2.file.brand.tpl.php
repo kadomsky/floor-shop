@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:47
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:48
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/catalog/_partials/miniatures/brand.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8fb8849c6_85154117',
+  'unifunc' => 'content_5ddd1d50316314_17562845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,20 +20,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ddcf8fb8849c6_85154117 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddd1d50316314_17562845 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10590987475ddcf8fb880816_54733757', 'brand_miniature_item');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8464048625ddd1d50311b69_41366582', 'brand_miniature_item');
 ?>
 
 <?php }
 /* {block 'brand_miniature_item'} */
-class Block_10590987475ddcf8fb880816_54733757 extends Smarty_Internal_Block
+class Block_8464048625ddd1d50311b69_41366582 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'brand_miniature_item' => 
   array (
-    0 => 'Block_10590987475ddcf8fb880816_54733757',
+    0 => 'Block_8464048625ddd1d50311b69_41366582',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

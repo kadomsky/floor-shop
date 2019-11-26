@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:46
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:45
   from '/home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/templates/_partials/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8fa390264_21832421',
+  'unifunc' => 'content_5ddd1d4d0bbfc1_20887730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,22 +20,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ddcf8fa390264_21832421 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddd1d4d0bbfc1_20887730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1436817505ddcf8fa38cb08_22088210', 'header_nav');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7371647615ddd1d4d0b8654_95902224', 'header_nav');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13543980375ddcf8fa38e0c1_86865601', 'header_top');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5650159485ddd1d4d0b9ee7_41723532', 'header_top');
 }
 /* {block 'header_nav'} */
-class Block_1436817505ddcf8fa38cb08_22088210 extends Smarty_Internal_Block
+class Block_7371647615ddd1d4d0b8654_95902224 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_nav' => 
   array (
-    0 => 'Block_1436817505ddcf8fa38cb08_22088210',
+    0 => 'Block_7371647615ddd1d4d0b8654_95902224',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,12 +93,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'header_nav'} */
 /* {block 'header_top'} */
-class Block_13543980375ddcf8fa38e0c1_86865601 extends Smarty_Internal_Block
+class Block_5650159485ddd1d4d0b9ee7_41723532 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'header_top' => 
   array (
-    0 => 'Block_13543980375ddcf8fa38e0c1_86865601',
+    0 => 'Block_5650159485ddd1d4d0b9ee7_41723532',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

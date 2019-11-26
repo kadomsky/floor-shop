@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-11-26 13:05:46
+/* Smarty version 3.1.33, created on 2019-11-26 15:40:45
   from 'module:pssocialfollowpssocialfol' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5ddcf8fa50bfa7_46495157',
+  'unifunc' => 'content_5ddd1d4d291019_38680635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80ac9ddb06fe7b43ffdd2f5cd1185536480d2577' => 
     array (
       0 => 'module:pssocialfollowpssocialfol',
-      1 => 1550645573,
+      1 => 1574763902,
       2 => 'module',
     ),
   ),
@@ -20,25 +20,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ddcf8fa50bfa7_46495157 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ddd1d4d291019_38680635 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
-$_smarty_tpl->compiled->nocache_hash = '4186237405ddcf8fa508290_47082947';
+$_smarty_tpl->compiled->nocache_hash = '11771441985ddd1d4d28cc79_28810463';
 ?>
 <!-- begin /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_socialfollow/ps_socialfollow.tpl -->
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4189304135ddcf8fa508f11_98573633', 'block_social');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17955928335ddd1d4d28d8c5_77284118', 'block_social');
 ?>
 
 <!-- end /home/a0280957/domains/shop.floor-shop.ru/public_html/themes/festive/modules/ps_socialfollow/ps_socialfollow.tpl --><?php }
 /* {block 'block_social'} */
-class Block_4189304135ddcf8fa508f11_98573633 extends Smarty_Internal_Block
+class Block_17955928335ddd1d4d28d8c5_77284118 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'block_social' => 
   array (
-    0 => 'Block_4189304135ddcf8fa508f11_98573633',
+    0 => 'Block_17955928335ddd1d4d28d8c5_77284118',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -47,7 +47,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 <div id="wisocialblock" class="col-lg-12 col-md-12 col-sm-12 links block links">
      <div class="title h3 block_title hidden-lg-up" data-target="#social_block" data-toggle="collapse">
-        <span class="h3"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Follow Us','d'=>'Shop.Theme'),$_smarty_tpl ) );?>
+        <span class="h3"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Follow Us','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>
 </span>
         <span class="float-xs-right">
           <span class="navbar-toggler collapse-icons">
