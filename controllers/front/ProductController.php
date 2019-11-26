@@ -1296,7 +1296,7 @@ class ProductControllerCore extends ProductPresentingFrontControllerCore
         }
         $page['admin_notifications'] = array_merge($page['admin_notifications'], $this->adminNotifications);
         $page['meta']['title'] = $this->getProductPageTitle($page['meta']);
-
+        $page['meta']['keywords'] = implode(', ', Tag::getProductTags((int)$this->product->id)[$this->context->language->id]);
         return $page;
     }
 

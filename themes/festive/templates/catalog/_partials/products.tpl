@@ -47,11 +47,3 @@
 		</a>
 	</div>-->
 </div>
-<div class="block-category-button ">
-    {if $category.description}
-	<div id="category-description" class="text-muted">{$category.description nofilter}</div>
-    {/if}
-    {if $manufacturer.description}
-    <div id="manufacturer-description">{$manufacturer.description nofilter}</div>
-    {/if}
-</div>

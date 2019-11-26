@@ -26,10 +26,12 @@
    <div class="container">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList">
     {block name='breadcrumb'}
+    {assign var=counterIter value=1}
+    {assign var=countList value=count($breadcrumb.links)}
     {foreach from=$breadcrumb.links item=path name=breadcrumb}
       {block name='breadcrumb_item'}
       <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-	{if $path.url==='#'}
+	{if $path.url==='#' || $counterIter === $countList}
 	<b itemprop="item">
           <span itemprop="name">{$path.title}</span>
         </b>
@@ -41,6 +43,7 @@
         <meta itemprop="position" content="{$smarty.foreach.breadcrumb.iteration}">
       </li>
       {/block}
+    {assign var=counterIter value=$counterIter+1}
     {/foreach}
     {*$path|unescape:"html" nofilter*}
     {/block}

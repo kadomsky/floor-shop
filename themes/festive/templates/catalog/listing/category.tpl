@@ -48,8 +48,8 @@
                             </a>
                         </div>
                         <h5><a class="subcategory-name" href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}">{$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}</a></h5>
-                        {if $subcategory.meta_description}
-                            <div class="cat_desc hidden-md-down">{$subcategory.meta_description}</div>
+                       {if $subcategory.meta_description}
+                            <!--<div class="cat_desc hidden-md-down">{$subcategory.meta_description}</div>-->
 			    <!--{*print_r($subcategory)*}-->
                         {/if}
                     </li>

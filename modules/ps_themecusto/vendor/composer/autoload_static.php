@@ -4,11 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2e5e157f9d7dc1d767e1f0ebd8968739
+class ComposerStaticInite04532e63a7997008778cad30c5fbdc4
 {
+    public static $classMap = array (
+        'AdminPsThemeCustoAdvancedController' => __DIR__ . '/../..' . '/controllers/admin/AdminPsThemeCustoAdvanced.php',
+        'AdminPsThemeCustoConfigurationController' => __DIR__ . '/../..' . '/controllers/admin/AdminPsThemeCustoConfiguration.php',
+        'ThemeCustoRequests' => __DIR__ . '/../..' . '/classes/ThemeCustoRequests.php',
+        'ps_themecusto' => __DIR__ . '/../..' . '/ps_themecusto.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->classMap = ComposerStaticInite04532e63a7997008778cad30c5fbdc4::$classMap;
 
         }, null, ClassLoader::class);
     }

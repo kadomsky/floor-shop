@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AdminPsThemeCustoAdvancedController' => $baseDir . '/controllers/admin/AdminPsThemeCustoAdvanced.php',
+    'AdminPsThemeCustoConfigurationController' => $baseDir . '/controllers/admin/AdminPsThemeCustoConfiguration.php',
+    'ThemeCustoRequests' => $baseDir . '/classes/ThemeCustoRequests.php',
+    'ps_themecusto' => $baseDir . '/ps_themecusto.php',
 );

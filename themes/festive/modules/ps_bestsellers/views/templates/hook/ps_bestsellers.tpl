@@ -23,9 +23,9 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 <section class="wi-bestsellers-products clearfix mt-3">
-	<h1 class="h1 products-section-title text-uppercase ">
+	<h3 class="h1 products-section-title text-uppercase ">
     {l s='Best Sellers' d='Shop.Theme.Catalog'}
-	</h1>
+	</h3>
 	<div class="products">
 		<ul class="bestsellers_grid product_list grid row gridcount">
 			{foreach from=$products item="product"}

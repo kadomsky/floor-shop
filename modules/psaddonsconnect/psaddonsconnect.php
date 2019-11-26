@@ -32,14 +32,20 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 
 use PrestaShop\Module\AddonsConnect\WeekAdvice;
 
-class Psaddonsconnect extends Module
+class PsAddonsConnect extends Module
 {
+    public $bootstrap;
+    public $js_path;
+    public $img_path;
+    public $logo_path;
+    public $confirmUninstall;
+
     public function __construct()
     {
         // Settings
         $this->name = 'psaddonsconnect';
         $this->tab = '';
-        $this->version = '2.0.0';
+        $this->version = '2.1.1';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -49,8 +55,6 @@ class Psaddonsconnect extends Module
         $this->bootstrap = true;
 
         parent::__construct();
-
-        $this->output = '';
 
         $this->displayName = $this->l('Tips and Updates module');
         $this->description = $this->l('Thanks to this module, connect to your Addons account from the dashboard of your back-office');
@@ -68,8 +72,6 @@ class Psaddonsconnect extends Module
     /**
      * install()
      *
-     * @param none
-     *
      * @return bool
      */
     public function install()
@@ -79,10 +81,12 @@ class Psaddonsconnect extends Module
             $this->registerHook('dashboardZoneOne')) {
             //Update module position in Dashboard
             $query = 'SELECT id_hook FROM ' . _DB_PREFIX_ . "hook WHERE name = 'dashboardZoneOne'";
+
+            /** @var array $result */
             $result = Db::getInstance()->ExecuteS($query);
             $id_hook = $result['0']['id_hook'];
 
-            $this->updatePosition((int) $id_hook, 0);
+            $this->updatePosition((int) $id_hook, false);
 
             return true;
         } else { // if something wrong return false
@@ -94,8 +98,6 @@ class Psaddonsconnect extends Module
 
     /**
      * uninstall()
-     *
-     * @param none
      *
      * @return bool
      */
@@ -207,7 +209,7 @@ class Psaddonsconnect extends Module
         $addonsConnectionUrl = '';
         $logged_on_addons17 = 0;
 
-        if ((bool) version_compare(_PS_VERSION_, '1.7', '>=')) {
+        if (true === version_compare(_PS_VERSION_, '1.7', '>=')) {
             global $kernel;
 
             //router to get the addons URL
@@ -224,7 +226,11 @@ class Psaddonsconnect extends Module
         $weekAdvice = new WeekAdvice();
         $weekAdviceData = $weekAdvice->getWeekData($this->context->language->iso_code);
         $advice = !empty($weekAdviceData['advice']) ? $weekAdviceData['advice'] : false;
-        $link_advice = !empty($weekAdviceData['link']) ? $weekAdviceData['link'] : false;
+        $currentLangIsoCode = $this->context->language->iso_code;
+        $link_advice = false;
+        if (!empty($weekAdviceData['link'])) {
+            $link_advice = $weekAdviceData['link'] . "?utm_source=back-office&utm_medium=AddonsConnect&utm_campaign=back-office-$currentLangIsoCode&utm_content=tipofthemoment";
+        }
 
         // assign var to smarty
         $this->context->smarty->assign(array(
@@ -235,10 +241,9 @@ class Psaddonsconnect extends Module
             'url_connexion' => $addonsConnectionUrl,
             'logged_on_addons17' => $logged_on_addons17,
             'practical_links' => $this->practicalLinks(),
+            'currentLangIsoCode' => $currentLangIsoCode,
         ));
 
-        $this->output .= $this->context->smarty->fetch($this->local_path . 'views/templates/hook/dashboard_zone_one.tpl');
-
-        return $this->output;
+        return $this->context->smarty->fetch($this->local_path . 'views/templates/hook/dashboard_zone_one.tpl');
     }
 }

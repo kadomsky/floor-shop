@@ -158,6 +158,5 @@ function updateProductshirina(data) {
 		var grName = shFld.attr('data-ainfo');
 		var shVal = $('select#group_'+grName+' option:selected').text();
 		shFld.val(shVal);
-		alert(shVal);
 	}
 }
